@@ -1,0 +1,5217 @@
+<configuration>
+  <Category DisplayName="变量">
+    <FDToolBoxItem Type="ControlTactic.Constant,ControlTactic,常数,变量">
+      <BasicProperty>
+        <Property name="ModuleColor">255,238,232,170</Property>
+        <Property name="ModuleSort">常数</Property>
+      </BasicProperty>
+      <FunctionProperty />
+      <CodeProperty>
+        <CodeLine>// 常量输入
+void CONControl(float a)
+{
+	Push(&amp;paramStack,a);	
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.SystemConstant,ControlTactic,系统变量,变量">
+      <BasicProperty>
+        <Property name="ModuleColor">255, 238, 232, 170</Property>
+        <Property name="ModuleSort">系统变量</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.InputValue,ControlTactic,输入变量,变量">
+      <BasicProperty>
+        <Property name="ModuleColor">255,238,232,170</Property>
+        <Property name="ModuleSort">输入变量</Property>
+      </BasicProperty>
+      <FunctionProperty />
+      <CodeProperty>
+        <CodeLine>// 输入: Bingo
+void LDControl(fp32 *a)
+{
+    Push(&amp;paramStack,*a);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.OutputValue,ControlTactic,输出变量,变量">
+      <BasicProperty>
+        <Property name="ModuleColor">255,238,232,170</Property>
+        <Property name="ModuleSort">输出变量</Property>
+      </BasicProperty>
+      <FunctionProperty />
+      <CodeProperty>
+        <CodeLine>// 输出
+void STControl(float *a)
+{
+	Pop(&amp;paramStack,a);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+  </Category>
+  <Category DisplayName="数学运算">
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,加法,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">ADD</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1</Property>
+        <Property name="ModuleColor">255,255,255,255</Property>
+        <Property name="ModuleSort">加法</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 加法函数
+void ADDControl(ADDStruct *ADD)
+{
+    fp32 en;
+    fp32 add1;
+    fp32 add2;
+    fp32 result;
+
+    result = 0;
+    // 弹出后倒着赋值
+    Pop(&amp;paramStack,&amp;add2);
+    Pop(&amp;paramStack,&amp;add1);
+    Pop(&amp;paramStack,&amp;en);
+    if(en != 0)
+    {
+        result = add1 + add2;
+		ADD-&gt;fLastVal = result;
+    }
+	else
+	{// 保持上次的值
+		result = ADD-&gt;fLastVal;
+	}   
+    Push(&amp;paramStack,result);
+        
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,减法,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">SUB</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1</Property>
+        <Property name="ModuleColor">255,255,255,255</Property>
+        <Property name="ModuleSort">减法</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 减法函数
+void SUBControl(SUBStruct *SUB)
+{
+    fp32 en;
+    fp32 sub1;
+    fp32 sub2;
+    fp32 result;
+    
+    result = 0;    
+    Pop(&amp;paramStack,&amp;sub2);
+    Pop(&amp;paramStack,&amp;sub1);
+    Pop(&amp;paramStack,&amp;en);
+    if(en != 0)
+    {
+        result = sub1 - sub2;
+		SUB-&gt;fLastVal = result;
+    }
+	else
+	{// 保持上次的值
+		result = SUB-&gt;fLastVal;
+	}    
+    Push(&amp;paramStack,result);               
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,乘法,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">MUL</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1</Property>
+        <Property name="ModuleColor">255,255,255,255</Property>
+        <Property name="ModuleSort">乘法</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 乘法
+void MULControl(MULStruct *MUL)
+{
+    fp32 en;
+    fp32 mul1;
+    fp32 mul2;
+    fp32 result;
+    
+    result = 0;    
+    Pop(&amp;paramStack,&amp;mul2);
+    Pop(&amp;paramStack,&amp;mul1);
+    Pop(&amp;paramStack,&amp;en);
+    if(en != 0)
+    {
+        result = mul1 * mul2;
+		MUL-&gt;fLastVal = result;
+    }
+	else
+	{// 保持上次的值
+		result = MUL-&gt;fLastVal;
+	}   
+    Push(&amp;paramStack,result);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,除法,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">DIV</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1</Property>
+        <Property name="ModuleColor">255,255,255,255</Property>
+        <Property name="ModuleSort">除法</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 除法
+void DIVControl(DIVStruct *DIV)
+{
+    fp32 en;
+    fp32 div1;
+    fp32 div2;
+    fp32 result;
+    
+    result = 0;    
+    Pop(&amp;paramStack,&amp;div2);
+    Pop(&amp;paramStack,&amp;div1);
+    Pop(&amp;paramStack,&amp;en);
+    if(en != 0)
+    {
+        result = div1 / div2;
+		DIV-&gt;fLastVal = result;
+    }
+	else
+	{// 保持上次的值
+		result = DIV-&gt;fLastVal;
+	}   
+    Push(&amp;paramStack,result);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,乘幂,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">POWER</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0</Property>
+        <Property name="ModuleColor">255,255,255,255</Property>
+        <Property name="ModuleSort">乘幂</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 乘幂
+void POWERControl(POWERStruct *POWER)
+{
+    fp32 en;
+    fp32 pow1;
+    fp32 pow2;
+    fp32 result;
+    
+    result = 0;    
+    Pop(&amp;paramStack,&amp;pow2);
+    Pop(&amp;paramStack,&amp;pow1);
+    Pop(&amp;paramStack,&amp;en);
+    if(en != 0)
+    {
+        result = pow(pow1,pow2);
+		POWER-&gt;fLastVal = result;
+    }
+	else
+	{
+		result = POWER-&gt;fLastVal;
+	}   
+    Push(&amp;paramStack,result);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,求余,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">MOD</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV,QUAT</Property>
+        <Property name="InputName">EN,IN0,IN1</Property>
+        <Property name="ModuleColor">255,255,255,255</Property>
+        <Property name="ModuleSort">求余</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 求余 32位整数处理转成浮点型
+void MODControl(MODStruct *MOD)
+{
+    fp32 mod1;  // 被除数
+    fp32 mod2;  // 除数
+    fp32 en;
+    fp32 pv;   // 余数
+    fp32 quat;   // 商 
+     
+    pv = 0;
+    quat = 0;   
+    Pop(&amp;paramStack,&amp;mod2);
+    Pop(&amp;paramStack,&amp;mod1);
+    Pop(&amp;paramStack,&amp;en);
+
+    if(en != 0)
+    {
+        pv = floor(mod1 / mod2); // 截取商
+        quat = mod1 - pv * mod2; // 得到余数
+		MOD-&gt;fLastValPV = pv;
+		MOD-&gt;fLastValQuat = quat;
+    }
+	else
+	{
+		pv = MOD-&gt;fLastValPV ;
+		quat = MOD-&gt;fLastValQuat;
+	}
+
+    Push(&amp;paramStack,quat);
+    Push(&amp;paramStack,pv);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,绝对值,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">ABS</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255,255,255,255</Property>
+        <Property name="ModuleSort">绝对值</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 绝对值
+void ABSControl(ABSStruct *ABS)
+{
+    fp32 en;
+    fp32 abs1;
+    fp32 result;
+
+    result = 0;
+
+    Pop(&amp;paramStack,&amp;abs1);
+    Pop(&amp;paramStack,&amp;en);
+    if(en != 0)
+    {
+        result = fabs(abs1);
+		ABS-&gt;fLastVal = result;
+    }
+	else
+	{
+		result = ABS-&gt;fLastVal;
+	}
+    Push(&amp;paramStack,result);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,反余弦,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">ARCCOS</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255,255,255,255</Property>
+        <Property name="ModuleSort">反余弦</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 反余弦
+void ACOSControl(ACOSStruct *ACOS)
+{
+    fp32 en;
+    fp32 acos1;
+    fp32 result;
+
+    result = 0;
+
+    Pop(&amp;paramStack,&amp;acos1);
+    Pop(&amp;paramStack,&amp;en);
+    if(en != 0)
+    {
+        result = acos(acos1);
+    	ACOS-&gt;fLastVal = result;
+    }
+	else
+	{
+		result = ACOS-&gt;fLastVal;
+	}
+    Push(&amp;paramStack,result);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,反正弦,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">ARCSIN</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255,255,255,255</Property>
+        <Property name="ModuleSort">反正弦</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 反正弦
+void ASINControl(ASINStruct *ASIN)
+{
+    fp32 en;
+    fp32 asin1;
+    fp32 result;
+
+    result = 0;
+
+    Pop(&amp;paramStack,&amp;asin1);
+    Pop(&amp;paramStack,&amp;en);
+    if(en != 0)
+    {
+        result = asin(asin1);
+    	ASIN-&gt;fLastVal = result;
+    }
+	else
+	{
+		result = ASIN-&gt;fLastVal;
+	}
+    Push(&amp;paramStack,result);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,反正切,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">ARCTAN</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255,255,255,255</Property>
+        <Property name="ModuleSort">反正切</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 反正切
+void ATANControl(ATANStruct *ATAN)
+{
+    fp32 en;
+    fp32 atan1;
+    fp32 result;
+
+    result = 0;
+
+    Pop(&amp;paramStack,&amp;atan1);
+    Pop(&amp;paramStack,&amp;en);
+    if(en != 0)
+    {
+        result = atan(atan1);
+    	ATAN-&gt;fLastVal = result;
+    }
+	else
+	{
+		result = ATAN-&gt;fLastVal;
+	}
+    Push(&amp;paramStack,result);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,余弦,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">COS</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255,255,255,255</Property>
+        <Property name="ModuleSort">余弦</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 余弦
+void COSControl(COSStruct *COS)
+{
+    fp32 en;
+    fp32 cos1;
+    fp32 result;
+
+    result = 0;
+
+    Pop(&amp;paramStack,&amp;cos1);
+    Pop(&amp;paramStack,&amp;en);
+    if(en != 0)
+    {
+        result = cos(cos1);
+    	COS-&gt;fLastVal = result;
+    }
+	else
+	{
+		result = COS-&gt;fLastVal;
+	}
+    Push(&amp;paramStack,result);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,正弦,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">SIN</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255,255,255,255</Property>
+        <Property name="ModuleSort">正弦</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 正弦
+void SINControl(SINStruct *SIN)
+{
+    fp32 en;
+    fp32 sin1;
+    fp32 result;
+
+    result = 0;
+
+    Pop(&amp;paramStack,&amp;sin1);
+    Pop(&amp;paramStack,&amp;en);
+    if(en != 0)
+    {
+        result = sin(sin1);
+   		SIN-&gt;fLastVal = result;
+    }
+	else
+	{
+		result = SIN-&gt;fLastVal;
+	}
+    Push(&amp;paramStack,result);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,正切,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">TAN</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255,255,255,255</Property>
+        <Property name="ModuleSort">正切</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 正切
+void TANControl(TANStruct *TAN)
+{
+    fp32 en;
+    fp32 tan1;
+    fp32 result;
+
+    result = 0;
+
+    Pop(&amp;paramStack,&amp;tan1);
+    Pop(&amp;paramStack,&amp;en);
+    if(en != 0)
+    {
+        result = tan(tan1);
+    	TAN-&gt;fLastVal = result;
+    }
+	else
+	{
+		result = TAN-&gt;fLastVal;
+	}
+    Push(&amp;paramStack,result);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,指数,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">EXP</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255,255,255,255</Property>
+        <Property name="ModuleSort">指数</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 指数
+void EXPControl(EXPStruct *EXP)
+{
+    fp32 en;
+    fp32 exp1;
+    fp32 result;
+
+    result = 0;
+
+    Pop(&amp;paramStack,&amp;exp1);
+    Pop(&amp;paramStack,&amp;en);
+    if(en != 0)
+    {
+        result = exp(exp1);
+    	EXP-&gt;fLastVal = result;
+    }
+	else
+	{
+		result = EXP-&gt;fLastVal;
+	}
+    Push(&amp;paramStack,result);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,常用对数,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">LG</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255,255,255,255</Property>
+        <Property name="ModuleSort">常用对数</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 常用对数
+void LGControl(LGStruct *LG)
+{
+    fp32 en;
+    fp32 lg1;
+    fp32 result;
+
+    result = 0;
+
+    Pop(&amp;paramStack,&amp;lg1);
+    Pop(&amp;paramStack,&amp;en);
+    if(en != 0)
+    {
+        result = log10(lg1);
+    	LG-&gt;fLastVal = result;
+    }
+	else
+	{
+		result = LG-&gt;fLastVal;
+	}
+    Push(&amp;paramStack,result);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,自然对数,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">LN</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255,255,255,255</Property>
+        <Property name="ModuleSort">自然对数</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 自然对数
+void LNControl(LNStruct *LN)
+{
+    fp32 en;
+    fp32 ln1;
+    fp32 result;
+
+    result = 0;
+
+    Pop(&amp;paramStack,&amp;ln1);
+    Pop(&amp;paramStack,&amp;en);
+    if(en != 0)
+    {
+        result = log(ln1);
+    	LN-&gt;fLastVal = result;
+    }
+	else
+	{
+		result = LN-&gt;fLastVal;
+	}
+    Push(&amp;paramStack,result);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,平方根,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">SQRT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255,255,255,255</Property>
+        <Property name="ModuleSort">平方根</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 平方根
+void SQRTControl(SQRTStruct *SQRT)
+{
+    fp32 en;
+    fp32 sqrt1;
+    fp32 result;
+
+    result = 0;
+
+    Pop(&amp;paramStack,&amp;sqrt1);
+    Pop(&amp;paramStack,&amp;en);
+    if(en != 0)
+    {
+        result = sqrt(sqrt1);
+    	SQRT-&gt;fLastVal = result;
+    }
+	else
+	{
+		result = SQRT-&gt;fLastVal;
+	}
+    Push(&amp;paramStack,result);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,取整,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">TRUNC</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255,255,255,255</Property>
+        <Property name="ModuleSort">取整</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 取整
+void TRUNCControl(TRUNCStruct *TRUNC)
+{
+    fp32 en;
+    fp32 trunc1;
+    fp32 result;
+
+    result = 0;
+
+    Pop(&amp;paramStack,&amp;trunc1);
+    Pop(&amp;paramStack,&amp;en);
+    if(en != 0)
+    {
+        result = floor(trunc1);
+    	TRUNC-&gt;fLastVal = result;
+    }
+	else
+	{
+		result = TRUNC-&gt;fLastVal;
+	}
+    Push(&amp;paramStack,result);
+}   </CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+  </Category>
+  <Category DisplayName="逻辑功能">
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,逻辑与,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">AND</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1,IN2</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">逻辑与</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="运算类型" varname="type" type="MyEnum" visible="yes">位,字节,字,双字</Property>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 逻辑与
+void ANDControl(ANDStruct *AND)
+{
+     fp32 a,b,c,d,en;
+     
+     d = 0; 
+     Pop(&amp;paramStack,&amp;a);
+     Pop(&amp;paramStack,&amp;b);
+     Pop(&amp;paramStack,&amp;c);
+     Pop(&amp;paramStack,&amp;en);
+     if(en != 0)
+     {
+        switch(AND-&gt;type)
+        {
+            case 0:
+            // 位处理
+                a = ((uint8)a) &lt;&lt; 7;
+                b = ((uint8)b) &lt;&lt; 7;
+                c = ((uint8)c) &lt;&lt; 7;
+                break;      
+            case 1:
+            // 字节处理
+                a = ((uint8)a) &lt;&lt; 0;
+                b = ((uint8)b) &lt;&lt; 0;
+                c = ((uint8)c) &lt;&lt; 0;
+                break;
+            case 2:
+            // 字处理
+                a = ((uint16)a) &lt;&lt; 0;
+                b = ((uint16)b) &lt;&lt; 0;
+                c = ((uint16)c) &lt;&lt; 0;
+                break;
+            case 3:
+            // 双字处理
+                a = ((uint32)a) &lt;&lt; 0;
+                b = ((uint32)b) &lt;&lt; 0;
+                c = ((uint32)c) &lt;&lt; 0;           
+                break;
+            default:
+                break;
+        }
+        d = (uint32)a &amp; (uint32)b &amp; (uint32)c;
+    	AND-&gt;fLastVal = d;
+    }
+	else
+	{
+		d = AND-&gt;fLastVal;
+	}
+    
+    Push(&amp;paramStack,d);
+     
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,逻辑或,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">OR</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1,IN2</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">逻辑或</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="运算类型" varname="type" type="MyEnum" visible="yes">位,字节,字,双字</Property>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 逻辑或
+void ORControl(ORStruct *OR)
+{
+     fp32 a,b,c,d,en;   
+
+     d = 0;
+     Pop(&amp;paramStack,&amp;a);
+     Pop(&amp;paramStack,&amp;b);
+     Pop(&amp;paramStack,&amp;c);
+     Pop(&amp;paramStack,&amp;en);
+     if(en != 0)
+     {
+        switch(OR-&gt;type)
+         {
+            case 0:
+            // 位处理
+                a = ((uint8)a) &lt;&lt; 7;
+                b = ((uint8)b) &lt;&lt; 7;
+                c = ((uint8)c) &lt;&lt; 7;
+                break;      
+            case 1:
+            // 字节处理
+                a = ((uint8)a) &lt;&lt; 0;
+                b = ((uint8)b) &lt;&lt; 0;
+                c = ((uint8)c) &lt;&lt; 0;            
+                break;
+            case 2:
+            // 字处理
+                a = ((uint16)a) &lt;&lt; 0;
+                b = ((uint16)b) &lt;&lt; 0;
+                c = ((uint16)c) &lt;&lt; 0;           
+                break;
+            case 3:
+            // 双字处理
+                a = ((uint32)a) &lt;&lt; 0;
+                b = ((uint32)b) &lt;&lt; 0;
+                c = ((uint32)c) &lt;&lt; 0;           
+                break;
+            default:
+                break;
+        }
+        d = (uint32)a | (uint32)b | (uint32)c;
+    	OR-&gt;fLastVal = d;
+    }
+	else
+	{
+		d = OR-&gt;fLastVal;
+	}
+    Push(&amp;paramStack,d);
+     
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,逻辑非,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">NOT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">逻辑非</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="运算类型" varname="type" type="MyEnum" visible="yes">位,字节,字,双字</Property>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 逻辑非
+void NOTControl(NOTStruct *NOT)
+{
+     fp32 a,d,en;   
+     Pop(&amp;paramStack,&amp;a);
+     Pop(&amp;paramStack,&amp;en);       
+     if(en != 0)
+     {   
+        switch(NOT-&gt;type)
+         {
+            case 0:
+            // 位处理
+                a = ((uint8)a) &lt;&lt; 7;                        
+                break;      
+            case 1:
+            // 字节处理
+                a = ((uint8)a) &lt;&lt; 0;                                
+                break;
+            case 2:
+            // 字处理
+                a = ((uint16)a) &lt;&lt; 0;                                   
+                break;
+            case 3:
+            // 双字处理
+                a = ((uint32)a) &lt;&lt; 0;                                   
+                break;
+            default:
+                break;
+        }
+        d = ~(uint32)a;
+    	NOT-&gt;fLastVal = d;
+    }
+	else
+	{
+		d = NOT-&gt;fLastVal;
+	}
+    Push(&amp;paramStack,d);         
+} </CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,逻辑异或,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">XOR</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">逻辑异或</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="运算类型" varname="type" type="MyEnum" visible="yes">位,字节,字,双字</Property>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 逻辑异或
+void XORControl(XORStruct *XOR)
+{
+     fp32 a,b,d,en;
+     
+     d = 0; 
+     Pop(&amp;paramStack,&amp;a);
+     Pop(&amp;paramStack,&amp;b);
+     Pop(&amp;paramStack,&amp;en);
+     if(en != 0)
+     {   
+         switch(XOR-&gt;type)
+         {
+            case 0:
+            // 位处理
+                a = ((uint8)a) &lt;&lt; 7;
+                b = ((uint8)b) &lt;&lt; 7;            
+                break;      
+            case 1:
+            // 字节处理
+                a = ((uint8)a) &lt;&lt; 0;
+                b = ((uint8)b) &lt;&lt; 0;                    
+                break;
+            case 2:
+            // 字处理
+                a = ((uint16)a) &lt;&lt; 0;
+                b = ((uint16)b) &lt;&lt; 0;                       
+                break;
+            case 3:
+            // 双字处理
+                a = ((uint32)a) &lt;&lt; 0;
+                b = ((uint32)b) &lt;&lt; 0;                       
+                break;
+            default:
+                break;
+        }
+        d = (uint32)a ^ (uint32)b;
+    	XOR-&gt;fLastVal = d;
+    }
+	else
+	{
+		d = XOR-&gt;fLastVal;
+	}
+    Push(&amp;paramStack,d);         
+} </CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,逻辑与非,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">NAND</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1,IN2</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">逻辑与非</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="运算类型" varname="type" type="MyEnum" visible="yes">位,字节,字,双字</Property>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 逻辑与非
+void NANDControl(NANDStruct *NAND)
+{
+     fp32 a,b,c,d,en;
+     
+     d = 0; 
+     Pop(&amp;paramStack,&amp;a);
+     Pop(&amp;paramStack,&amp;b);
+     Pop(&amp;paramStack,&amp;c);
+     Pop(&amp;paramStack,&amp;en);
+     if(en != 0)
+     {
+         switch(NAND-&gt;type)
+         {
+            case 0:
+            // 位处理
+                a = ((uint8)a) &lt;&lt; 7;
+                b = ((uint8)b) &lt;&lt; 7;
+                c = ((uint8)c) &lt;&lt; 7;
+                break;      
+            case 1:
+            // 字节处理
+                a = ((uint8)a) &lt;&lt; 0;
+                b = ((uint8)b) &lt;&lt; 0;
+                c = ((uint8)c) &lt;&lt; 0;            
+                break;
+            case 2:
+            // 字处理
+                a = ((uint16)a) &lt;&lt; 0;
+                b = ((uint16)b) &lt;&lt; 0;
+                c = ((uint16)c) &lt;&lt; 0;           
+                break;
+            case 3:
+            // 双字处理
+                a = ((uint32)a) &lt;&lt; 0;
+                b = ((uint32)b) &lt;&lt; 0;
+                c = ((uint32)c) &lt;&lt; 0;           
+                break;
+            default:
+                break;
+        }
+        d = ~((uint32)a &amp; (uint32)b &amp; (uint32)c);
+    	NAND-&gt;fLastVal = d;
+    }
+	else
+	{
+		d = NAND-&gt;fLastVal;
+	}
+    Push(&amp;paramStack,d);         
+} </CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,逻辑或非,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">NOR</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1,IN2</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">逻辑或非</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="运算类型" varname="type" type="MyEnum" visible="yes">位,字节,字,双字</Property>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 逻辑或非
+void NORControl(NORStruct *NOR)
+{
+     fp32 a,b,c,d,en;
+     
+     d = 0; 
+     Pop(&amp;paramStack,&amp;a);
+     Pop(&amp;paramStack,&amp;b);
+     Pop(&amp;paramStack,&amp;c);
+     Pop(&amp;paramStack,&amp;en);
+     if(en != 0)
+     {
+        switch(NOR-&gt;type)
+        {
+            case 0:
+            // 位处理
+                a = ((uint8)a) &lt;&lt; 7;
+                b = ((uint8)b) &lt;&lt; 7;
+                c = ((uint8)c) &lt;&lt; 7;
+                break;      
+            case 1:
+            // 字节处理
+                a = ((uint8)a) &lt;&lt; 0;
+                b = ((uint8)b) &lt;&lt; 0;
+                c = ((uint8)c) &lt;&lt; 0;            
+                break;
+            case 2:
+            // 字处理
+                a = ((uint16)a) &lt;&lt; 0;
+                b = ((uint16)b) &lt;&lt; 0;
+                c = ((uint16)c) &lt;&lt; 0;           
+                break;
+            case 3:
+            // 双字处理
+                a = ((uint32)a) &lt;&lt; 0;
+                b = ((uint32)b) &lt;&lt; 0;
+                c = ((uint32)c) &lt;&lt; 0;           
+                break;
+            default:
+                break;
+        }
+        d = ~((uint32)a | (uint32)b | (uint32)c);
+    	NOR-&gt;fLastVal = d;
+    }
+	else
+	{
+		d = NOR-&gt;fLastVal;
+	}
+    Push(&amp;paramStack,d);         
+} </CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,两输入ON有效或门,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">QOR2</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1,IN2,IN3</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">两输入ON有效或门</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 两输入ON有效或门
+void QOR2Control(QOR2Struct *QOR2)
+{
+     fp32 a,b,c,d,e,en;
+     uint8 count;
+     
+     e = 0; 
+     Pop(&amp;paramStack,&amp;a);
+     Pop(&amp;paramStack,&amp;b);
+     Pop(&amp;paramStack,&amp;c);
+     Pop(&amp;paramStack,&amp;d);
+     Pop(&amp;paramStack,&amp;en);
+     if(en != 0)
+     {
+        count = 0;
+        if(a != 0)
+            count++;
+        if(b != 0)
+            count++;
+        if(c != 0)
+            count++;
+        if(d != 0)
+            count++;
+
+        if(count &gt;= 2)
+            e = 0;
+        else
+            e = 1;
+		QOR2-&gt;fLastVal = e;
+    }
+	else
+	{
+		e = QOR2-&gt;fLastVal;
+	}
+     Push(&amp;paramStack,e);        
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,三输入ON有效或门,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">QOR3</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1,IN2,IN3</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">三输入ON有效或门</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 三输入ON有效或门
+void QOR3Control(QOR3Struct *QOR3)
+{
+     fp32 a,b,c,d,e,en;
+     uint8 count;
+        
+     Pop(&amp;paramStack,&amp;a);
+     Pop(&amp;paramStack,&amp;b);
+     Pop(&amp;paramStack,&amp;c);
+     Pop(&amp;paramStack,&amp;d);
+     Pop(&amp;paramStack,&amp;en);
+
+     if(en != 0)
+     {
+        count = 0;
+        if(a != 0)
+            count++;
+         if(b != 0)
+            count++;
+         if(c != 0)
+            count++;
+         if(d != 0)
+            count++;
+        if(count &gt;= 3)
+            e = 0;
+         else
+            e = 1;
+		 QOR3-&gt;fLastVal = e;
+    }
+	else
+	{
+		e = QOR3-&gt;fLastVal;
+	}
+     Push(&amp;paramStack,e);        
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,三输入不一致,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">DISP3</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1,IN2</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">三输入不一致</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="运算类型" varname="type" type="MyEnum" visible="yes">位,字节,字,双字</Property>
+        <Property name="采样周期" varname="cycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+        <Property name="上次的输出" varname="lastValue" type="MyEnum" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 三输入不一致
+void DISP3Control(DISP3Struct *DISP3)
+{
+     fp32 a,b,c,en;
+	 uint32 timerInterval;  // 时间跨度
+	 // 时间处理
+	 if(timerCount &lt; DISP3-&gt;lastTimeRec)
+	 {
+	 	  timerInterval = 0xffffffff - DISP3-&gt;lastTimeRec + timerCount;
+	 }
+	 else
+	 {
+	 	  timerInterval = timerCount - DISP3-&gt;lastTimeRec;
+	 }	      
+        
+     Pop(&amp;paramStack,&amp;a);
+     Pop(&amp;paramStack,&amp;b);
+     Pop(&amp;paramStack,&amp;c);
+     Pop(&amp;paramStack,&amp;en);   
+     
+     if(timerInterval &gt;= DISP3-&gt;cycle)
+     {// 时间到点
+        if(en != 0)
+        {
+            if(a != b || a != c || b!= c)
+             {
+                DISP3-&gt;lastValue = 1;   // 不相同为1
+             }
+             else
+             {
+                DISP3-&gt;lastValue = 0;   // 相同为0
+             }       
+         }
+         DISP3-&gt;lastTimeRec = timerCount;
+     }
+     Push(&amp;paramStack,DISP3-&gt;lastValue);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,开关,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">SWIT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1,SW</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">开关</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="运算类型" varname="type" type="MyEnum" visible="yes">位,字节,字,双字</Property>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 开关
+void SWITControl(SWITStruct *SWIT)
+{
+     fp32 a,b,c,d,en;   
+     Pop(&amp;paramStack,&amp;c);  // SW
+     Pop(&amp;paramStack,&amp;b);  // 输入1
+     Pop(&amp;paramStack,&amp;a);  // 输入0
+     Pop(&amp;paramStack,&amp;en);  // SW
+
+     d = 0;
+     if(en != 0)
+     {   
+        switch(SWIT-&gt;type)
+         {
+            case 0:
+            // 位处理
+                a = ((uint8)a) &lt;&lt; 7;
+                b = ((uint8)b) &lt;&lt; 7;                        
+                break;      
+            case 1:
+            // 字节处理
+                a = ((uint8)a) &lt;&lt; 0;
+                b = ((uint8)b) &lt;&lt; 0;                                
+                break;
+            case 2:
+            // 字处理
+                a = ((uint16)a) &lt;&lt; 0;
+                b = ((uint16)b) &lt;&lt; 0;                                   
+                break;
+            case 3:
+            // 双字处理
+                a = ((uint32)a) &lt;&lt; 0;
+                b = ((uint32)b) &lt;&lt; 0;                                   
+                break;
+            default:
+                break;
+        }// switch
+        switch((uint8)c)
+        {
+            case 0:
+            // sw为0时,输入0        
+                d = a;
+                break;      
+            case 1:
+            // sw为1时,输入1        
+                d = b;          
+                break;  
+            default:
+                break;
+        }
+    	 SWIT-&gt;fLastVal = d;
+    }
+	else
+	{
+		d = SWIT-&gt;fLastVal;
+	}
+        
+    Push(&amp;paramStack,d);         
+} </CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,定长度脉冲,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">PULSE</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">定长度脉冲</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="定长脉冲" varname="cycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+        <Property name="上次的输入" varname="lastInValue" type="MyEnum" visible="no">0</Property>
+        <Property name="上次的输出" varname="lastOutValue" type="MyEnum" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 定长脉冲 
+void PULSEControl(PULSEStruct *PULSE)
+{
+     fp32 a,d,en;
+	 uint32 timerInterval;  // 时间跨度
+	 // 时间处理
+	 if(timerCount &lt; PULSE-&gt;lastTimeRec)
+	 {
+	 	  timerInterval = 0xffffffff - PULSE-&gt;lastTimeRec + timerCount;
+	 }
+	 else
+	 {
+	 	  timerInterval = timerCount - PULSE-&gt;lastTimeRec;
+	 }
+
+     Pop(&amp;paramStack,&amp;a);  // 当前值
+     Pop(&amp;paramStack,&amp;en);
+
+     d = 0;
+     if(en != 0)
+     {
+         if(timerInterval &gt;= PULSE-&gt;cycle)
+         {      
+            if(PULSE-&gt;lastInValue == 0 &amp;&amp; (uint8)a == 1)
+            {
+                d = 1;     // 从OFF到ON输出1,并持续一个周期         
+            }
+            else
+            {
+                d = 0;
+            }
+            (*PULSE).lastOutValue = d;
+            (*PULSE).lastTimeRec = timerCount;
+         }          
+    }
+
+     Push(&amp;paramStack,PULSE-&gt;lastOutValue);
+     (*PULSE).lastInValue = (uint8)a; // 记录上次输入值      
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,最大时限脉冲,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">MAXPL</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">最大时限脉冲</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="定长脉冲" varname="cycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+        <Property name="上次的输入" varname="lastInValue" type="MyEnum" visible="no">0</Property>
+        <Property name="上次的输出" varname="lastOutValue" type="MyEnum" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 最大脉冲
+void MAXPLControl(MAXPLStruct *MAXPL)
+{
+     fp32 a,d,en;
+	 uint32 timerInterval;  // 时间跨度
+	 // 时间处理
+	 if(timerCount &lt; MAXPL-&gt;lastTimeRec)
+	 {
+	 	  timerInterval = 0xffffffff - MAXPL-&gt;lastTimeRec + timerCount;
+	 }
+	 else
+	 {
+	 	  timerInterval = timerCount - MAXPL-&gt;lastTimeRec;
+	 }
+
+     Pop(&amp;paramStack,&amp;a);  // 输入值
+     Pop(&amp;paramStack,&amp;en);
+
+    d = 0;
+    if(en != 0)
+    {       
+        if(MAXPL-&gt;lastInValue == 0 &amp;&amp; (uint8)a != 0)
+        {
+            MAXPL-&gt;isPulse = 1;   // 产生脉冲
+            MAXPL-&gt;lastTimeRec = timerCount;                
+        }
+
+        if(MAXPL-&gt;isPulse != 0)
+        {// 产生脉冲
+            if((timerInterval &lt;= MAXPL-&gt;cycle) &amp;&amp; a != 0)
+            {// 在最大宽度之内并且输入为1
+                d = 1;
+            }
+            else
+            {
+                d = 0;
+                MAXPL-&gt;isPulse = 0; // 脉冲结束 
+            }
+			MAXPL-&gt;lastOutValue = d;
+        }
+        MAXPL-&gt;lastInValue = (uint8)a; // 记录上次输入值
+    }
+	else
+	{
+		d = MAXPL-&gt;lastOutValue;
+	}
+     
+     Push(&amp;paramStack,d);
+                 
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,最小时限脉冲,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">MINPL</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">最小时限脉冲</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="定长脉冲" varname="cycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+        <Property name="上次的输入" varname="lastInValue" type="MyEnum" visible="no">0</Property>
+        <Property name="上次的输出" varname="lastOutValue" type="MyEnum" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 最小脉冲
+void MINPLControl(MINPLStruct *MINPL)
+{
+     fp32 a,d,en;
+	 uint32 timerInterval;  // 时间跨度
+	 // 时间处理
+	 if(timerCount &lt; MINPL-&gt;lastTimeRec)
+	 {
+	 	  timerInterval = 0xffffffff - MINPL-&gt;lastTimeRec + timerCount;
+	 }
+	 else
+	 {
+	 	  timerInterval = timerCount - MINPL-&gt;lastTimeRec;
+	 }
+
+     Pop(&amp;paramStack,&amp;a);  // 当前值
+     Pop(&amp;paramStack,&amp;en);  // 当前值
+
+    if(en != 0)
+    {       
+        if(MINPL-&gt;lastInValue == 0 &amp;&amp; (uint8)a != 0)
+        {
+            MINPL-&gt;isPulse = 1;   // 产生脉冲
+            MINPL-&gt;lastTimeRec = timerCount;                
+        }
+
+        if(MINPL-&gt;isPulse != 0)
+        {// 产生脉冲
+            if((timerInterval &lt;= MINPL-&gt;cycle) || a != 0)
+            {// 在最大宽度之内或者输入为1
+                d = 1;
+            }
+            else
+            {
+                d = 0;
+                MINPL-&gt;isPulse = 0; // 脉冲结束 
+            }
+			MINPL-&gt;lastOutValue = d;
+        }
+        MINPL-&gt;lastInValue = (uint8)a; // 记录上次输入值                         
+     }
+	else
+	{
+		d = MINPL-&gt;lastOutValue;
+	}   
+     Push(&amp;paramStack,d);   
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,等于比较,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">EQ</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">等于比较</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 等于比较
+void EQUControl(EQUStruct *EQU)
+{
+    fp32 a;
+    fp32 b;
+    fp32 c,en;    
+    Pop(&amp;paramStack,&amp;b);   // IN1
+    Pop(&amp;paramStack,&amp;a);   // IN0
+    Pop(&amp;paramStack,&amp;en);
+    c = 0;
+    if(en != 0)
+    {
+        if(a == b)
+        {
+            c = 1;
+        }
+        else
+        {
+            c = 0;
+        }
+    	 EQU-&gt;fLastVal = c;
+    }
+	else
+	{
+		c = EQU-&gt;fLastVal;
+	}
+    Push(&amp;paramStack,c);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,不等于比较,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">NE</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">不等于比较</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 不等于比较
+void UEQUControl(UEQUStruct *UEQU)
+{
+    fp32 a;
+    fp32 b;
+    fp32 c,en;    
+    Pop(&amp;paramStack,&amp;b);   // IN1
+    Pop(&amp;paramStack,&amp;a);   // IN0
+    Pop(&amp;paramStack,&amp;en);
+    c = 0;
+    if(en != 0)
+    {
+        if(a != b)
+        {
+            c = 1;
+        }
+        else
+        {
+            c = 0;
+        }
+    	UEQU-&gt;fLastVal = c;
+    }
+	else
+	{
+		c = UEQU-&gt;fLastVal;
+	}
+    Push(&amp;paramStack,c);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,大于比较,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">GT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">大于比较</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 大于比较
+void GTControl(GTStruct *GT)
+{
+    fp32 a;
+    fp32 b;
+    fp32 c,en;    
+    Pop(&amp;paramStack,&amp;b);
+    Pop(&amp;paramStack,&amp;a);
+    Pop(&amp;paramStack,&amp;en);
+    if(en != 0)
+    {
+        if(a &gt; b)
+        {
+            c = 1;
+        }
+        else
+        {
+            c = 0;
+        }
+    	GT-&gt;fLastVal = c;
+    }
+	else
+	{
+		c = GT-&gt;fLastVal;
+	}
+    Push(&amp;paramStack,c);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,小于比较,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">LT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">小于比较</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 小于比较
+void LTControl(LTStruct *LT)
+{
+    fp32 a;
+    fp32 b;
+    fp32 c,en;    
+    Pop(&amp;paramStack,&amp;b);
+    Pop(&amp;paramStack,&amp;a);
+    Pop(&amp;paramStack,&amp;en);
+    c = 0;
+    if(en != 0)
+    {
+        if(a &lt; b)
+        {
+            c = 1;
+        }
+        else
+        {
+            c = 0;
+        }
+    	LT-&gt;fLastVal = c;
+    }
+	else
+	{
+		c = LT-&gt;fLastVal;
+	}
+    Push(&amp;paramStack,c);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,延时,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">DELAY</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">延时</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="延时时间" varname="cycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+        <Property name="上次的输出" varname="lastOutValue" type="MyEnum" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// DELAY,时间没到一直保持上次的值,到点后才等于输入值
+void DELAYControl(DELAYStruct *DELAY)
+{
+    fp32 a,en;
+    fp32 out;
+	uint32 timerInterval;  // 时间跨度
+	 // 时间处理
+	 if(timerCount &lt; DELAY-&gt;lastTimeRec)
+	 {
+	 	  timerInterval = 0xffffffff - DELAY-&gt;lastTimeRec + timerCount;
+	 }
+	 else
+	 {
+	 	  timerInterval = timerCount - DELAY-&gt;lastTimeRec;
+	 }
+
+    Pop(&amp;paramStack,&amp;a);
+    Pop(&amp;paramStack,&amp;en);
+    out = 0;
+    if(en != 0)
+    {
+        if(timerInterval &gt;= DELAY-&gt;cycle)
+        {// 到点
+            out = a;
+            DELAY-&gt;lastTimeRec = timerCount;    
+        }
+        else
+        {
+            out = DELAY-&gt;lastOutValue;
+        }
+        DELAY-&gt;lastOutValue = out;
+    }
+
+    Push(&amp;paramStack,DELAY-&gt;lastOutValue);  
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,ON延时,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">ONDLY</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">ON延时</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="延时时间" varname="cycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+        <Property name="上次的输出" varname="lastOutValue" type="MyEnum" visible="no">0</Property>
+        <Property name="OFF-&gt;ON标志" varname="onSign" type="MyEnum" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// ON延时,OFF-&gt;ON延时保持,其它情况输出等于输入
+void ONDLYControl(ONDLYStruct *ONDLY)
+{
+    fp32 in,en;
+    fp32 out;
+	uint32 timerInterval;  // 时间跨度
+	 // 时间处理
+	 if(timerCount &lt; ONDLY-&gt;lastTimeRec)
+	 {
+	 	  timerInterval = 0xffffffff - ONDLY-&gt;lastTimeRec + timerCount;
+	 }
+	 else
+	 {
+	 	  timerInterval = timerCount - ONDLY-&gt;lastTimeRec;
+	 }
+
+    Pop(&amp;paramStack,&amp;in);
+    Pop(&amp;paramStack,&amp;en);
+
+    out = 0;
+    if(en != 0)
+    {
+        // 是否开启定时器
+        if(ONDLY-&gt;onSign == 0)
+        {// 没开时
+            if(ONDLY-&gt;lastInValue == 0 &amp;&amp; in == 1)
+            {// OFF-&gt;ON
+                ONDLY-&gt;onSign = 1;
+                ONDLY-&gt;lastTimeRec = timerCount;  // 开始计时       
+            }
+        }
+        else
+        {// 开启时
+            if(timerInterval &gt;= ONDLY-&gt;cycle)
+            {// 时间延时到
+                ONDLY-&gt;onSign = 0;  // 开启关闭
+            }
+        }
+        // 计算输出
+        if(ONDLY-&gt;onSign == 1)
+        {// 开启
+            if(timerInterval &lt;= ONDLY-&gt;cycle)
+            {// 延时时间内保持              
+                out = ONDLY-&gt;lastOutValue;              
+            }
+        }
+        else
+        {// 没开启时输出等于输入
+            out = in;
+        }
+        // 保存
+        ONDLY-&gt;lastOutValue = out;
+        ONDLY-&gt;lastInValue = in;
+    }
+	else
+	{
+		out = ONDLY-&gt;lastOutValue;
+	}
+    Push(&amp;paramStack,out);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,OFF延时,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">OFFDLY</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">OFF延时</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="延时时间" varname="cycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+        <Property name="上次的输出" varname="lastOutValue" type="MyEnum" visible="no">0</Property>
+        <Property name="ON-&gt;OFF标志" varname="offSign" type="MyEnum" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// OFF延时,ON-&gt;OFF延时保持,其它情况输出等于输入
+void OFFDLYControl(OFFDLYStruct *OFFDLY)
+{
+    fp32 in,en;
+    fp32 out;
+	uint32 timerInterval;  // 时间跨度
+	 // 时间处理
+	 if(timerCount &lt; OFFDLY-&gt;lastTimeRec)
+	 {
+	 	  timerInterval = 0xffffffff - OFFDLY-&gt;lastTimeRec + timerCount;
+	 }
+	 else
+	 {
+	 	  timerInterval = timerCount - OFFDLY-&gt;lastTimeRec;
+	 }
+
+    Pop(&amp;paramStack,&amp;in);
+    Pop(&amp;paramStack,&amp;en);
+
+    out = 0;
+    if(en != 0)
+    {
+        // 是否开启定时器
+        if(OFFDLY-&gt;offSign == 0)
+        {// 没开时
+            if(OFFDLY-&gt;lastInValue == 1 &amp;&amp; in == 0)
+            {// ON-&gt;OFF
+                OFFDLY-&gt;offSign = 1;
+                OFFDLY-&gt;lastTimeRec = timerCount;  // 开始计时      
+            }
+        }
+        else
+        {// 开启时
+            if(timerInterval &gt;= OFFDLY-&gt;cycle)
+            {// 时间延时到
+                OFFDLY-&gt;offSign = 0;  // 开启关闭
+            }
+        }
+        // 计算输出
+        if(OFFDLY-&gt;offSign == 1)
+        {// 开启
+            if(timerInterval &lt;= OFFDLY-&gt;cycle)
+            {// 延时时间内保持              
+                out = OFFDLY-&gt;lastOutValue;             
+            }
+        }
+        else
+        {// 没开启时输出等于输入
+            out = in;
+        }
+        // 保存
+        OFFDLY-&gt;lastOutValue = out;
+        OFFDLY-&gt;lastInValue = in;
+    }
+	else
+	{
+		out = OFFDLY-&gt;lastOutValue;	
+	}
+    Push(&amp;paramStack,out);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,看门狗,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">WTDOG</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">看门狗</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="复位时间" varname="cycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+        <Property name="上次的输入" varname="lastInValue" type="MyEnum" visible="no">0</Property>
+        <Property name="是否触发" varname="isTrigger" type="MyEnum" visible="no">0</Property>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// WTDOG 周期之内触发了输出0,到点时还没触发输出1
+void WTDOGControl(WTDOGStruct *WTDOG)
+{
+    fp32 in,en;
+    fp32 out;
+	uint32 timerInterval;  // 时间跨度
+	 // 时间处理
+	 if(timerCount &lt; WTDOG-&gt;lastTimeRec)
+	 {
+	 	  timerInterval = 0xffffffff - WTDOG-&gt;lastTimeRec + timerCount;
+	 }
+	 else
+	 {
+	 	  timerInterval = timerCount - WTDOG-&gt;lastTimeRec;
+	 }
+
+    Pop(&amp;paramStack,&amp;in);
+    Pop(&amp;paramStack,&amp;en);
+
+    out = 0;
+    if(en != 0)
+    {           
+        if(timerInterval &lt;= WTDOG-&gt;cycle)
+        {// 时间之内
+            if(WTDOG-&gt;isTrigger == 0)
+            {// 没触发过判断触发
+                if(WTDOG-&gt;lastInValue == 0 &amp;&amp; in == 1)
+                {// 触发也就是喂狗了,就也不用复位了
+                    out = 0;
+                    WTDOG-&gt;isTrigger = 1;   
+                }
+            }           
+        }
+        else
+        {// 时间到点,重新计时           
+            if(WTDOG-&gt;isTrigger == 0)
+            {// 到点还没触发
+                out = 1;
+            }
+            // 重新计时
+            WTDOG-&gt;lastTimeRec = timerCount;
+        }
+		WTDOG-&gt;fLastVal = out;
+    }
+	else
+	{
+		out = WTDOG-&gt;fLastVal;	
+	}
+    Push(&amp;paramStack,out);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,RS触发器,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">RS</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,R,S,SW</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">RS触发器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的输出" varname="lastOutValue" type="MyEnum" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// RS触发器
+void RSControl(RSStruct *RS)
+{
+    fp32 r;
+    fp32 s,en;
+    fp32 sw;
+    fp32 out;
+    Pop(&amp;paramStack,&amp;sw);
+    Pop(&amp;paramStack,&amp;s);
+    Pop(&amp;paramStack,&amp;r);   
+    Pop(&amp;paramStack,&amp;en);
+    out = 0;
+    if(en != 0)
+    {   
+        if(r == 0 &amp;&amp; s == 1)
+        {
+             out = 0;
+        }
+        else if(r == 1 &amp;&amp; s == 1)
+        {
+             out = sw;
+        }
+        else if(r == 1 &amp;&amp; s == 0)
+        {
+             out = 1;
+        }
+        else
+        {
+             out = RS-&gt;lastValue;
+        }
+		RS-&gt;lastValue = out;
+    }
+	else
+	{
+		out = RS-&gt;lastValue;	
+	}    
+    Push(&amp;paramStack,out);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,变化检测,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">CHDCT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1,IN2</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">变化检测</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="检测周期" varname="cycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+        <Property name="上次的输入1" varname="lastIn1" type="MyEnum" visible="no">0</Property>
+        <Property name="上次的输入2" varname="lastIn2" type="MyEnum" visible="no">0</Property>
+        <Property name="上次的输入3" varname="lastIn3" type="MyEnum" visible="no">0</Property>
+        <Property name="变化标记" varname="mark" type="MyEnum" visible="no">0</Property>
+        <Property name="上次的值" varname="fLastVal" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 变化检测
+void CHDCTControl(CHDCTStruct *CHDCT)
+{
+     fp32 fIn1,fIn2,fIn3,fEn,fOut;
+	 uint32 timerInterval;  // 时间跨度
+	 // 时间处理
+	 if(timerCount &lt; CHDCT-&gt;lastTimeRec)
+	 {
+	 	  timerInterval = 0xffffffff - CHDCT-&gt;lastTimeRec + timerCount;
+	 }
+	 else
+	 {
+	 	  timerInterval = timerCount - CHDCT-&gt;lastTimeRec;
+	 }
+
+     Pop(&amp;paramStack,&amp;fIn3);
+     Pop(&amp;paramStack,&amp;fIn2);
+     Pop(&amp;paramStack,&amp;fIn1);
+     Pop(&amp;paramStack,&amp;fEn);
+
+     fOut = 0;
+     if(fEn != 0)
+     {
+        if(CHDCT-&gt;mark == 0)
+        {// 
+            if(fIn1 != CHDCT-&gt;lastIn1 || fIn2 != CHDCT-&gt;lastIn2 ||
+             fIn3 != CHDCT-&gt;lastIn3)
+            {   
+                CHDCT-&gt;mark = 1;
+                // 开始计时
+                CHDCT-&gt;lastTimeRec = timerCount;
+            }
+        }
+        if(CHDCT-&gt;mark == 1)
+        {
+             if(timerInterval &gt;= CHDCT-&gt;cycle)
+             {// 到点
+                 CHDCT-&gt;mark = 0; // 重新检测
+             }
+             else
+             {
+                 fOut = 1;  // 输出持续一周
+             }
+        } 
+		CHDCT-&gt;fLastVal = fOut;       
+     }
+	 else
+	 {
+	 	fOut = CHDCT-&gt;fLastVal; 
+	 }
+     Push(&amp;paramStack,fOut);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,选通器,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">SELECT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">CH0,CH1,CH2,CH3,CH4,CH5,CH6,CH7</Property>
+        <Property name="InputName">EN,IN0</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">选通器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="通道1低限选通" varname="cIsMin1" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道1高限选通" varname="cIsMax1" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道1低限" varname="fMin1" type="System.Single" visible="yes">0</Property>
+        <Property name="通道1高限" varname="fMax1" type="System.Single" visible="yes">1000</Property>
+        <Property name="通道2低限选通" varname="cIsMin2" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道2高限选通" varname="cIsMax2" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道2低限" varname="fMin2" type="System.Single" visible="yes">0</Property>
+        <Property name="通道2高限" varname="fMax2" type="System.Single" visible="yes">1000</Property>
+        <Property name="通道3低限选通" varname="cIsMin3" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道3高限选通" varname="cIsMax3" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道3低限" varname="fMin3" type="System.Single" visible="yes">0</Property>
+        <Property name="通道3高限" varname="fMax3" type="System.Single" visible="yes">1000</Property>
+        <Property name="通道4低限选通" varname="cIsMin4" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道4高限选通" varname="cIsMax4" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道4低限" varname="fMin4" type="System.Single" visible="yes">0</Property>
+        <Property name="通道4高限" varname="fMax4" type="System.Single" visible="yes">1000</Property>
+        <Property name="通道5低限选通" varname="cIsMin5" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道5高限选通" varname="cIsMax5" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道5低限" varname="fMin5" type="System.Single" visible="yes">0</Property>
+        <Property name="通道5高限" varname="fMax5" type="System.Single" visible="yes">1000</Property>
+        <Property name="通道6低限选通" varname="cIsMin6" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道6高限选通" varname="cIsMax6" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道6低限" varname="fMin6" type="System.Single" visible="yes">0</Property>
+        <Property name="通道6高限" varname="fMax6" type="System.Single" visible="yes">1000</Property>
+        <Property name="通道7低限选通" varname="cIsMin7" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道7高限选通" varname="cIsMax7" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道7低限" varname="fMin7" type="System.Single" visible="yes">0</Property>
+        <Property name="通道7高限" varname="fMax7" type="System.Single" visible="yes">1000</Property>
+        <Property name="通道8低限选通" varname="cIsMin8" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道8高限选通" varname="cIsMax8" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道8低限" varname="fMin8" type="System.Single" visible="yes">0</Property>
+        <Property name="通道8高限" varname="fMax8" type="System.Single" visible="yes">1000</Property>
+        <Property name="上次的值" varname="fLastVal1" type="System.Single" visible="no">0</Property>
+        <Property name="上次的值" varname="fLastVal2" type="System.Single" visible="no">0</Property>
+        <Property name="上次的值" varname="fLastVal3" type="System.Single" visible="no">0</Property>
+        <Property name="上次的值" varname="fLastVal4" type="System.Single" visible="no">0</Property>
+        <Property name="上次的值" varname="fLastVal5" type="System.Single" visible="no">0</Property>
+        <Property name="上次的值" varname="fLastVal6" type="System.Single" visible="no">0</Property>
+        <Property name="上次的值" varname="fLastVal7" type="System.Single" visible="no">0</Property>
+        <Property name="上次的值" varname="fLastVal8" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 选择是否在范围内,是返回1,不是返回0
+fp32 SELECTisIN(uint8 cMin,uint8 cMax,fp32 fMin,fp32 fMax,fp32 fIn)
+{
+      // 根据是否起作用,上下限可分为四种情况
+     if(cMin == 1 &amp;&amp; cMax == 1)
+     {// 都起作用
+         if(fMin &lt; fIn &amp;&amp; fMax &gt; fIn)
+         {
+            return 1;
+         }
+         else
+         {
+            return 0;
+         }       
+     }
+     else if(cMin == 1 &amp;&amp; cMax == 0)
+     {// 只有下限起作用
+         if(fMin &lt; fIn)
+         {
+            return 1;
+         }
+         else
+         {
+            return 0;
+         }
+     }
+     else if(cMin == 0 &amp;&amp; cMax == 1)
+     {// 只有上限起作用
+         if(fMax &gt; fIn)
+         {
+            return 1;
+         }
+         else
+         {
+            return 0;
+         }
+     }
+     else 
+     {// 都不起作用
+          return 1;
+     }
+      
+}
+// 选通器
+void SELECTControl(SELECTStruct *SELECT)
+{
+     fp32 fIn,fEn;
+
+     Pop(&amp;paramStack,&amp;fIn);
+     Pop(&amp;paramStack,&amp;fEn);
+
+     if(fEn != 0)
+     {
+         SELECT-&gt;fLastVal1 = SELECTisIN(SELECT-&gt;cIsMin1,SELECT-&gt;cIsMax1,SELECT-&gt;fMin1,SELECT-&gt;fMax1,fIn);
+		 
+		 SELECT-&gt;fLastVal2 = SELECTisIN(SELECT-&gt;cIsMin2,SELECT-&gt;cIsMax2,SELECT-&gt;fMin2,SELECT-&gt;fMax2,fIn);
+         
+         SELECT-&gt;fLastVal3 = SELECTisIN(SELECT-&gt;cIsMin3,SELECT-&gt;cIsMax3,SELECT-&gt;fMin1,SELECT-&gt;fMax3,fIn);
+         
+         SELECT-&gt;fLastVal4 = SELECTisIN(SELECT-&gt;cIsMin4,SELECT-&gt;cIsMax4,SELECT-&gt;fMin4,SELECT-&gt;fMax4,fIn);
+         
+         SELECT-&gt;fLastVal5 = SELECTisIN(SELECT-&gt;cIsMin5,SELECT-&gt;cIsMax5,SELECT-&gt;fMin5,SELECT-&gt;fMax5,fIn);
+         
+         SELECT-&gt;fLastVal6 = SELECTisIN(SELECT-&gt;cIsMin6,SELECT-&gt;cIsMax6,SELECT-&gt;fMin6,SELECT-&gt;fMax6,fIn);
+        
+         SELECT-&gt;fLastVal7 = SELECTisIN(SELECT-&gt;cIsMin7,SELECT-&gt;cIsMax7,SELECT-&gt;fMin7,SELECT-&gt;fMax7,fIn);
+         
+         SELECT-&gt;fLastVal8 = SELECTisIN(SELECT-&gt;cIsMin8,SELECT-&gt;cIsMax8,SELECT-&gt;fMin8,SELECT-&gt;fMax8,fIn);
+         
+     }
+	 Push(&amp;paramStack,SELECT-&gt;fLastVal1);
+	 Push(&amp;paramStack,SELECT-&gt;fLastVal2); 
+	 Push(&amp;paramStack,SELECT-&gt;fLastVal1); 
+	 Push(&amp;paramStack,SELECT-&gt;fLastVal4); 
+	 Push(&amp;paramStack,SELECT-&gt;fLastVal5); 
+	 Push(&amp;paramStack,SELECT-&gt;fLastVal6); 
+	 Push(&amp;paramStack,SELECT-&gt;fLastVal7); 
+	 Push(&amp;paramStack,SELECT-&gt;fLastVal8);	      
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+  </Category>
+  <Category DisplayName="程序控制">
+    <FDToolBoxItem Type="ControlTactic.JMP,ControlTactic,跳转,程序控制">
+      <BasicProperty>
+        <Property name="ModuleColor">255, 238, 232, 170</Property>
+        <Property name="ModuleSort">跳转</Property>
+        <Property name="ModuleName">JMP</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.JMP,ControlTactic,调用,程序控制">
+      <BasicProperty>
+        <Property name="ModuleColor">255, 238, 232, 170</Property>
+        <Property name="ModuleSort">调用</Property>
+        <Property name="ModuleName">CALL</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.OutputValue,ControlTactic,返回,程序控制">
+      <BasicProperty>
+        <Property name="ModuleName">RET</Property>
+        <Property name="ModuleColor">255,238,232,170</Property>
+        <Property name="ModuleSort">返回</Property>
+      </BasicProperty>
+      <FunctionProperty />
+      <CodeProperty>
+        <CodeLine>// 返回
+float RETControl()
+{
+	 float fIn;
+
+	 Pop(&amp;paramStack,&amp;fIn);
+	 return fIn;
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Label,ControlTactic,注释,程序控制">
+      <BasicProperty>
+        <Property name="ModuleSort">注释</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+  </Category>
+  <Category DisplayName="算法支撑">
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,模拟输入,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">AI</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">RAW</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">模拟输入</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="输出值" varname="fPV" type="System.Single" visible="yes">0</Property>
+        <Property name="设定值" varname="fSV" type="System.Single" visible="yes">0</Property>
+        <Property name="上次值" varname="fLastVal" type="System.Single" visible="yes">0</Property>
+        <Property name="原始值" varname="fRawVal" type="System.Single" visible="yes">0</Property>
+        <Property name="是否进行量程转换" varname="isChange" type="System.Boolean" visible="yes">false</Property>
+        <Property name="工程单位低限" varname="fPVMin" type="System.Single" visible="yes">0</Property>
+        <Property name="工程单位高限" varname="fPVMax" type="System.Single" visible="yes">100</Property>
+        <Property name="原始数据低限" varname="fRawMin" type="System.Single" visible="yes">0</Property>
+        <Property name="原始数据高限" varname="fRawMax" type="System.Single" visible="yes">100</Property>
+        <Property name="报警低限" varname="fWarnL" type="System.Single" visible="yes">10</Property>
+        <Property name="发生低限报警" varname="isWarnL" type="System.Boolean" visible="yes">false</Property>
+        <Property name="报警低低限" varname="fWarnLL" type="System.Single" visible="yes">0</Property>
+        <Property name="发生低低限报警" varname="isWarnLL" type="System.Boolean" visible="yes">false</Property>
+        <Property name="报警高限" varname="fWarnH" type="System.Single" visible="yes">90</Property>
+        <Property name="发生高限报警" varname="isWarnH" type="System.Boolean" visible="yes">false</Property>
+        <Property name="报警高高限" varname="fWarnHH" type="System.Single" visible="yes">100</Property>
+        <Property name="发生高高限报警" varname="isWarnHH" type="System.Boolean" visible="yes">false</Property>
+        <Property name="变化率" varname="fRation" type="System.Single" visible="yes">100</Property>
+        <Property name="发生变化率报警" varname="isRationWarn" type="System.Boolean" visible="yes">false</Property>
+        <Property name="偏差" varname="fBias" type="System.Single" visible="yes">100</Property>
+        <Property name="发生偏差报警" varname="isBiasWarn" type="System.Boolean" visible="yes">false</Property>
+        <Property name="上次的时间记录" varname="lastTimeRec" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,模拟输出,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">AO</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">OP</Property>
+        <Property name="InputName">PV</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">模拟输出</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="输出值" varname="fPV" type="System.Single" visible="yes">0</Property>
+        <Property name="设定值" varname="fSV" type="System.Single" visible="yes">0</Property>
+        <Property name="上次值" varname="fLastVal" type="System.Single" visible="yes">0</Property>
+        <Property name="原始值" varname="fRawVal" type="System.Single" visible="yes">0</Property>
+        <Property name="是否进行量程转换" varname="isChange" type="System.Boolean" visible="yes">false</Property>
+        <Property name="工程单位低限" varname="fPVMin" type="System.Single" visible="yes">0</Property>
+        <Property name="工程单位高限" varname="fPVMax" type="System.Single" visible="yes">100</Property>
+        <Property name="原始数据低限" varname="fRawMin" type="System.Single" visible="yes">0</Property>
+        <Property name="原始数据高限" varname="fRawMax" type="System.Single" visible="yes">100</Property>
+        <Property name="报警低限" varname="fWarnL" type="System.Single" visible="yes">10</Property>
+        <Property name="发生低限报警" varname="isWarnL" type="System.Boolean" visible="yes">false</Property>
+        <Property name="报警低低限" varname="fWarnLL" type="System.Single" visible="yes">0</Property>
+        <Property name="发生低低限报警" varname="isWarnLL" type="System.Boolean" visible="yes">false</Property>
+        <Property name="报警高限" varname="fWarnH" type="System.Single" visible="yes">90</Property>
+        <Property name="发生高限报警" varname="isWarnH" type="System.Boolean" visible="yes">false</Property>
+        <Property name="报警高高限" varname="fWarnHH" type="System.Single" visible="yes">100</Property>
+        <Property name="发生高高限报警" varname="isWarnHH" type="System.Boolean" visible="yes">false</Property>
+        <Property name="变化率" varname="fRation" type="System.Single" visible="yes">100</Property>
+        <Property name="发生变化率报警" varname="isRationWarn" type="System.Boolean" visible="yes">false</Property>
+        <Property name="偏差" varname="fBias" type="System.Single" visible="yes">100</Property>
+        <Property name="发生偏差报警" varname="isBiasWarn" type="System.Boolean" visible="yes">false</Property>
+        <Property name="上次的时间记录" varname="lastTimeRec" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 模拟量输出
+void AOControl(AOStruct *AO)
+{
+    fp32 fRation,fBias; // 变化率,偏差
+    Pop(&amp;paramStack,&amp;(AO-&gt;fRawVal));
+    
+    if(AO-&gt;isChange != 0)
+    {// 转换
+        AO-&gt;fPV = ((AO-&gt;fRawVal - AO-&gt;fRawMin) / (AO-&gt;fRawMax - AO-&gt;fRawMin)) * 
+        (AO-&gt;fPVMax - AO-&gt;fPVMin) + AO-&gt;fPVMin;
+        // 低低限
+        if(AO-&gt;fPV &lt; AO-&gt;fWarnLL)       
+            AO-&gt;isWarnLL = 1;       
+        else
+            AO-&gt;isWarnLL = 0;
+        // 低限
+        if(AO-&gt;fPV &lt; AO-&gt;fWarnL)        
+            AO-&gt;isWarnL = 1;        
+        else
+            AO-&gt;isWarnL = 0;
+        // 高高限
+        if(AO-&gt;fPV &gt; AO-&gt;fWarnHH)       
+            AO-&gt;isWarnHH = 1;       
+        else
+            AO-&gt;isWarnHH = 0;
+        // 高限
+        if(AO-&gt;fPV &gt; AO-&gt;fWarnH)        
+            AO-&gt;isWarnH = 1;        
+        else
+            AO-&gt;isWarnH = 0;
+        // 变化率
+        fRation = (fabs(AO-&gt;fPV - AO-&gt;fLastVal)) / (timerCount - AO-&gt;lastTimeRec);
+        if(fRation &gt; AO-&gt;fRation)
+             AO-&gt;isRationWarn = 1;
+        else
+             AO-&gt;isRationWarn = 0;
+        // 偏差
+        fBias = fabs(AO-&gt;fPV - AO-&gt;fSV);
+        if(fBias &gt; AO-&gt;fBias)
+             AO-&gt;isBiasWarn = 1;
+        else
+             AO-&gt;isBiasWarn = 0;
+    }
+    else
+    {// 不转换      
+        AO-&gt;fPV = AO-&gt;fRawVal;      
+    }
+    AO-&gt;lastTimeRec = timerCount;
+    AO-&gt;fLastVal = AO-&gt;fPV;
+
+    Push(&amp;paramStack,AO-&gt;fPV);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,数字输入,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">DI</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">RAW</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">数字输入</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="输出值" varname="cPV" type="MyEnum" visible="yes">0/1</Property>
+        <Property name="正/反动作" varname="isInvert" type="MyEnum" visible="yes">正动作,反动作</Property>
+        <Property name="正常值" varname="cNormalVal" type="MyEnum" visible="yes">0/1</Property>
+        <Property name="报警值" varname="isWarn" type="MyEnum" visible="yes">0/1</Property>
+        <Property name="原始值" varname="cRawVal" type="MyEnum" visible="yes">0/1</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 数字输入
+void DIControl(DIStruct* DI)
+{
+    
+    Pop(&amp;paramStack,(fp32 *)(&amp;DI-&gt;cRawVal));
+
+    if(DI-&gt;isInvert != 0)
+    {// 反动作
+        if(DI-&gt;cRawVal == 0)
+            DI-&gt;cPV = 1;
+        else
+            DI-&gt;cPV = 0;
+    }
+    else
+        DI-&gt;cPV = DI-&gt;cRawVal;
+    // 报警
+    if(DI-&gt;cPV != DI-&gt;cNormalVal)
+        DI-&gt;isWarn = 1;
+    Push(&amp;paramStack,DI-&gt;cPV);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,数字输出,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">DO</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">OP</Property>
+        <Property name="InputName">PV</Property>
+        <Property name="ModuleColor">255, 102, 205, 170</Property>
+        <Property name="ModuleSort">数字输出</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="输出" varname="cPV" type="MyEnum" visible="yes">0/1</Property>
+        <Property name="正/反动作" varname="isInvert" type="MyEnum" visible="yes">正动作,反动作</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 数字输出
+void DOControl(DOStruct* DO)
+{
+    fp32 fPV;
+        
+    Pop(&amp;paramStack,&amp;fPV);
+
+    if(DO-&gt;isInvert != 0)
+    {// 反动作
+        if((uint8)fPV == 0)
+            DO-&gt;cPV = 1;
+        else
+            DO-&gt;cPV = 0;
+    }
+    else
+        DO-&gt;cPV = (uint8)fPV;
+
+    Push(&amp;paramStack,DO-&gt;cPV);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,脉冲输入,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">PI</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">RAW</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">脉冲输入</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="工程单位转换因子" varname="fC1" type="System.Single" visible="yes">0</Property>
+        <Property name="仪表系数" varname="fC2" type="System.Single" visible="yes">0</Property>
+        <Property name="基本时间单位" varname="ucTBase" type="MyEnum" visible="yes">秒,分钟,小时</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 脉冲输入点
+void PIControl(PIStruct * PI)
+{
+    fp32 fIn;// 输入值
+	fp32 fPV;// 输出值
+	uint16 timeBase;
+
+    Pop(&amp;paramStack,&amp;fIn);
+	switch(PI-&gt;ucTBase)
+	{
+		case 0:
+			timeBase = 1;
+			break;
+		case 1:
+			timeBase = 60;
+			break;
+		case 2:
+			timeBase = 3600;
+			break;
+		default:
+			break;
+	}
+	fPV = PI-&gt;fC1 * timeBase * fIn / PI-&gt;fC2;
+	Push(&amp;paramStack,fPV);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,纯滞后补偿器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">SMITH</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">纯滞后补偿器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="时间常数T1" varname="ulT1" type="System.Int32" visible="yes">1000</Property>
+        <Property name="时间常数T2" varname="ulT2" type="System.Int32" visible="yes">1000</Property>
+        <Property name="滞后时间" varname="ulLagT" type="System.Int32" visible="yes">10000</Property>
+        <Property name="补偿比例" varname="fK" type="System.Single" visible="yes">1</Property>
+        <Property name="采集周期" varname="ulTs" type="System.Int32" visible="yes">1000</Property>
+        <Property name="输入" varname="fPV" type="System.Single" visible="no">0</Property>
+        <Property name="上上次输出" varname="fMV_1" type="System.Single" visible="no">0</Property>
+        <Property name="上次输出" varname="fMV" type="System.Single" visible="no">0</Property>
+        <Property name="上次记录时间" varname="ulLastTime" type="System.Int32" visible="no">0</Property>
+        <Property name="输入队列" varname="queueIn" type="queue" visible="no">NULL</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// SMITH补偿
+void SMITHControl(SMITHStruct *SMITH)
+{
+    uint32 qLength;  // 输出队列元素个数
+    uint32 historyInNum;  // 输出必须保存的历史个数
+    fp32 fPV_N_1; // 前第N-1个输入
+
+    fp32 fMV;   // 输出
+    fp32 temp,a,b,c;  // 计算二阶时的临时变量
+    fp32 ulT1,ulT2,ulTs;
+    fp32 fK;
+    fp32 fPV_1;	// 上次输入
+	fp32 fPV;  // 输入
+    fp32 fMV_1;
+    fp32 fMV_2;
+	uint32 timerInterval;  // 时间跨度
+	 // 时间处理
+	 if(timerCount &lt; SMITH-&gt;ulLastTime)
+	 {
+	 	  timerInterval = 0xffffffff - SMITH-&gt;ulLastTime + timerCount;
+	 }
+	 else
+	 {
+	 	  timerInterval = timerCount - SMITH-&gt;ulLastTime;
+	 }
+	
+    if(timerInterval &gt;= SMITH-&gt;ulTs)
+    {// 时间到点
+		Pop(&amp;paramStack,&amp;fPV);
+        // 读取参数
+        ulT1 = (SMITH-&gt;ulT1 / 1000);
+        ulT2 = (SMITH-&gt;ulT2 / 1000);
+        ulTs = (SMITH-&gt;ulTs / 1000);
+        fK = SMITH-&gt;fK;
+        fMV_1 = SMITH-&gt;fMV;
+        fMV_2 = SMITH-&gt;fMV_1;
+        fPV_1 = SMITH-&gt;fPV;
+         
+        
+        // 输出队列处理
+        if(SMITH-&gt;queueIn == NULL)
+        {// 队列不存在时,初始化队列
+            InitQueue(&amp;SMITH-&gt;queueIn);
+        }
+        qLength = QueueLength(SMITH-&gt;queueIn);
+
+        historyInNum = (uint32)(SMITH-&gt;ulLagT / SMITH-&gt;ulTs);
+        while(historyInNum &gt; qLength)
+        {// 当队列个数不满时
+            EnQueue(&amp;SMITH-&gt;queueIn,0);// 插入0
+            qLength++;
+        }
+        while(historyInNum &lt; qLength)
+        {// 当队列个数超出时
+            DeQueue(&amp;SMITH-&gt;queueIn,&amp;fPV_N_1);// 删除最原始的数据
+            qLength--;
+        }
+    
+        if(ulT1 == 0)
+        {// 至少为一阶对象,当为0时,用默认值1000
+            ulT1 = 1;
+        }
+        if(ulTs == 0)
+        {// 采样周期,当为0时,用默认值1000
+            ulTs = 1;
+        }
+
+        DeQueue(&amp;SMITH-&gt;queueIn,&amp;fPV_N_1); // 取出第N个元素进行计算
+        // 一阶算法不对,全采用二阶的好了
+        /*if(ulT2 == 0)
+        {// 当被控对象为一阶时
+            
+            fMV = (ulT1 / (ulT1 + ulTs)) * fMV_1 - (fK * (ulTs / (ulT1 + ulTs))) * (fPV_1 - fPV_N_1);               
+                
+            // 保存
+            SMITH-&gt;fMV = fMV;   // 输出
+            SMITH-&gt;fPV = fPV; // 输入
+            EnQueue(&amp;SMITH-&gt;queueIn,fPV); // 输入队列
+        }
+        else
+        {// 被控对象为二阶  */
+            temp = (ulT1 * ulT2) + ulTs * (ulT1 + ulT2) + ulTs * ulTs;
+            a = (2 * ulT1 * ulT2 + ulTs * (ulT1 + ulT2)) / temp;
+            b = (ulT1 *ulT2) / temp;
+            c = (fK * ulTs * ulTs) / temp;          
+            
+            fMV = a * fMV_1 - b * fMV_2 + c * (fPV_1 - fPV_N_1);
+            // 保存
+            SMITH-&gt;fMV = fMV;   // 输出
+            SMITH-&gt;fMV_1 = fMV_1;
+            SMITH-&gt;fPV = fPV; // 输入
+            EnQueue(&amp;SMITH-&gt;queueIn,fPV); // 输入队列
+        //}
+        SMITH-&gt;ulLastTime = timerCount;
+		Push(&amp;paramStack,fMV);
+    }// 时间到点
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,滤波,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">FILT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">滤波</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="工程单位转换因子" varname="fC1" type="System.Single" visible="yes">0</Property>
+        <Property name="仪表系数" varname="fC2" type="System.Single" visible="yes">0</Property>
+        <Property name="滤波时间常数" varname="ulTF" type="System.Int32" visible="yes">1000</Property>
+        <Property name="采样周期" varname="ucTs" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+        <Property name="上次的输出" varname="fLastPV" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 滤波
+void FILTControl(FILTStruct *FILT)
+{
+     fp32 fIn;
+     fp32 fOut;
+     fp32 fDelta;
+
+     if(FILT-&gt;ulTs == 0)
+     {
+        FILT-&gt;ulTs = 1000;
+     }
+     if(timerCount - FILT-&gt;lastTimeRec &gt;= FILT-&gt;ulTs)
+     {
+        Pop(&amp;paramStack,&amp;fIn);
+        fDelta = exp(-FILT-&gt;ulTs / FILT-&gt;ulTF);
+        fOut = fDelta * FILT-&gt;fLastPV + (1 - fDelta) * fIn;
+        Push(&amp;paramStack,fOut);
+     }
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,一阶传递函数,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">TRANS</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">一阶传递函数</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="参数A" varname="A" type="System.Single" visible="yes">0</Property>
+        <Property name="参数B" varname="B" type="System.Single" visible="yes">10</Property>
+        <Property name="参数C" varname="C" type="System.Single" visible="yes">1</Property>
+        <Property name="参数D" varname="D" type="System.Single" visible="yes">0</Property>
+        <Property name="采样周期" varname="ucTs" type="System.Int32" visible="yes">1000</Property>
+        <Property name="中间临时变量" varname="Xk" type="System.Single" visible="no">0</Property>
+        <Property name="上次输入" varname="Uk" type="System.Single" visible="no">0</Property>
+        <Property name="上次控制的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 一阶传递函数
+void TRANSControl(TRANSSTruct *TRANS)
+{   
+    fp32 A,B,C,D,E,F,G,H,L,P;
+    fp32 Uk,Uk_1,Xk,Xk_1,Yk;
+	fp32 T;
+	uint32 timerInterval;  // 时间跨度
+	 // 时间处理
+	 if(timerCount &lt; TRANS-&gt;lastTimeRec)
+	 {
+	 	  timerInterval = 0xffffffff - TRANS-&gt;lastTimeRec + timerCount;
+	 }
+	 else
+	 {
+	 	  timerInterval = timerCount - TRANS-&gt;lastTimeRec;
+	 }
+
+    T = TRANS-&gt;Ts / 1000;
+    if(T == 0)
+    {
+        T = 1;
+    }   
+    if(timerInterval &gt;= TRANS-&gt;Ts)
+    {
+        Pop(&amp;paramStack,&amp;Uk);
+        A = TRANS-&gt;A;B = TRANS-&gt;B;C = TRANS-&gt;C;D = TRANS-&gt;D;
+        Xk = TRANS-&gt;Xk;Uk_1 = TRANS-&gt;Uk;
+            
+        if(A == 0 &amp;&amp; B == 0)
+        {
+            B = 1;
+        }
+
+        if(A != 0 &amp;&amp; B == 0)
+        {
+            E = F = G = H = 0;
+            L = (C+D/T)/A;
+            P = -D/A*T;
+        }
+        else if(A == 0 &amp;&amp; B != 0)
+        {
+            E = 1;
+            F = 0.5*C*T/B;
+            G = F;
+            H = 1;
+            L = D/B;
+            P = 0;
+        }
+        else if(A != 0 &amp;&amp; B!= 0)
+        {
+            E = exp(-A*T/B);
+            F = (D/B-C/A)*((1-E)*B/(A*T)-1);
+            G = (D/B-C/A)*(1+(E-1)*(1+B/(A*T)));
+            H =  1;
+            L = D/B;
+            P = 0;
+        }
+
+        Xk_1 = E*Xk + F*Uk + G*Uk_1;
+        Yk   = H*Xk_1 + L*Uk + P*Uk_1;
+
+        // 保存
+        TRANS-&gt;Uk = Uk;
+        TRANS-&gt;Xk = Xk_1;
+        TRANS-&gt;lastTimeRec = timerCount;
+
+        Push(&amp;paramStack,Yk);
+    }
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,比较器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">COMPARE</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">RESULT,GT,EQ,LT</Property>
+        <Property name="InputName">IN0,IN1</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">比较器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="死区" varname="" type="System.Single" visible="yes">0</Property>
+        <Property name="比较结果" varname="" type="System.Single" visible="yes">0</Property>
+        <Property name="大于" varname="" type="System.Boolean" visible="yes">false</Property>
+        <Property name="小于" varname="" type="System.Boolean" visible="yes">false</Property>
+        <Property name="等于" varname="" type="System.Boolean" visible="yes">false</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 比较器
+void COMPAREControl()
+{
+    fp32 fIn1,fIn2;
+    fp32 fResult,fGT,fEQ,fLT;
+
+    Pop(&amp;paramStack,&amp;fIn1);
+    Pop(&amp;paramStack,&amp;fIn2);
+
+    fResult = fIn1 - fIn2;
+    fGT = 0;
+    fEQ = 0;
+    fLT = 0;
+    if(fResult == 0)
+    {
+        fEQ = 1;
+    }
+    else if(fResult &gt; 0)
+    {
+        fGT = 1;
+    }
+    else if(fResult &lt; 0)
+    {
+        fLT = 1;
+    }
+
+    Push(&amp;paramStack,fResult);
+    Push(&amp;paramStack,fGT);
+    Push(&amp;paramStack,fEQ);
+    Push(&amp;paramStack,fLT);
+} </CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,计时器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">TIM</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">FIN,TIM</Property>
+        <Property name="InputName">EN,RST</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">计时器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="计时值" varname="ulTimer" type="System.Int32" visible="yes">0</Property>
+        <Property name="预设值" varname="ulSetTimer" type="System.Int32" visible="yes">10000</Property>
+        <Property name="计时完成" varname="ucIsFinish" type="System.Boolean" visible="yes">false</Property>
+        <Property name="自动复位" varname="ucAutoReset" type="System.Boolean" visible="yes">false</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 计时器点
+void TIMControl(TIMStruct *TIM)
+{
+    fp32 fIn,fReset;
+    uint32 timerInterval;  // 时间跨度	 
+	 // 时间处理
+	 if(timerCount &lt; TIM-&gt;ulLastTimeRec)
+	 {
+	 	  timerInterval = 0xffffffff - TIM-&gt;ulLastTimeRec + timerCount;
+	 }
+	 else
+	 {
+	 	  timerInterval = timerCount - TIM-&gt;ulLastTimeRec;
+	 }
+
+	Pop(&amp;paramStack,&amp;fReset);
+    Pop(&amp;paramStack,&amp;fIn);    
+
+    if(fIn != 0)
+    {// 输入为0, 不启动定时器				
+		if(fReset == 1 || ((TIM-&gt;ucAutoReset == 1) &amp;&amp; (TIM-&gt;ucIsFinish == 1)))
+		{// 输入复位
+		    //TIM-&gt;ulTimer = 0;			
+			TIM-&gt;ucIsFinish = 0;
+		}		
+		TIM-&gt;ulTimer = timerInterval;		
+		if(TIM-&gt;ulTimer &gt;= TIM-&gt;ulSetTimer)
+		{// 时间到点
+		    TIM-&gt;ucIsFinish = 1;
+			TIM-&gt;ulLastTimeRec = timerCount;
+		}
+	}
+    Push(&amp;paramStack,TIM-&gt;ucIsFinish);
+    Push(&amp;paramStack,TIM-&gt;ulTimer);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,计数器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">CNT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">FIN,CNT</Property>
+        <Property name="InputName">IN,RST</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">计数器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="计数值" varname="ulCount" type="System.Int32" visible="yes">0</Property>
+        <Property name="预设值" varname="ulSetValue" type="System.Int32" visible="yes">1000</Property>
+        <Property name="计数类型" varname="ucType" type="MyEnum" visible="yes">上升沿触发,下降沿触发,高电平触发,低电平触发</Property>
+        <Property name="计数完成" varname="ucIsComplete" type="System.Boolean" visible="yes">false</Property>
+        <Property name="自动复位" varname="ucIsAutoReset" type="System.Boolean" visible="yes">false</Property>
+        <Property name="上次的输入值" varname="fLastInValue" type="MyEnum" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 计数器点
+void CNTControl(CNTStruct *CNT)
+{
+    fp32 fIn;
+    fp32 fInReset;
+
+	Pop(&amp;paramStack,&amp;fInReset);
+    Pop(&amp;paramStack,&amp;fIn);
+
+    if(fInReset != 0)
+    {
+	    if(CNT-&gt;ucIsAutoReset == 1)
+	    {// 自动复位
+	        if(CNT-&gt;ucIsComplete == 1)
+	        {// 计数完成
+	            CNT-&gt;ulCount = 0;
+	            CNT-&gt;ucIsComplete = 0;
+	        }
+	    }
+	
+	    if(CNT-&gt;ucType == 0)
+	    {// 上升沿
+	        if(CNT-&gt;fLastInValue == 0 &amp;&amp; 
+	        fIn == 1)
+	        {
+	            CNT-&gt;ulCount = CNT-&gt;ulCount + 1;    
+	        }
+	    }
+	    else if(CNT-&gt;ucType == 1)
+	    {// 下降沿
+	        if(CNT-&gt;fLastInValue == 1 &amp;&amp; 
+	        fIn == 0)
+	        {
+	            CNT-&gt;ulCount = CNT-&gt;ulCount + 1;    
+	        }
+	    }
+	    else if(CNT-&gt;ucType == 2)
+	    {// 高电平
+	        if(fIn == 1)
+	        {
+	            CNT-&gt;ulCount = CNT-&gt;ulCount + 1;    
+	        }
+	    }
+	    else if(CNT-&gt;ucType == 3)
+	    {// 低电平
+	        if(fIn == 0)
+	        {
+	            CNT-&gt;ulCount = CNT-&gt;ulCount + 1;    
+	        }
+	    }
+	
+	    if(CNT-&gt;ulCount &gt;= CNT-&gt;ulSetValue)
+	    {// 到达设定值
+	        CNT-&gt;ucIsComplete = 1; // 计数完成
+	    }
+    }
+    CNT-&gt;fLastInValue = fIn;     // 记录每回的输入值,为下次作为上次值
+    Push(&amp;paramStack,CNT-&gt;ucIsComplete);  // 输出是否完成
+    Push(&amp;paramStack,CNT-&gt;ulCount);       // 输出计数值
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,累计器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">TOT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">FIN,TOT</Property>
+        <Property name="InputName">PV,RST</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">累计器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="累计值" varname="accValue" type="System.Single" visible="yes">0</Property>
+        <Property name="预设值" varname="setValue" type="System.Single" visible="yes">100000</Property>
+        <Property name="时间基数(秒)" varname="TBase" type="System.Int32" visible="yes">3600</Property>
+        <Property name="是否累计" varname="isTot" type="System.Boolean" visible="yes">true</Property>
+        <Property name="累计完成" varname="isComplete" type="System.Boolean" visible="yes">false</Property>
+        <Property name="自动复位" varname="isAuto" type="System.Boolean" visible="yes">false</Property>
+        <Property name="小信号切除" varname="valveValue" type="System.Single" visible="yes">0</Property>
+        <Property name="上次采集的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 累计器
+void TOTControl(TOTStruct *TOT)
+{
+     fp32 fIn,fRst;	 
+	 uint32 timerInterval;  // 时间跨度
+	 // 时间处理
+	 if(timerCount &lt; TOT-&gt;lastTimeRec)
+	 {
+	 	  timerInterval = 0xffffffff - TOT-&gt;lastTimeRec + timerCount;
+	 }
+	 else
+	 {
+	 	  timerInterval = timerCount - TOT-&gt;lastTimeRec;
+	 }
+
+     Pop(&amp;paramStack,&amp;fIn);
+     Pop(&amp;paramStack,&amp;fRst);
+
+     if(fRst == 1)
+     {// 复位
+         TOT-&gt;accValue = 0;
+         TOT-&gt;isComplete = 0;
+     }
+
+     if(TOT-&gt;isAuto == 1)
+     {// 自动复位
+         if(TOT-&gt;isComplete == 1)
+         {// 完成
+             TOT-&gt;accValue = 0;
+             TOT-&gt;isComplete = 0;
+         }      
+     }
+
+     if((TOT-&gt;isTot == 1) &amp;&amp; (fIn &gt; TOT-&gt;valveValue))
+     {// 计数要求符合
+        if(TOT-&gt;TBase == 0)
+        {
+            TOT-&gt;TBase = 3600;
+        }
+
+        // 以秒为单位
+        TOT-&gt;accValue += (fIn*(timerInterval/(float)1000))/TOT-&gt;TBase;
+        if(TOT-&gt;accValue &gt;= TOT-&gt;setValue)
+        {
+            TOT-&gt;isComplete = 1;
+        }
+     }
+     Push(&amp;paramStack,TOT-&gt;isComplete);
+     Push(&amp;paramStack,TOT-&gt;accValue);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,温压补偿器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">FLCP</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">F,G,P,T,X,Q</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">温压补偿器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="补偿类型" varname="ucType" type="MyEnum" visible="yes">液体,气体、蒸汽,气体、蒸汽(比重),气体和蒸汽体积流量,蒸汽</Property>
+        <Property name="设计比重" varname="fRG" type="System.Single" visible="yes">1</Property>
+        <Property name="设计压力" varname="fRP" type="System.Single" visible="yes">1</Property>
+        <Property name="设计蒸汽参数因子" varname="fRQ" type="System.Single" visible="yes">1</Property>
+        <Property name="设计温度" varname="fRT" type="System.Single" visible="yes">1</Property>
+        <Property name="表压转换系数" varname="fP0" type="System.Single" visible="yes">101.325</Property>
+        <Property name="温度转换系数" varname="fT0" type="System.Single" visible="yes">273.15</Property>
+        <Property name="设计蒸汽系数" varname="fRX" type="System.Single" visible="yes">1</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 温压补偿器
+void FLCPControl(FLCPStruct *FLCP)
+{
+    fp32 fIn,fG,fP,fT,fX,fQ;
+    fp32 fCompterm,fOut;
+
+    Pop(&amp;paramStack,&amp;fIn);
+    Pop(&amp;paramStack,&amp;fG);
+    Pop(&amp;paramStack,&amp;fP);
+    Pop(&amp;paramStack,&amp;fT);
+    Pop(&amp;paramStack,&amp;fX);
+    Pop(&amp;paramStack,&amp;fQ);
+
+    switch(FLCP-&gt;ucType)
+    {
+        case 0:// 液体
+            fCompterm = sqrt(fG/FLCP-&gt;fRG);
+            break;
+        case 1:// 气体与蒸汽
+            fCompterm = sqrt((FLCP-&gt;fP0 + fP) / FLCP-&gt;fRP) * sqrt(FLCP-&gt;fRT / (fT + FLCP-&gt;fT0));
+            break;
+        case 2:// 气体与蒸汽(比重)
+            fCompterm = sqrt(((FLCP-&gt;fP0 + fP) * FLCP-&gt;fRT * fG )/ (FLCP-&gt;fRP * (fT + FLCP-&gt;fT0) * FLCP-&gt;fRG));
+            break;
+        case 3:// 气体和蒸汽体积流量
+            fCompterm = sqrt(((FLCP-&gt;fP0 + fP) * FLCP-&gt;fRT * FLCP-&gt;fRG) / (FLCP-&gt;fRP * (fT + FLCP-&gt;fT0) * fG));
+            break;
+        case 4:// 蒸汽
+            fCompterm = sqrt(((FLCP-&gt;fP0 + fP) * FLCP-&gt;fRT * fX * FLCP-&gt;fRQ) / (FLCP-&gt;fRP * (fT +FLCP-&gt; fT0) * FLCP-&gt; fRX * fQ));
+            break;
+        default:
+            break;
+    }
+    fOut = fIn * fCompterm;
+
+    Push(&amp;paramStack,fOut);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,通用线性化器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">GLIN</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">通用线性化器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="输入最小值" varname="fInMin" type="System.Single" visible="yes">0</Property>
+        <Property name="输入最大值" varname="fInMax" type="System.Single" visible="yes">100</Property>
+        <Property name="输出最小值" varname="fOutMin" type="System.Single" visible="yes">0</Property>
+        <Property name="输出最大值" varname="fOutMax" type="System.Single" visible="yes">100</Property>
+        <Property name="第1点输入" varname="pt" type="System.Single" visible="yes">0</Property>
+        <Property name="第1点输出" varname="pt" type="System.Single" visible="yes">0</Property>
+        <Property name="第2点输入" varname="pt" type="System.Single" visible="yes">1</Property>
+        <Property name="第2点输出" varname="pt" type="System.Single" visible="yes">1</Property>
+        <Property name="第3点输入" varname="pt" type="System.Single" visible="yes">2</Property>
+        <Property name="第3点输出" varname="pt" type="System.Single" visible="yes">2</Property>
+        <Property name="第4点输入" varname="pt" type="System.Single" visible="yes">3</Property>
+        <Property name="第4点输出" varname="pt" type="System.Single" visible="yes">3</Property>
+        <Property name="第5点输入" varname="pt" type="System.Single" visible="yes">4</Property>
+        <Property name="第5点输出" varname="pt" type="System.Single" visible="yes">4</Property>
+        <Property name="第6点输入" varname="pt" type="System.Single" visible="yes">5</Property>
+        <Property name="第6点输出" varname="pt" type="System.Single" visible="yes">5</Property>
+        <Property name="第7点输入" varname="pt" type="System.Single" visible="yes">6</Property>
+        <Property name="第7点输出" varname="pt" type="System.Single" visible="yes">6</Property>
+        <Property name="第8点输入" varname="pt" type="System.Single" visible="yes">7</Property>
+        <Property name="第8点输出" varname="pt" type="System.Single" visible="yes">7</Property>
+        <Property name="第9点输入" varname="pt" type="System.Single" visible="yes">8</Property>
+        <Property name="第9点输出" varname="pt" type="System.Single" visible="yes">8</Property>
+        <Property name="第10点输入" varname="pt" type="System.Single" visible="yes">9</Property>
+        <Property name="第10点输出" varname="pt" type="System.Single" visible="yes">9</Property>
+        <Property name="第11点输入" varname="pt" type="System.Single" visible="yes">10</Property>
+        <Property name="第11点输出" varname="pt" type="System.Single" visible="yes">10</Property>
+        <Property name="第12点输入" varname="pt" type="System.Single" visible="yes">11</Property>
+        <Property name="第12点输出" varname="pt" type="System.Single" visible="yes">11</Property>
+        <Property name="有效点的个数" varname="effNum" type="System.Int32" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 线性化函数
+fp32 Linearize(PointStruct pt1,PointStruct pt2,fp32 x)
+{
+    fp32 fOut;
+    fOut = (pt2.y - pt1.y) * (x - pt1.x) / (pt2.x - pt1.x) + pt1.y;
+    return fOut;
+}
+// 通用线性化点
+void GLINControl(GLINStruct *GLIN)
+{
+     fp32 fIn;
+     fp32 fOut;
+     uint8 i;
+     PointStruct ptStart,ptEnd;
+
+     Pop(&amp;paramStack,&amp;fIn);
+
+     if(fIn &lt; GLIN-&gt;fInMin ||
+        fIn &gt; GLIN-&gt;fInMax)
+    {// 在最值之外,等于输入
+        fOut = fIn;
+    }
+    else if(fIn == GLIN-&gt;fInMin)
+    {// 等于最小值
+        fOut = GLIN-&gt;fOutMin;
+    }
+    else if(fIn == GLIN-&gt;fInMax)
+    {// 等于最大值
+        fOut = GLIN-&gt;fOutMax;
+    }   
+    else
+    {
+        ptStart.x = GLIN-&gt;fInMin;
+        ptStart.y = GLIN-&gt;fOutMin;
+        ptEnd.x = GLIN-&gt;fInMax;
+        ptEnd.y = GLIN-&gt;fOutMax;
+        if(GLIN-&gt;effNum &gt; 0)
+        {// 有有效点时
+            for(i = 0;i &lt; GLIN-&gt;effNum;i++)
+            {
+                 if(fIn == GLIN-&gt;pt[i].x)
+                 {// 等于输入值
+                     fOut = GLIN-&gt;pt[i].y;
+                     break;
+                 }
+                 else 
+                 {
+                    if(i == 0)
+                    {// 第一个点特殊处理
+                        if(fIn &gt; ptStart.x &amp;&amp; 
+                        fIn &lt; GLIN-&gt;pt[i].x)
+                        {// 在第0个与第1个点之间 
+                            fOut = Linearize(ptStart,GLIN-&gt;pt[i],fIn);
+                            break;
+                        }
+                    }
+                    else if(GLIN-&gt;effNum - 1 &gt; i)
+                    {// 如还存在下一个结点
+                          if(fIn &gt; GLIN-&gt;pt[i].x &amp;&amp; fIn &lt; GLIN-&gt;pt[i+1].x)
+                          {
+                             fOut = Linearize(GLIN-&gt;pt[i],GLIN-&gt;pt[i+1],fIn);
+                             break;
+                          }
+                    }
+                    else
+                    {// 最后一个点
+                        if(fIn &gt; GLIN-&gt;pt[i].x &amp;&amp; 
+                            fIn &lt; ptEnd.x)
+                        { 
+                            fOut = Linearize(GLIN-&gt;pt[i],ptEnd,fIn);
+                            break;
+                        }
+                    }
+                 }// 不等于输入值                
+            }// for 
+        }// 有有效点
+        else
+        {// 无有效点
+            fOut = Linearize(ptStart,ptEnd,fIn);
+        }
+
+    }// else
+
+    Push(&amp;paramStack,fOut);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,线性变换器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">LICH</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">线性变换器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="比例系数" varname="fCoeffient" type="System.Single" visible="yes">1</Property>
+        <Property name="偏差" varname="fBias" type="System.Single" visible="yes">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 线性变换器
+void LICHControl(LICHStruct *LICH)
+{
+     fp32 fIn;
+     fp32 fOut;
+
+     Pop(&amp;paramStack,&amp;fIn);
+
+     fOut = fIn * LICH-&gt;fCoeffient + LICH-&gt;fBias;
+     
+     Push(&amp;paramStack,fOut);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,限值器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">LIMIT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">限值器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="低限" varname="fMin" type="System.Single" visible="yes">0</Property>
+        <Property name="高限" varname="fMax" type="System.Single" visible="yes">100</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 限值器
+void LIMITControl(LIMITStruct *LIMIT)
+{
+     fp32 fIn;  // 输入
+
+     Pop(&amp;paramStack,&amp;fIn);
+     if(fIn &lt; LIMIT-&gt;fMin)
+     {// 小于低限,等于低限
+        fIn = LIMIT-&gt;fMin;
+     }
+     if(fIn &gt; LIMIT-&gt;fMax)
+     {// 大于高限,等于高限
+        fIn = LIMIT-&gt;fMax;
+     }
+
+     Push(&amp;paramStack,fIn);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,比例器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">PRECENT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">比例器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="低限" varname="fMin" type="System.Single" visible="yes">0</Property>
+        <Property name="高限" varname="fMax" type="System.Single" visible="yes">100</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 比例器
+void PERCENTControl(PERCENTStruct *PERCENT)
+{
+    fp32 fIn;  // 输入
+    fp32 fOut;
+
+    Pop(&amp;paramStack,&amp;fIn);
+    fOut = (fIn - PERCENT-&gt;fMin) / (PERCENT-&gt;fMax - PERCENT-&gt;fMin) * 100;
+    Push(&amp;paramStack,fOut);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,比值控制器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">RATION</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">OP</Property>
+        <Property name="InputName">SV</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">比值控制器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="输出值" varname="fMV" type="System.Single" visible="no">0</Property>
+        <Property name="输入低限" varname="fInMin" type="System.Single" visible="yes">0</Property>
+        <Property name="输入高限" varname="fInMax" type="System.Single" visible="yes">100</Property>
+        <Property name="输出低限" varname="fOutMin" type="System.Single" visible="yes">0</Property>
+        <Property name="输出高限" varname="fOutMax" type="System.Single" visible="yes">100</Property>
+        <Property name="比值设定" varname="fRation" type="System.Single" visible="yes">0</Property>
+        <Property name="爬坡常数" varname="fClimbCon" type="System.Single" visible="yes">100</Property>
+        <Property name="偏差" varname="fBias" type="System.Single" visible="yes">0</Property>
+        <Property name="采样周期" varname="ulLastTime" type="System.Int32" visible="yes">1000</Property>
+        <Property name="手动/自动" varname="ucCtrlMod" type="MyEnum" visible="yes">手动,自动</Property>
+        <Property name="上次的控制时间" varname="ulLastTime" type="System.Int32" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 比值控制器
+void RATIONControl(RATIONStruct *RATION)
+{
+    fp32 fPV,fMV,fDeltaMV;
+	 uint32 timerInterval;  // 时间跨度
+	 // 时间处理
+	 if(timerCount &lt; RATION-&gt;ulLastTime)
+	 {
+	 	  timerInterval = 0xffffffff - RATION-&gt;ulLastTime + timerCount;
+	 }
+	 else
+	 {
+	 	  timerInterval = timerCount - RATION-&gt;ulLastTime;
+	 }
+
+    if(RATION-&gt;ulCycle == 0)
+    {
+        RATION-&gt;ulCycle = 1000;
+    }
+    
+    if(timerInterval &gt;= RATION-&gt;ulCycle)
+    {// 到点
+        Pop(&amp;paramStack,&amp;fPV);
+        if(RATION-&gt;ucCtrlMod == 0)
+        {// 自动
+            // 输入值处理
+            fPV = fPV &gt; RATION-&gt;fInMax ? RATION-&gt;fInMax : fPV;
+            fPV = fPV &lt; RATION-&gt;fInMin ? RATION-&gt;fInMin : fPV;
+            // 计算输出
+            fMV = fPV * RATION-&gt;fRation +RATION-&gt;fBias;
+            fDeltaMV = fMV - RATION-&gt;fMV;
+            // 爬坡处理
+            if(fabs(fDeltaMV) &gt; RATION-&gt;fClimbCon)
+            {
+                if(fDeltaMV &gt; 0)
+                {// 正坡
+                    fMV = RATION-&gt;fMV + RATION-&gt;fClimbCon;
+                }
+                else
+                {// 负坡
+                    fMV = RATION-&gt;fMV - RATION-&gt;fClimbCon;
+                }
+            }            
+        }
+        else
+        {// 手动
+            fMV = RATION-&gt;fMV;
+        }
+        // 输出值处理
+        fMV = (fMV &gt; RATION-&gt;fOutMax) ? RATION-&gt;fOutMax : fMV;
+        fMV = (fMV &lt; RATION-&gt;fOutMin) ? RATION-&gt;fOutMin : fMV;
+
+        Push(&amp;paramStack,fMV);
+    }
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,斜坡控制器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">RAMP</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">NULL</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">斜坡控制器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="输出值" varname="fMV" type="System.Single" visible="no">0</Property>
+        <Property name="手动/自动" varname="ctrlMod" type="MyEnum" visible="yes">手动,自动</Property>
+        <Property name="手动时计时方式" varname="manStyle" type="MyEnum" visible="yes">手动时停止计时,手动时继续计时</Property>
+        <Property name="终止时控制方式" varname="terminateStyle" type="MyEnum" visible="yes">停止控制,重新开始控制</Property>
+        <Property name="初值" varname="initOutValue" type="System.Single" visible="yes">0</Property>
+        <Property name="终值" varname="endOutValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间01" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出01" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间02" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出02" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间03" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出03" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间04" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出04" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间05" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出05" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间06" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出06" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间07" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出07" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间08" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出08" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间09" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出09" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间10" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出10" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间11" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出11" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间12" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出12" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间13" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出13" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间14" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出14" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间15" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出15" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间16" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出16" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间17" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出17" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间18" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出18" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间19" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出19" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间20" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出20" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间21" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出21" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间22" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出22" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间23" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出23" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间24" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出24" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="有效段数" varname="sectionNum" type="System.Int32" visible="no">0</Property>
+        <Property name="控制时间" varname="controlTime" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 斜坡控制点
+void RAMPControl(RAMPStruct *RAMP)
+{
+     uint32 deltaTime;
+     uint8 i;
+     fp32 fMV;
+					 
+     if(RAMP-&gt;ctrlMod == 0)
+     {// 自动
+	     // 时间处理
+		 if(timerCount &lt; RAMP-&gt;lastTimeRec)
+		 {
+		 	  deltaTime = 0xffffffff - RAMP-&gt;lastTimeRec + timerCount;
+		 }
+		 else
+		 {
+		 	  deltaTime = timerCount - RAMP-&gt;lastTimeRec;
+		 }
+         // 要进行入每一点,只能将时间设为长些
+        if(deltaTime &lt; RAMP-&gt;time[0])
+        {// 初始情况
+             fMV = RAMP-&gt;initOutValue;
+         }
+         else if(deltaTime &gt;= RAMP-&gt;controlTime)
+         {// 控制时间到点
+            fMV = RAMP-&gt;endOutValue; // 终止方式非0时,不再控制
+            if(RAMP-&gt;terminateStyle == 0)
+            {// 重新计时
+                RAMP-&gt;lastTimeRec = timerCount;
+            }           
+         }
+         else if(deltaTime &gt;= RAMP-&gt;time[RAMP-&gt;sectionNum-1] &amp;&amp;
+             deltaTime &lt; RAMP-&gt;controlTime)
+         {// 最后一个点
+             fMV = RAMP-&gt;outValue[RAMP-&gt;sectionNum-1];
+         }
+         else
+         {// 中间点
+             for(i = 0;i &lt; RAMP-&gt;sectionNum;i++)
+             {
+                 if(deltaTime &gt;= RAMP-&gt;time[i] &amp;&amp;
+                    deltaTime &lt; RAMP-&gt;time[i+1])
+                 {
+                    fMV = RAMP-&gt;outValue[i];
+                    break;
+                 }
+             }
+         }
+     }
+     else
+     {// 手动
+        fMV = RAMP-&gt;fMV;
+        if(RAMP-&gt;manStyle == 0)
+        {// 时间停止
+            RAMP-&gt;lastTimeRec = timerCount;
+        }
+     }
+     Push(&amp;paramStack,fMV);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,开关控制器51,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">SW51</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">OP</Property>
+        <Property name="InputName">PV0,PV1,PV2,PV3,PV4</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">开关控制器51</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="输入选择" varname="ucSelect" type="MyEnum" visible="yes">第一输入,第二输入,第三输入,第四输入,第五输入</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 开关控制器51点
+void SW51Control(SW51Struct *SW51)
+{
+     fp32 fIn0,fIn1,fIn2,fIn3,fIn4;
+     fp32 fOut;
+
+     Pop(&amp;paramStack,&amp;fIn0);
+     Pop(&amp;paramStack,&amp;fIn1);
+     Pop(&amp;paramStack,&amp;fIn2);
+     Pop(&amp;paramStack,&amp;fIn3);
+     Pop(&amp;paramStack,&amp;fIn4);
+
+     switch(SW51-&gt;ucSelect)
+     {
+        case 0:
+            fOut = fIn0;
+            break;
+        case 1:
+            fOut = fIn1;
+            break;
+        case 2:
+            fOut = fIn2;
+            break;
+        case 3:
+            fOut = fIn3;
+            break;
+        case 4:
+            fOut = fIn4;
+            break;
+     }
+     Push(&amp;paramStack,fOut);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,开关控制器13,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">SW13</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">OP0,OP1,OP2</Property>
+        <Property name="InputName">IN0</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">开关控制器13</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="输出选择" varname="ucSelect" type="MyEnum" visible="yes">第一输出,第二输出,第三输出</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 开关控制器13
+void SW13Control(SW13Struct *SW13)
+{
+     fp32 fIn,fOut1,fOut2,fOut3;
+
+     Pop(&amp;paramStack,&amp;fIn);
+     fOut1 = 0;
+     fOut2 = 0;
+     fOut3 = 0;
+     switch(SW13-&gt;ucSelect)
+     {
+        case 0:
+            fOut1 = fIn;
+            break;
+        case 1:
+            fOut2 = fIn;
+            break;
+        case 2:
+            fOut3 = fIn;
+            break;
+        default:
+            break;
+     }
+
+     Push(&amp;paramStack,fOut1);
+     Push(&amp;paramStack,fOut2);
+     Push(&amp;paramStack,fOut3);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,三者取中器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">SWMID</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">OP</Property>
+        <Property name="InputName">PV0,PV1,PV2</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">三者取中器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="算式选择" varname="ucSelect" type="MyEnum" visible="yes">高值,低值,均值</Property>
+        <Property name="有效个数" varname="ucEffNum" type="MyEnum" visible="no">3</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 三者取中器
+void SWMIDControl(SWMIDStruct *SWMID)
+{
+      fp32 fIn1,fIn2,fIn3;
+      fp32 fOut;
+
+      if(SWMID-&gt;ucEffNum == 1)
+      {
+         Pop(&amp;paramStack,&amp;fIn1);
+         fOut = fIn1;        
+      }
+      else if(SWMID-&gt;ucEffNum == 2)
+      {
+         Pop(&amp;paramStack,&amp;fIn1);
+         Pop(&amp;paramStack,&amp;fIn2);
+         switch(SWMID-&gt;ucSelect)
+         {
+            case 0:
+                fOut = (fIn1 &gt; fIn2) ? fIn1 : fIn2;
+                break;
+            case 1:
+                fOut = (fIn1 &lt; fIn2) ? fIn1 : fIn2;
+                break;
+            case 2:
+                fOut = (fIn1 + fIn2) / 2;
+                break;
+            default:
+                break;
+         } 
+        
+      }
+      else if(SWMID-&gt;ucEffNum == 3)
+      {
+         Pop(&amp;paramStack,&amp;fIn1);
+         Pop(&amp;paramStack,&amp;fIn2);
+         Pop(&amp;paramStack,&amp;fIn3);
+         switch(SWMID-&gt;ucSelect)
+         {
+            case 0:
+                fOut = (fIn1 &gt; fIn2) ? fIn1 : fIn2;
+                fOut = (fOut &gt; fIn3) ? fOut : fIn3;
+                break;
+            case 1:
+                fOut = (fIn1 &lt; fIn2) ? fIn1 : fIn2;
+                fOut = (fOut &lt; fIn3) ? fOut : fIn3;
+                break;
+            case 2:
+                fOut = (fIn1 + fIn2 + fIn3) / 3;
+                break;
+            default:
+                break;
+         }       
+         
+      }
+      Push(&amp;paramStack,fOut);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,高低选择器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">SWHL</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">OP</Property>
+        <Property name="InputName">PV0,PV1,PV2,PV3,PV4,PV5</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">高低选择器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="算式选择" varname="ucSelect" type="MyEnum" visible="yes">高选,低选,均值</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 高低选择器
+void SWHLControl(SWHLStruct *SWHL)
+{
+     fp32 fIn[6];
+     fp32 fOut;
+     fp32 temp;
+     uint8 i;
+
+     Pop(&amp;paramStack,&amp;fIn[0]);
+     Pop(&amp;paramStack,&amp;fIn[1]);
+     Pop(&amp;paramStack,&amp;fIn[2]);
+     Pop(&amp;paramStack,&amp;fIn[3]);
+     Pop(&amp;paramStack,&amp;fIn[4]);
+     Pop(&amp;paramStack,&amp;fIn[5]);
+
+     switch(SWHL-&gt;ucSelect)
+     {
+        case 0:// max
+            temp = fIn[0];
+            for(i = 1; i &lt; 6;i++)
+            {
+                if(fIn[i] &gt; temp)
+                {// 更大
+                    temp = fIn[i];
+                }
+            }
+            fOut = temp;    
+            break;
+        case 1: // Min
+            temp = fIn[0];
+            for(i = 1; i &lt; 6;i++)
+            {
+                if(fIn[i] &lt; temp)
+                {// 更小
+                    temp = fIn[i];
+                }
+            }
+            fOut = temp;    
+            break;
+        case 2:
+            temp = 0;
+            for(i = 0;i &lt; 6;i++)
+            {
+                temp += fIn[i];
+            }
+            fOut = temp / 6;
+            break;
+        default:
+            break;
+     }
+     Push(&amp;paramStack,fOut);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,数字组合器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">DC</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">INST,DO0,DO1</Property>
+        <Property name="InputName">OUTST,DI0,DI1</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">数字组合器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="输入状态" varname="Inpt" type="MyEnum" visible="yes">第一有效态,第二有效态,爬行态,非法态</Property>
+        <Property name="输出状态" varname="Outpt" type="MyEnum" visible="yes">第一有效态,第二有效态</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 数字组合点
+void DCControl()
+{
+     fp32 fIn1,fIn2,fIn3; // 输出状态\输入点1\输入点2
+     fp32 fOut1,fOut2,fOut3;  // 输入状态\输出点1\输出点2
+
+     Pop(&amp;paramStack,&amp;fIn3);
+     Pop(&amp;paramStack,&amp;fIn2);
+     Pop(&amp;paramStack,&amp;fIn1);
+
+     if(fIn1 == 0)
+     {// 输出状态为第一有效态
+        fOut2 = 0;
+        fOut3 = 1;
+     }
+     else
+     {// 输出状态为第二有效态
+        fOut2 = 1;
+        fOut3 = 0; 
+     }
+
+     if(fIn2 == 0 &amp;&amp; fIn3 == 0)
+     {// 爬行状态
+        fOut1 = 2;
+     }
+     else if(fIn2 == 0 &amp;&amp; fIn3 == 1)
+     {// 第一有效态(开)
+        fOut1 = 0;
+     }
+     else if(fIn2 == 1 &amp;&amp; fIn3 == 0)
+     {// 第二有效态(关)
+        fOut1 = 1;
+     }
+     else if(fIn2 == 1 &amp;&amp; fIn3 == 1)
+     {// 非法状态
+        fOut1 = 3;
+     }
+
+     Push(&amp;paramStack,fOut1);
+     Push(&amp;paramStack,fOut2);
+     Push(&amp;paramStack,fOut3);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,偏差限值器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">BIASLMT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">偏差限值器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="最大偏差" varname="fMaxBias" type="System.Single" visible="yes">100</Property>
+        <Property name="上次输出" varname="fLastOut" type="System.Single" visible="yes">0</Property>
+        <Property name="采样周期" varname="ulCycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="ulLastTimeRec" type="System.Int32" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 偏差限值器
+void BIASLMTControl(BIASLMTStruct *BIASLMT)
+{
+      fp32 fIn,fOut;
+      fp32 fFactualBias,fAllowedBias;// 实际偏差与允许的最大偏差
+	  uint32 timerInterval;  // 时间跨度
+	 // 时间处理
+	 if(timerCount &lt; BIASLMT-&gt;ulLastTimeRec)
+	 {
+	 	  timerInterval = 0xffffffff - BIASLMT-&gt;ulLastTimeRec + timerCount;
+	 }
+	 else
+	 {
+	 	  timerInterval = timerCount - BIASLMT-&gt;ulLastTimeRec;
+	 }
+
+      Pop(&amp;paramStack,&amp;fIn);
+
+      if(timerInterval &lt;= BIASLMT-&gt;ulCycle)
+      {// 在周期内
+            fFactualBias = (fIn - BIASLMT-&gt;fLastOut) / (timerCount - BIASLMT-&gt;ulLastTimeRec);
+            fAllowedBias = BIASLMT-&gt;fMaxBias * (timerCount - BIASLMT-&gt;ulLastTimeRec) / 
+                       BIASLMT-&gt;ulCycle;
+            if(fabs(fFactualBias) &gt;  fAllowedBias)
+            {// 实际偏差大于允许偏差
+                if(fIn &gt; BIASLMT-&gt;fLastOut)
+                {// 输入大于上次输出
+                    fOut = BIASLMT-&gt;fLastOut + fAllowedBias;
+                }
+                else
+                {
+                    fOut = BIASLMT-&gt;fLastOut - fAllowedBias;
+                }
+            }
+            else
+            {
+                fOut = fIn;
+            }           
+      }
+      else
+      {// 不在周期内
+            fOut = fIn;
+      }
+      Push(&amp;paramStack,fOut);      
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,变化率器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">CHRAT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">变化率器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次输入" varname="fLastIn" type="System.Single" visible="yes">0</Property>
+        <Property name="采样周期" varname="ulCycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="ulLastTimeRec" type="System.Int32" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 变化率器
+void CHRATControl(CHRATStruct *CHRAT)
+{
+     fp32 fIn,fOut;
+	 fp32 fTs;
+	 uint32 timerInterval;  // 时间跨度
+	 // 时间处理
+	 if(timerCount &lt; CHRAT-&gt;ulLastTimeRec)
+	 {
+	 	  timerInterval = 0xffffffff - CHRAT-&gt;ulLastTimeRec + timerCount;
+	 }
+	 else
+	 {
+	 	  timerInterval = timerCount - CHRAT-&gt;ulLastTimeRec;
+	 }
+
+     Pop(&amp;paramStack,&amp;fIn);
+
+     if(timerInterval &lt;= CHRAT-&gt;ulCycle)
+     {// 在周期内
+	 	fTs = timerInterval / (float)1000;
+        fOut = (fIn - CHRAT-&gt;fLastIn) / fTs;
+     }
+     else
+     {
+        fOut = fIn;
+     }
+
+     Push(&amp;paramStack,fOut);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,脉宽调制输出,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">PVM</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN0</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">脉宽调制输出</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="输入" varname="fLastMV" type="System.Single" visible="yes">0</Property>
+        <Property name="输出" varname="cPV" type="MyEnum" visible="yes">0/1</Property>
+        <Property name="时间单位" varname="lCycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="复位" varname="cReset" type="System.Boolean" visible="yes">false</Property>
+        <Property name="方式" varname="cStyle" type="MyEnum" visible="yes">周期结束后开始新周期,输入改变时开始新周期</Property>
+        <Property name="前段时间" varname="preCycle" type="System.Int32" visible="no">0</Property>
+        <Property name="后段时间" varname="aftCycle" type="System.Int32" visible="no">0</Property>
+        <Property name="时间记录" varname="timeRec" type="System.Int32" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 脉宽调制输出
+void PVMControl(PVMStruct *PVM)
+{
+	fp32 fIn;
+	uint32 timerInterval;  // 时间跨度
+	 // 时间处理
+	 if(timerCount &lt; PVM-&gt;timeRec)
+	 {
+	 	  timerInterval = 0xffffffff - PVM-&gt;timeRec + timerCount;
+	 }
+	 else
+	 {
+	 	  timerInterval = timerCount - PVM-&gt;timeRec;
+	 }
+
+	Pop(&amp;paramStack,&amp;fIn);
+	fIn = fIn &lt; 0 ? 0 : fIn;
+	fIn = fIn &gt; 1 ? 1 : fIn;
+
+	if((PVM-&gt;cReset != 0) || (PVM-&gt;cStyle == 0 &amp;&amp; fIn != PVM-&gt;fLastMV) ||
+		(PVM-&gt;cStyle != 0 &amp;&amp; (timerInterval &gt;= PVM-&gt;lCycle)))
+	{// 重新开始控制财期
+		PVM-&gt;preCycle = PVM-&gt;lCycle * fIn;
+		PVM-&gt;aftCycle = PVM-&gt;lCycle * (1 - fIn);
+		PVM-&gt;timeRec = timerCount;
+		PVM-&gt;fLastMV = fIn;	
+	}
+	if(timerInterval &lt;= PVM-&gt;preCycle)
+	{// 前半段
+		PVM-&gt;cPV = 1; // 输出为1
+	}
+	else
+	{// 后半段
+		PVM-&gt;cPV = 0; // 输出为0
+	}
+
+	Push(&amp;paramStack,PVM-&gt;cPV);
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,加权平均滤波器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">AVEFLT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">加权平均滤波器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="系数1" varname="fCoefficient" type="System.Single" visible="yes">12.5</Property>
+        <Property name="系数2" varname="fCoefficient" type="System.Single" visible="yes">12.5</Property>
+        <Property name="系数3" varname="fCoefficient" type="System.Single" visible="yes">12.5</Property>
+        <Property name="系数4" varname="fCoefficient" type="System.Single" visible="yes">12.5</Property>
+        <Property name="系数5" varname="fCoefficient" type="System.Single" visible="yes">12.5</Property>
+        <Property name="系数6" varname="fCoefficient" type="System.Single" visible="yes">12.5</Property>
+        <Property name="系数7" varname="fCoefficient" type="System.Single" visible="yes">12.5</Property>
+        <Property name="系数8" varname="fCoefficient" type="System.Single" visible="yes">12.5</Property>
+        <Property name="输入1" varname="fSavedIn" type="System.Single" visible="yes">0</Property>
+        <Property name="输入2" varname="fSavedIn" type="System.Single" visible="yes">0</Property>
+        <Property name="输入3" varname="fSavedIn" type="System.Single" visible="yes">0</Property>
+        <Property name="输入4" varname="fSavedIn" type="System.Single" visible="yes">0</Property>
+        <Property name="输入5" varname="fSavedIn" type="System.Single" visible="yes">0</Property>
+        <Property name="输入6" varname="fSavedIn" type="System.Single" visible="yes">0</Property>
+        <Property name="输入7" varname="fSavedIn" type="System.Single" visible="yes">0</Property>
+        <Property name="输入8" varname="fSavedIn" type="System.Single" visible="yes">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 加权平均滤波器
+void AVEFLTControl(AVEFLTStruct *AVEFLT)
+{
+    fp32 fIn,fOut;
+    uint8 i;
+     
+    Pop(&amp;paramStack,&amp;fIn);
+
+    AVEFLT-&gt;fSavedIn[7] = fIn;
+    fOut = (AVEFLT-&gt;fCoefficient[0] * AVEFLT-&gt;fSavedIn[0] + 
+         AVEFLT-&gt;fCoefficient[1] * AVEFLT-&gt;fSavedIn[1] + 
+         AVEFLT-&gt;fCoefficient[2] * AVEFLT-&gt; fSavedIn[2] + 
+         AVEFLT-&gt;fCoefficient[3] * AVEFLT-&gt;fSavedIn[3] + 
+         AVEFLT-&gt;fCoefficient[4] * AVEFLT-&gt;fSavedIn[4] + 
+         AVEFLT-&gt;fCoefficient[5] * AVEFLT-&gt;fSavedIn[5] + 
+         AVEFLT-&gt;fCoefficient[6] * AVEFLT-&gt;fSavedIn[6] + 
+         AVEFLT-&gt;fCoefficient[7] * AVEFLT-&gt;fSavedIn[7]) /
+         (AVEFLT-&gt;fCoefficient[0] + AVEFLT-&gt;fCoefficient[1] +
+         AVEFLT-&gt;fCoefficient[2] + AVEFLT-&gt;fCoefficient[3] +
+         AVEFLT-&gt;fCoefficient[4] + AVEFLT-&gt;fCoefficient[5] +
+         AVEFLT-&gt;fCoefficient[6] + AVEFLT-&gt;fCoefficient[7]); 
+
+    Push(&amp;paramStack,fOut);
+    // 更新保存的值
+    for(i = 0; i &lt; 8;i++)
+    {
+        if(i &lt; 7)
+        {
+            AVEFLT-&gt;fSavedIn[i] = AVEFLT-&gt;fSavedIn[i+1];
+        }
+        else
+        {// 第8个值设为0
+            AVEFLT-&gt;fSavedIn[i] = 0;
+        }   
+    }
+
+
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.SpecialControl.Calculator,ControlTactic,计算器组态,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">CALCU</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">Y0,Y1,Y2,Y3</Property>
+        <Property name="InputName">X0,X1,X2,X3,X4,X5,X6,X7</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">计算器组态</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="中间变量0" varname="fM[0]" type="System.Single" visible="yes">0</Property>
+        <Property name="中间变量1" varname="fM[1]" type="System.Single" visible="yes">0</Property>
+        <Property name="中间变量2" varname="fM[2]" type="System.Single" visible="yes">0</Property>
+        <Property name="中间变量3" varname="fM[3]" type="System.Single" visible="yes">0</Property>
+        <Property name="中间变量4" varname="fM[4]" type="System.Single" visible="yes">0</Property>
+        <Property name="中间变量5" varname="fM[5]" type="System.Single" visible="yes">0</Property>
+        <Property name="中间变量6" varname="fM[6]" type="System.Single" visible="yes">0</Property>
+        <Property name="中间变量7" varname="fM[7]" type="System.Single" visible="yes">0</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.SpecialControl.Process,ControlTactic,条件动作表,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">PROCESS</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">NULL</Property>
+        <Property name="InputName">EN</Property>
+        <Property name="ModuleColor">255, 102, 205, 170</Property>
+        <Property name="ModuleSort">条件动作表</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="使能" varname="" type="System.Boolean" visible="yes">false</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.ADControl,ControlTactic,AD转化,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">AD</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">NULL</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">AD转化</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="通道号" varname="ucCN" type="MyEnum" visible="yes">0,1,2,3,4,5,6,7,8,9</Property>
+        <Property name="采样周期" varname="ulCycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制时间" varname="ulLastTimeRec" type="System.Int32" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>//AD转换器输入,有一个参数(通道号),一个输出
+void ADControl(ADStruct * AD)
+{	 
+	 uint32 timerInterval;  // 时间跨度
+	 // 时间处理
+	 if(timerCount &lt; AD-&gt;ulLastTimeRec)
+	 {
+	 	  timerInterval = 0xffffffff - AD-&gt;ulLastTimeRec + timerCount;
+	 }
+	 else
+	 {
+	 	  timerInterval = timerCount - AD-&gt;ulLastTimeRec;
+	 }
+	 if(timerInterval &gt;= AD-&gt;ulCycle) 
+     {// 时间到点
+	 	 fp32 fPV;
+		 ADConvert = (fp32 (*)(uint8))ADConvertAddr;	
+		 fPV = ADConvert(AD-&gt;ucCN);
+		 Push(&amp;paramStack,fPV);
+		 AD-&gt;ulLastTimeRec = timerCount;
+	 }
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.DAControl,ControlTactic,DA转化,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">DA</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">NULL</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">DA转化</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="通道号" varname="ucCN" type="MyEnum" visible="yes">0,1,2,3,4,5,6,7,8,9</Property>
+        <Property name="采样周期" varname="ulCycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制时间" varname="ulLastTimeRec" type="System.Int32" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>//DA
+void DAControl(DAStruct * DA)
+{
+	 uint32 timerInterval;  // 时间跨度
+	 // 时间处理
+	 if(timerCount &lt; DA-&gt;ulLastTimeRec)
+	 {
+	 	  timerInterval = 0xffffffff - DA-&gt;ulLastTimeRec + timerCount;
+	 }
+	 else
+	 {
+	 	  timerInterval = timerCount - DA-&gt;ulLastTimeRec;
+	 }
+	 if(timerInterval &gt;= DA-&gt;ulCycle) 
+     {// 时间到点
+		fp32 fMV;
+	
+		Pop(&amp;paramStack,&amp;fMV);
+		DAConvert = (void (*)(fp32,uint8))DAConvertAddr;
+		DAConvert(fMV,DA-&gt;ucCN);
+		DA-&gt;ulLastTimeRec = timerCount;
+	}
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+  </Category>
+  <Category DisplayName="控制算法">
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,PID控制器,控制算法">
+      <BasicProperty>
+        <Property name="ModuleName">PID</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">OP</Property>
+        <Property name="InputName">SPC,PV</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">PID控制器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="安全值" varname="fSaveValue" type="System.Single" visible="yes">0</Property>
+        <Property name="被控量" varname="fPV" type="System.Single" visible="no">0</Property>
+        <Property name="被控量报警死区" varname="fHY" type="System.Single" visible="yes">0</Property>
+        <Property name="被控量变化率" varname="fPR" type="System.Single" visible="yes">0</Property>
+        <Property name="被控量的上限状态" varname="cPHA" type="MyEnum" visible="no">0</Property>
+        <Property name="被控量的下限状态" varname="cPLA" type="MyEnum" visible="no">0</Property>
+        <Property name="被控量上限报警" varname="fPH" type="System.Single" visible="yes">100</Property>
+        <Property name="被控量下限报警" varname="fPL" type="System.Single" visible="yes">0</Property>
+        <Property name="比例" varname="Kp" type="System.Single" visible="yes">1</Property>
+        <Property name="采集周期" varname="Ts" type="System.Int32" visible="yes">1000</Property>
+        <Property name="给定值的变化率" varname="fSR" type="System.Single" visible="yes">0</Property>
+        <Property name="积分(秒)" varname="Ki" type="System.Single" visible="yes">100000</Property>
+        <Property name="记录上次的给定值" varname="fSV" type="System.Single" visible="no">0</Property>
+        <Property name="紧急连锁状态" varname="ucIsEmergency" type="MyEnum" visible="yes">安全态,紧急态</Property>
+        <Property name="内给定值" varname="fSVL" type="System.Single" visible="yes">50</Property>
+        <Property name="偏差" varname="ei" type="System.Single" visible="yes">0</Property>
+        <Property name="偏差报警值" varname="fDL" type="System.Single" visible="yes">0</Property>
+        <Property name="偏差输入补偿方式" varname="cICM" type="MyEnum" visible="yes">不考虑输入补偿,加补偿,减补偿,置换补偿</Property>
+        <Property name="偏差输入补偿量" varname="fICV" type="System.Single" visible="yes">0</Property>
+        <Property name="偏差死区" varname="fBSGP" type="System.Single" visible="yes">0</Property>
+        <Property name="偏差正作用/反作用" varname="cDorR" type="MyEnum" visible="yes">偏差反作用,偏差正作用</Property>
+        <Property name="上次的偏差" varname="ei_1" type="System.Single" visible="no">0</Property>
+        <Property name="上次的时间记录" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+        <Property name="上上次的偏差" varname="ei_2" type="System.Single" visible="no">0</Property>
+        <Property name="微分(秒)" varname="Kd" type="System.Single" visible="yes">0</Property>
+        <Property name="偏差报警状态" varname="cDLA" type="System.Single" visible="no">0</Property>
+        <Property name="算法选择" varname="cSelect" type="MyEnum" visible="yes">普通PID算法,积分分离PID算法,遇限削弱积分PID算法,微分先行PID算法,梯形积分PID算法</Property>
+        <Property name="输出值" varname="fMV" type="System.Single" visible="no">50</Property>
+        <Property name="积分分离因子" varname="fE0" type="System.Single" visible="yes">0</Property>
+        <Property name="控制量上限" varname="fMH" type="System.Single" visible="yes">100</Property>
+        <Property name="控制量下限" varname="fML" type="System.Single" visible="yes">0</Property>
+        <Property name="上次的被控量" varname="fPV_1" type="System.Single" visible="no">0</Property>
+        <Property name="上上次的被控量" varname="fPV_2" type="System.Single" visible="no">0</Property>
+        <Property name="输出补偿量" varname="fOCV" type="System.Single" visible="yes">0</Property>
+        <Property name="输出补偿方式" varname="cOCM" type="MyEnum" visible="yes">不考虑输入补偿,加补偿,减补偿,置换补偿</Property>
+        <Property name="输出变化率" varname="fMR" type="System.Single" visible="yes">100</Property>
+        <Property name="输出保持" varname="cFHorNH" type="MyEnum" visible="yes">保持,不保持</Property>
+        <Property name="安全输出" varname="cFSorNS" type="MyEnum" visible="yes">安全输出,不安全输出</Property>
+        <Property name="安全输出量" varname="fMS" type="System.Single" visible="yes">0</Property>
+        <Property name="自动/手动" varname="cCtrlMode" type="MyEnum" visible="yes">自动,手动</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// PID控制
+void PIDControl(PIDStruct* PID)
+{
+     fp32 Kp,Ki,Kd;
+     uint32 Ts;	 // 计算值,S单位
+     fp32 ei,ei_1,ei_2;
+     fp32 deltaMV;
+     fp32 mv,sv,pv;
+     fp32 Up,Ud,Ui;  // 比例项，积分项，微分项
+	 uint32 timerInterval;  // 时间跨度
+	 // 时间处理
+	 if(timerCount &lt; PID-&gt;lastTimeRec)
+	 {
+	 	  timerInterval = 0xffffffff - PID-&gt;lastTimeRec + timerCount;
+	 }
+	 else
+	 {
+	 	  timerInterval = timerCount - PID-&gt;lastTimeRec;
+	 }	 
+
+     if(timerInterval &gt;= PID-&gt;Ts) 
+     {// 时间到点
+	 	 Pop(&amp;paramStack,&amp;pv);  // 获得输入值
+		 Pop(&amp;paramStack,&amp;sv);  // 获得设定值		 
+     	 Ts = PID-&gt;Ts / 1000;
+         if(PID-&gt;cCtrlMode == 1)
+         {// 手动方式
+            mv = PID-&gt;fMV;
+            PID-&gt;fSV = pv;// 给定值跟综被控量
+            PID-&gt;ei_1 = 0;
+            PID-&gt;ei_2 = 0;
+         }
+         else
+         {// 自动方式
+            // 给定值处理
+            /*if(PID-&gt;cCLorCR == 1)
+            {// 外给
+                if(PID-&gt;cCASorSCC == 1)
+                {// 上位机
+                    sv = PID-&gt;fSVS;
+                }
+                else
+                {// 串联
+                    sv = PID-&gt;fSVC;
+                }
+            }
+            else
+            {// 内给
+                 sv = PID-&gt;fSVL;
+            }*/
+			if(sv &lt; 0)
+			{// 无输入或输入值不正确,采用内给
+				sv = PID-&gt;fSVL;	
+			}
+			        
+             if(PID-&gt;fSR != 0 &amp;&amp; fabs(sv - PID-&gt;fSV) &gt; PID-&gt;fSR)
+             {// 变化率超过范围
+                sv = sv &gt; PID-&gt;fSV ? (PID-&gt;fSV + PID-&gt;fSR) : 
+                    (PID-&gt;fSV - PID-&gt;fSR); 
+             }       
+             // 记录下给定值
+            PID-&gt;fSV = sv;
+
+             // 被控量处理
+             if(PID-&gt;cPHA == 0)
+             {
+                if(pv &gt; PID-&gt;fPH)
+                {// 大于上限
+                    PID-&gt;cPHA = 1;
+                }
+             }
+             else
+             {// 已是报警状态
+                 if(pv &lt; PID-&gt;fPH - PID-&gt;fHY)
+                 {// 不在报警死区内
+                    PID-&gt;cPHA = 0; 
+                 }
+             }
+             if(PID-&gt;cPLA == 0)
+             {
+                if(pv &lt; PID-&gt;fPL)
+                {// 小于下限
+                    PID-&gt;cPLA = 1;
+                }
+             }
+             else			 
+             {// 已是报警状态
+                 if(pv &lt; PID-&gt;fPL + PID-&gt;fHY)
+                 {// 不在报警死区内
+                    PID-&gt;cPLA = 0; 
+                 }
+             }
+             if(PID-&gt;fPR != 0 &amp;&amp; fabs(pv - PID-&gt;fPV) &gt; PID-&gt;fPR)
+             {// 变化率超过范围
+                pv = pv &gt; PID-&gt;fPV ? (PID-&gt;fPV + PID-&gt;fPR) : 
+                    (PID-&gt;fPV - PID-&gt;fPR); 
+             }
+             PID-&gt;fPV_2 = PID-&gt;fPV_1;
+             PID-&gt;fPV_1 = PID-&gt;fPV;          
+             // 记录下被控量
+             PID-&gt;fPV = pv;
+
+             // 偏差处理
+             if(PID-&gt;cDorR == 1)  
+             {// 正作用
+                ei = pv - sv;
+             }
+            else
+            {// 反作用
+                ei = sv - pv;
+             }
+             if(fabs(ei) &gt; PID-&gt;fDL)
+             {// 超出报警值
+                 PID-&gt;cDLA = 1;
+             }
+             else
+             {
+                 PID-&gt;cDLA = 0;
+             }
+             // 偏差死区处理
+             if(fabs(ei) &lt;= PID-&gt;fBSGP)
+             {
+                 ei = 0;
+             }
+             if(PID-&gt;cICM == 1)
+             {// 加补偿
+                ei += PID-&gt;fICV;
+             }
+             else if(PID-&gt;cICM == 2)
+             {// 减补偿
+                ei -= PID-&gt;fICV;
+             }
+             else if(PID-&gt;cICM == 3)
+             {// 置换补偿				
+                ei = PID-&gt;fICV;
+             }
+        
+
+            // PID计算
+            Kp = PID-&gt;Kp;
+            Ki = PID-&gt;Ki;
+            Kd = PID-&gt;Kd; 
+			
+            ei_1 = PID-&gt;ei;
+            ei_2 = PID-&gt;ei_1;
+            if(Ts == 0)
+            {   
+                Ts = 1;
+             }
+            if(PID-&gt;cSelect == 0)
+             {// 普通PID
+                 if(Ki == 0)
+                 {// 积分因子不起作用   
+                     deltaMV = Kp * ( ei - ei_1 + (Kd / Ts) * (ei- 2 * ei_1 + ei_2));
+                     mv = PID-&gt;fMV + deltaMV;
+                 }
+                 else if(Ki == 0 &amp;&amp; Kd == 0)
+                 {// 只有比例因子起作用
+                     mv = Kp * ei;
+                 }
+                 else
+                 {              
+                    deltaMV = Kp * ( ei - ei_1 + Ts * ei / Ki + (Kd / Ts) * (ei- 2 * ei_1 + ei_2));
+                    mv = PID-&gt;fMV + deltaMV;
+                 }          
+             }
+             else if(PID-&gt;cSelect == 1)
+             {// 积分分离PID算法
+                 if(fabs(ei) &gt; PID-&gt;fE0)
+                 {// 采用PD
+                    if(Kd == 0)
+                    {// 只有比例因子起作用
+                        mv = Kp * ei;                   
+                    }
+                    else
+                    {// 积分因子不起作用
+                        deltaMV = Kp * ( ei - ei_1 + (Kd / Ts) * (ei- 2 * ei_1 + ei_2));
+                        mv = PID-&gt;fMV + deltaMV;
+                    }
+                 }
+                 else
+                 {// PID算法
+                     if(Ki == 0)
+                     {// 积分因子不起作用   
+                        deltaMV = Kp * ( ei - ei_1 + (Kd / Ts) * (ei- 2 * ei_1 + ei_2));
+                         mv = PID-&gt;fMV + deltaMV;
+                    }
+                     else if(Ki == 0 &amp;&amp; Kd == 0)
+                     {// 只有比例因子起作用
+                         mv = Kp * ei;
+                     }
+                     else
+                     {              
+                        deltaMV = Kp * ( ei - ei_1 + Ts * ei / Ki + (Kd / Ts) * (ei- 2 * ei_1 + ei_2));
+                        mv = PID-&gt;fMV + deltaMV;
+                     }
+                }
+            }
+            else if(PID-&gt;cSelect == 2)
+            {// 遇限削弱积分PID算法
+                Up = Kp * ( ei - ei_1);
+                 if(Ki == 0)
+                 {
+                    Ui = 0;
+                 }
+                 else
+                 {
+                    Ui = Kp * Ts * ei / Ki;
+                 }
+                 Ud = Kp * (Kd / Ts) * (ei- 2 * ei_1 + ei_2);
+                 if(mv &gt; PID-&gt;fMH)
+                 {// 大于控制量上限
+                    if(ei &gt; 0)
+                    {// 舍去积分
+                        deltaMV = Up + Ud;
+                    }
+                    else
+                    {
+                        deltaMV = Up + Ui + Ud;
+                    }
+                }
+                else if(mv &lt; PID-&gt;fML)
+                {
+                    if(ei &lt; 0)
+                    {// 舍去积分
+                        deltaMV = Up + Ud;  
+                    }
+                    else
+                    {
+                        deltaMV = Up + Ui + Ud;
+                    }
+                }
+                 else
+                 {
+                      deltaMV = Up + Ui + Ud;
+                 }
+                 mv = PID-&gt;fMV + deltaMV;
+            }
+            else if(PID-&gt;cSelect == 3)
+            {// 微分先行PID算法
+                  if(Ki == 0)
+                  {// 积分因子不起作用  
+                     deltaMV = Kp * ( ei - ei_1 + (Kd / Ts) * 
+                         (PID-&gt;fPV - 2*PID-&gt;fPV_1 + PID-&gt;fPV_2));
+                     mv = PID-&gt;fMV + deltaMV;
+                  }
+                 else if(Ki == 0 &amp;&amp; Kd == 0)
+                  {// 只有比例因子起作用
+                        mv = Kp * ei;
+                  }
+                  else
+                  {             
+                     deltaMV = Kp * ( ei - ei_1 + Ts * ei / Ki + (Kd / Ts) * 
+                         (PID-&gt;fPV - 2*PID-&gt;fPV_1 + PID-&gt;fPV_2));
+                     mv = PID-&gt;fMV + deltaMV;
+                 }
+            }
+             else if(PID-&gt;cSelect == 4)
+             {// 梯形积分PID算法
+                 if(Ki == 0)
+                {// 积分因子不起作用    
+                     deltaMV = Kp * ( ei - ei_1 + (Kd / Ts) * 
+                         (PID-&gt;fPV - 2*PID-&gt;fPV_1 + PID-&gt;fPV_2));
+                     mv = PID-&gt;fMV + deltaMV;
+                 }
+                  else if(Ki == 0 &amp;&amp; Kd == 0)
+                 {// 只有比例因子起作用
+                    mv = Kp * ei;
+                 }
+                 else
+                 {              
+                     deltaMV = Kp * ( ei - ei_1 + (Ts/Ki) * (ei + ei_1)/2 + (Kd / Ts) * 
+                         (PID-&gt;fPV - 2*PID-&gt;fPV_1 + PID-&gt;fPV_2));
+                     mv = PID-&gt;fMV + deltaMV;
+                  }         
+            } 
+            
+             // 控制量处理
+             switch(PID-&gt;cOCM)
+             {
+                case 1: // 加
+                    mv += PID-&gt;fOCV;
+                    break;
+                case 2: // 减
+                    mv -= PID-&gt;fOCV;
+                    break;
+                case 3: // 置换
+                    mv = PID-&gt;fOCV;
+                    break;
+                default:
+                    break; 
+            }
+            if(PID-&gt;fMR != 0 &amp;&amp; fabs(mv - PID-&gt;fMV) &gt; PID-&gt;fMR)
+            {// 变化率限制
+                 mv = mv &gt; PID-&gt;fMV ? (PID-&gt;fMV + PID-&gt;fMR) : 
+                    (PID-&gt;fMV - PID-&gt;fMR); 
+            }
+            if(PID-&gt;cFHorNH == 1)
+            {// 输出保持
+                mv = PID-&gt;fMV;
+            }
+            if(PID-&gt;cFSorNS == 1)
+            {// 安全输出
+                mv = PID-&gt;fMS;
+            }
+        }// 自动
+        // 输出最值的处理
+        mv = mv &gt; PID-&gt;fMH ? PID-&gt;fMH : mv;
+        mv = mv &lt; PID-&gt;fML ? PID-&gt;fML : mv; 
+        
+        // 保存值
+        PID-&gt;fMV = mv;
+        (*PID).ei = ei;
+        (*PID).ei_1 = ei_1;
+        (*PID).ei_2 = ei_2;
+        PID-&gt;lastTimeRec = timerCount;
+
+		// 压栈
+     	Push(&amp;paramStack,mv); 
+     }// 到点
+ }    </CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,最少拍控制器,控制算法">
+      <BasicProperty>
+        <Property name="ModuleName">LEAST</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">最少拍控制器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="被控对象的放大系数" varname="fK" type="System.Single" visible="yes">1</Property>
+        <Property name="一阶被控对象的时间常数" varname="ulT1" type="System.Int32" visible="yes">1000</Property>
+        <Property name="被控对象的纯滞后时间" varname="ulTao" type="System.Single" visible="yes">10000</Property>
+        <Property name="采样周期" varname="ulTs" type="System.Int32" visible="yes">1000</Property>
+        <Property name="输出高限" varname="fMH" type="System.Single" visible="yes">100</Property>
+        <Property name="输出低限" varname="fML" type="System.Single" visible="yes">0</Property>
+        <Property name="自动/手动" varname="cCtrlMod" type="MyEnum" visible="yes">自动,手动</Property>
+        <Property name="上次的偏差" varname="fei" type="System.Single" visible="no">0</Property>
+        <Property name="上次控制的时间" varname="ulLastTime" type="System.Int32" visible="no">0</Property>
+        <Property name="输出" varname="fMV" type="System.Single" visible="no">50</Property>
+        <Property name="设定值" varname="fSV" type="System.Single" visible="yes">50</Property>
+        <Property name="输入队列" varname="queueMV" type="queue" visible="no">NULL</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 最少拍控制
+void LEASTControl(LEASTStruct *LEAST)
+{
+    fp32 fPV,fMV,fei_1,fei,fMV_N_1;
+    uint32 historyInNum;  // 输出元素个数
+    uint32 qLength;  // 队列中元素个数
+    fp32 a;
+    fp32 ulTs,ulT1;
+    fp32 fK;
+    fp32 fMH,fML; // 输出最值
+	uint32 timerInterval;  // 时间跨度
+	 // 时间处理
+	 if(timerCount &lt; LEAST-&gt;ulLastTime)
+	 {
+	 	  timerInterval = 0xffffffff - LEAST-&gt;ulLastTime + timerCount;
+	 }
+	 else
+	 {
+	 	  timerInterval = timerCount - LEAST-&gt;ulLastTime;
+	 }
+
+    Pop(&amp;paramStack,&amp;fPV);
+
+    
+    if(timerInterval &gt;= LEAST-&gt;ulTs)
+    {// 时间到点
+		    ulTs = (LEAST-&gt;ulTs / 1000);
+		    fMH = LEAST-&gt;fMH;
+		    fML = LEAST-&gt;fML;
+		    if(ulTs == 0)
+		    {// 周期
+		        ulTs = 1;
+		    }        
+        if(LEAST-&gt;cCtrlMod == 1)
+        {// 手动
+            fMV = LEAST-&gt;fMV;
+        }
+        else
+        {// 自动
+            if(LEAST-&gt;ulT1 == 0)
+            {// 时间常数
+                LEAST-&gt;ulT1 = 1000;
+            }
+            fei = LEAST-&gt;fSV - fPV;
+            fei_1 = LEAST-&gt;fei; 
+            ulT1 = LEAST-&gt;ulT1 / 1000;
+            fK = LEAST-&gt;fK;     
+
+            // 输出队列处理
+            if(LEAST-&gt;queueMV == NULL)
+            {// 队列不存在时,初始化队列
+                InitQueue(&amp;LEAST-&gt;queueMV);
+            }
+            qLength = QueueLength(LEAST-&gt;queueMV);
+        
+            historyInNum = (uint32)(LEAST-&gt;ulTao / LEAST-&gt;ulTs);
+            while(historyInNum &gt; qLength)
+            {// 当队列个数不满时
+                EnQueue(&amp;LEAST-&gt;queueMV,0);// 插入0
+                qLength++;
+            }
+            while(historyInNum &lt; qLength)
+            {// 当队列个数超出时
+                DeQueue(&amp;LEAST-&gt;queueMV,&amp;fMV_N_1);// 删除最原始的数据
+                qLength--;
+            }
+
+            DeQueue(&amp;LEAST-&gt;queueMV,&amp;fMV_N_1);
+            a = exp(-(fp32)ulTs/ulT1);          
+            fMV = (fei - a * fei_1) / (fK*(1-a)) + fMV_N_1;
+            // 最值处理
+            fMV = fMV &gt; fMH ? fMH : fMV;
+            fMV = fMV &lt; fML ? fML : fMV;
+            // 保存
+            LEAST-&gt;fMV = fMV;
+            LEAST-&gt;fei = fei;
+            EnQueue(&amp;LEAST-&gt;queueMV,fMV);
+        }// 自动
+        LEAST-&gt;ulLastTime = timerCount;
+        Push(&amp;paramStack,fMV);
+    }// 周期到
+   
+    
+     
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,大林控制器,控制算法">
+      <BasicProperty>
+        <Property name="ModuleName">DARLIN</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">大林控制器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="输出高限" varname="fMH" type="System.Single" visible="yes">100</Property>
+        <Property name="输出低限" varname="fML" type="System.Single" visible="yes">0</Property>
+        <Property name="被控对象的放大系数" varname="fK" type="System.Single" visible="yes">1</Property>
+        <Property name="时间常数1" varname="ulT1" type="System.Int32" visible="yes">1000</Property>
+        <Property name="时间常数2" varname="ulT2" type="System.Int32" visible="yes">1000</Property>
+        <Property name="闭环系统时间常数" varname="ulTTao" type="System.Int32" visible="yes">1000</Property>
+        <Property name="采样周期" varname="ulTs" type="System.Int32" visible="yes">1000</Property>
+        <Property name="滞后时间" varname="ulTao" type="System.Int32" visible="yes">10000</Property>
+        <Property name="自动/手动" varname="cCtrlMod" type="MyEnum" visible="yes">自动,手动</Property>
+        <Property name="输出" varname="fMV" type="System.Single" visible="no">50</Property>
+        <Property name="上上次的输出" varname="fMV_1" type="System.Single" visible="no">0</Property>
+        <Property name="上次的偏差" varname="fei" type="System.Single" visible="no">0</Property>
+        <Property name="上上次的偏差" varname="fei_1" type="System.Single" visible="no">0</Property>
+        <Property name="上次控制的时间" varname="ulLastTime" type="System.Int32" visible="no">0</Property>
+        <Property name="设定值" varname="fSV" type="System.Single" visible="yes">50</Property>
+        <Property name="输入队列" varname="queueMV" type="queue" visible="no">NULL</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 大林算法
+void DARLINControl(DARLINStruct *DARLIN)
+{
+    fp32 fPV,fMV,fei,fei_1,fei_2,fMV_N_1,fMV_1,fMV_N_2,fMV_2;
+    uint32 historyInNum;  // 输出元素个数
+    uint32 qLength;  // 队列中元素个数
+    fp32 a,b,c,c1,c2;  // 计算时的临时变量
+    fp32 temp1,temp2;
+    fp32 ulTs,ulT1,ulT2,ulTTao;
+    fp32 fK;
+    fp32 fMH,fML; // 输出最值
+	uint32 timerInterval;  // 时间跨度
+	 // 时间处理
+	 if(timerCount &lt; DARLIN-&gt;ulLastTime)
+	 {
+	 	  timerInterval = 0xffffffff - DARLIN-&gt;ulLastTime + timerCount;
+	 }
+	 else
+	 {
+	 	  timerInterval = timerCount - DARLIN-&gt;ulLastTime;
+	 }
+     
+    if(timerInterval &gt;= DARLIN-&gt;ulTs)
+    {// 时间到点
+		Pop(&amp;paramStack,&amp;fPV);
+	
+	    ulTs = DARLIN-&gt;ulTs / 1000;
+	    ulT1 = DARLIN-&gt;ulT1 / 1000;
+	    ulT2 = DARLIN-&gt;ulT2 / 1000;
+	    ulTTao = DARLIN-&gt;ulTTao / 1000;    
+	    fMH = DARLIN-&gt;fMH;
+	    fML = DARLIN-&gt;fML;
+	    if(ulTs == 0)
+	    {// 周期
+	        ulTs = 1;
+	    }
+	    if(ulT1 == 0)
+	    {
+	        ulT1 = 1;
+	    }          
+        if(DARLIN-&gt;cCtrlMod == 1)
+        {// 手动
+            fMV = DARLIN-&gt;fMV;
+        }
+        else
+        {// 自动
+            
+            fei = DARLIN-&gt;fSV - fPV;
+            fei_1 = DARLIN-&gt;fei;
+            fei_2 = DARLIN-&gt;fei_1;
+            fK = DARLIN-&gt;fK;
+            fMV_1 = DARLIN-&gt;fMV;
+            fMV_2 = DARLIN-&gt;fMV_1;      
+
+            // 输出队列处理
+            if(DARLIN-&gt;queueMV == NULL)
+            {// 队列不存在时,初始化队列
+                InitQueue(&amp;DARLIN-&gt;queueMV);
+            }
+            qLength = QueueLength(DARLIN-&gt;queueMV);
+        
+            if(ulT2 == 0)
+            {
+                historyInNum = (uint32)(DARLIN-&gt;ulTao / DARLIN-&gt;ulTs);
+            }
+            else
+            {// 二阶对象时,得多存一个
+                historyInNum = (uint32)(DARLIN-&gt;ulTao / DARLIN-&gt;ulTs) + 1;
+            }
+            while(historyInNum &gt; qLength)
+            {// 当队列个数不满时
+                EnQueue(&amp;DARLIN-&gt;queueMV,0);// 插入0
+                qLength++;
+            }
+            while(historyInNum &lt; qLength)
+            {// 当队列个数超出时
+                DeQueue(&amp;DARLIN-&gt;queueMV,&amp;fMV_N_1);// 删除最原始的数据
+                qLength--;
+            }
+            a = exp(-ulTs/ulTTao);
+            b = exp(-ulTs/ulT1);
+            if(ulT2 == 0)
+            {// 一阶对象
+                DeQueue(&amp;DARLIN-&gt;queueMV,&amp;fMV_N_1);
+                
+                fMV=((1-a)*fei-b*(1-a)*fei_1+fK*a*(1-b)*fMV_1+fK*(1-a)*(1-b)*fMV_N_1)/(fK*(1-b));
+                // 最值处理
+                fMV = fMV &gt; fMH ? fMH : fMV;
+                fMV = fMV &lt; fML ? fML : fMV;
+                // 保存
+                DARLIN-&gt;fMV = fMV;              
+                DARLIN-&gt;fei = fei;
+                EnQueue(&amp;DARLIN-&gt;queueMV,fMV);
+            }
+            else
+            {// 二阶对象
+                if(ulT1 == ulT2)
+                {
+                    fMV = 0;
+                }
+                else
+                {
+                    DeQueue(&amp;DARLIN-&gt;queueMV,&amp;fMV_N_2);
+                    fMV_N_1 = GetQueueElement(DARLIN-&gt;queueMV);
+                    c=exp(-ulTs/ulT2);
+                    c1=1+(ulT1*b-ulT2*c)/(ulT2-ulT1);
+                    c2=b*c+(ulT1*c-ulT2*b)/(ulT2-ulT1);
+                    temp1=((1-a)*fei-(c+b)*(1-a)*fei_1+b*c*fei_2*(1-a))/fK;
+                    temp2=(c2-c1*a)*fMV_1-c2*a*fMV_2-c1*(1-a)*fMV_N_1-c2*(1-a)*fMV_N_2;
+                    fMV = temp1 - temp2;
+                    // 最值处理
+                    fMV = fMV &gt; fMH ? fMH : fMV;
+                    fMV = fMV &lt; fML ? fML : fMV;
+                    // 保存
+                    DARLIN-&gt;fMV = fMV;
+                    DARLIN-&gt;fMV_1 = fMV_1;
+                    DARLIN-&gt;fei = fei;                  
+                    DARLIN-&gt;fei_1 = fei_1;                  
+                    EnQueue(&amp;DARLIN-&gt;queueMV,fMV);
+                }
+            }
+			DARLIN-&gt;ulLastTime = timerCount;
+			Push(&amp;paramStack,fMV);
+        }// 自动
+    }// 周期到
+    
+    
+      
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,前馈器,控制算法">
+      <BasicProperty>
+        <Property name="ModuleName">PRE</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">前馈器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="输出高限" varname="fMH" type="System.Single" visible="yes">100</Property>
+        <Property name="输出低限" varname="fML" type="System.Single" visible="yes">0</Property>
+        <Property name="扰动对象的放大系数" varname="fK1" type="System.Single" visible="yes">1</Property>
+        <Property name="被控对象的时间常数" varname="ulT2" type="System.Int32" visible="yes">1000</Property>
+        <Property name="扰动通道的时间常数" varname="ulT1" type="System.Int32" visible="yes">10000</Property>
+        <Property name="采样周期" varname="ulTs" type="System.Int32" visible="yes">1000</Property>
+        <Property name="被控对象的放大系数" varname="fK2" type="System.Single" visible="yes">1</Property>
+        <Property name="扰动通道的滞后时间" varname="ulTTao1" type="System.Int32" visible="yes">10000</Property>
+        <Property name="自动/手动" varname="cCtrlMod" type="MyEnum" visible="yes">自动,手动</Property>
+        <Property name="上次的输出" varname="fMV" type="System.Single" visible="no">50</Property>
+        <Property name="上次控制的时间" varname="ulLastTime" type="System.Int32" visible="no">0</Property>
+        <Property name="输入队列" varname="queuePV" type="queue" visible="no">NULL</Property>
+        <Property name="被控对象的滞后时间" varname="ulTTao2" type="System.Int32" visible="yes">10000</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine> // 前馈控制
+void PREControl(PREStruct *PRE)
+{
+    fp32 fPV,fMV,fMV_1,fPV_N,fPV_N_1;
+    uint32 historyInNum;  // 输出元素个数
+    uint32 qLength;  // 队列中元素个数
+    fp32 a,b,c;
+    fp32 ulTs,ulT1,ulT2,ulTTao1,ulTTao2;
+    fp32 fK1,fK2,fKf;
+    fp32 fMH,fML; // 输出最值
+	uint32 timerInterval;  // 时间跨度
+	 // 时间处理
+	 if(timerCount &lt; PRE-&gt;ulLastTime)
+	 {
+	 	  timerInterval = 0xffffffff - PRE-&gt;ulLastTime + timerCount;
+	 }
+	 else
+	 {
+	 	  timerInterval = timerCount - PRE-&gt;ulLastTime;
+	 }
+
+    
+    if(timerInterval &gt;= PRE-&gt;ulTs)
+    {// 时间到点
+		Pop(&amp;paramStack,&amp;fPV);
+
+	    ulTs = PRE-&gt;ulTs / 1000;
+	    fMH = PRE-&gt;fMH;
+	    fML = PRE-&gt;fML;
+	    if(ulTs == 0)
+	    {// 周期
+	        ulTs = 1;
+	    }        
+        if(PRE-&gt;cCtrlMod == 1)
+        {// 手动
+            fMV = PRE-&gt;fMV;
+        }
+        else
+        {// 自动
+            if(PRE-&gt;ulT1 == 0)
+            {// 扰动时间常数
+                PRE-&gt;ulT1   = 1000;
+            }
+            fK1 = PRE-&gt;fK1;
+            fK2 = PRE-&gt;fK2; 
+            ulT1 = PRE-&gt;ulT1 / 1000;
+            ulT2 = PRE-&gt;ulT2 / 1000;
+            ulTTao1 = PRE-&gt;ulTTao1 / 1000;
+			ulTTao2 = PRE-&gt;ulTTao2 / 1000;
+            fMV_1 = PRE-&gt;fMV;
+            if(ulT2 == 0)
+            {// 被控对象时间常数
+                ulT2 = 1;
+            }       
+
+            // 输出队列处理
+            if(PRE-&gt;queuePV == NULL)
+            {// 队列不存在时,初始化队列
+                InitQueue(&amp;PRE-&gt;queuePV);
+            }
+            qLength = QueueLength(PRE-&gt;queuePV);
+        
+            historyInNum = (uint32)((ulTTao1 - ulTTao2) / ulTs) + 1;
+            while(historyInNum &gt; qLength)
+            {// 当队列个数不满时
+                EnQueue(&amp;PRE-&gt;queuePV,0);// 插入0
+                qLength++;
+            }
+            while(historyInNum &lt; qLength)
+            {// 当队列个数超出时
+                DeQueue(&amp;PRE-&gt;queuePV,&amp;fPV_N);// 删除最原始的数据
+                qLength--;
+            }
+
+            DeQueue(&amp;PRE-&gt;queuePV,&amp;fPV_N_1);
+            if(historyInNum == 1)
+            {
+                fPV_N = fPV;
+            }
+            else
+            {
+                fPV_N = GetQueueElement(PRE-&gt;queuePV);
+            }
+            fKf = -(fK1 * ulT2)/(fK2 * ulT1);
+            a = (fp32)ulT1 / (ulT1 + ulTs);
+            b = fKf * ulT1 * (ulTs + ulT2) / (ulT2 * (ulTs + ulT1));
+            c = -fKf * ulT1 / (ulTs + ulT1);         
+            fMV = a * fMV_1 + b * fPV_N + c * fPV_N_1;
+            // 最值处理
+            fMV = fMV &gt; fMH ? fMH : fMV;
+            fMV = fMV &lt; fML ? fML : fMV;
+            // 保存
+            PRE-&gt;fMV = fMV;         
+            EnQueue(&amp;PRE-&gt;queuePV,fPV);
+        }// 自动
+        PRE-&gt;ulLastTime = timerCount;
+		Push(&amp;paramStack,fMV);  
+    }// 周期到     
+    
+   
+} </CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.SpecialControl.JieOu,ControlTactic,解耦补偿控制器,控制算法">
+      <BasicProperty>
+        <Property name="ModuleName">JIEOU</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">解耦补偿控制器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="解耦路数" varname="iN" type="System.Int32" visible="yes">2</Property>
+        <Property name="解耦矩阵的参数" varname="paramMatrix" type="System.Single" visible="no">array</Property>
+        <Property name="上次偏差数组" varname="ei" type="System.Single" visible="no">0</Property>
+        <Property name="上上次偏差数组" varname="ei_1" type="System.Single" visible="no">0</Property>
+        <Property name="上次控制器输出" varname="fUk" type="System.Single" visible="no">0</Property>
+        <Property name="比例" varname="fKp" type="System.Single" visible="no">array</Property>
+        <Property name="积分" varname="fKi" type="System.Single" visible="no">array</Property>
+        <Property name="微分" varname="fKd" type="System.Single" visible="no">array</Property>
+        <Property name="设定值" varname="fSV" type="System.Single" visible="no">array</Property>
+        <Property name="自动/手动" varname="cCtrlMod" type="MyEnum" visible="no">array</Property>
+        <Property name="采样周期" varname="ulTs" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="ulLastTime" type="System.Int32" visible="no">0</Property>
+        <Property name="解耦矩阵" varname="jieOuMatrix" type="queue" visible="no">NULL</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 解耦控制
+void JIEOUControl(JIEOUStruct *JIEOU)
+{
+    fp32 *JieOuMatrix(fp32 *matrix,uint32 n);
+    fp32 *fPV;
+    uint32 iN;    // 几路
+    int32 i,j;
+    fp32 *paramMatrix;  // 解耦的参数矩阵
+    //fp32 *jieOuMatrix;  // 解耦矩阵 
+    fp32 *ei,*ei_1,*ei_2;  // 偏差
+    fp32 *fKp,*fKi,*fKd,*fSV,*fMV;
+    uint8 *cCtrlMod;    
+    fp32 ulTs;
+    uint32 ulLastTime;
+    fp32 *fUk,*fUk_1;  // 控制器输出
+	uint32 timerInterval;  // 时间跨度
+	 // 时间处理
+	if(timerCount &lt; JIEOU-&gt;ulLastTime)
+	{
+	 	timerInterval = 0xffffffff - JIEOU-&gt;ulLastTime + timerCount;
+	}
+	else
+	{
+	 	timerInterval = timerCount - JIEOU-&gt;ulLastTime;
+	}
+	if(timerInterval &gt;= JIEOU-&gt;ulTs) 
+    {// 时间到点
+	    fKp = JIEOU-&gt;fKp;
+	    fKi = JIEOU-&gt;fKi;
+	    fKd = JIEOU-&gt;fKd;
+	    fSV = JIEOU-&gt;fSV;   
+	    cCtrlMod = JIEOU-&gt;cCtrlMod;
+	    ulTs = JIEOU-&gt;ulTs / 1000;
+	    iN = JIEOU-&gt;iN;
+	    ulLastTime = JIEOU-&gt;ulLastTime;
+	    paramMatrix = JIEOU-&gt;paramMatrix;	
+	    fUk_1 = JIEOU-&gt;fUk;
+	    ei_2 = JIEOU-&gt;ei_1;
+	    ei_1 = JIEOU-&gt;ei;
+	    ei = (fp32 *)malloc(sizeof(fp32) * iN);
+	    fUk = (fp32 *)malloc(sizeof(fp32) * iN);
+		fMV = (fp32 *)malloc(sizeof(fp32) * iN);
+		fPV = (fp32 *)malloc(sizeof(fp32) * iN);
+		if(ulTs == 0)
+        {
+           ulTs = 1;
+        }
+	    // 求得解耦矩阵
+		if(JIEOU-&gt;jieOuMatrix == NULL)
+		{
+	   		 JIEOU-&gt;jieOuMatrix = JieOuMatrix(paramMatrix,iN);		 
+		}
+	    // 求得每路控制器输出
+	    for(i = iN - 1;i &gt;= 0;i--)
+	    {           
+			Pop(&amp;paramStack,&amp;fPV[i]);   
+	        ei[i] = fSV[i] - fPV[i];		        
+	        
+            // 算出控制器输出
+            if(fKi == 0)
+            {// 积分不起作用
+                fUk[i] = fUk_1[i]+fKp[i]*(ei[i]-ei_1[i]+(fKd[i]/ulTs)*(ei[i]-2*ei_1[i]+ ei_2[i]));
+            }
+            else
+            {
+                fUk[i] = fUk_1[i]+fKp[i]*(ei[i]-ei_1[i]+ulTs*ei[i]/fKi[i]+(fKd[i]/ulTs)*(ei[i]- 2*ei_1[i]+ei_2[i]));
+            }
+            fUk[i] = fUk[i] &gt; 1 ? 1 : fUk[i];
+            fUk[i] = fUk[i] &lt; 0 ? 0 : fUk[i];
+	    }// 循环每个回路
+		
+		// 求得解耦输出
+	    for(i = 0;i &lt; iN;i++)
+	    {
+	        if(cCtrlMod[i] != 1)        
+	        {// 自动  
+                fMV[i] = 0;
+                for(j = 0;j &lt; iN;j++)
+                {
+                    fMV[i] += fUk[j]* JIEOU-&gt;jieOuMatrix[i*iN+j]; // 这便是耦合关系,不能拆开算
+                }
+                fMV[i] = fMV[i] &gt; 1 ? 1 : fMV[i];
+                fMV[i] = fMV[i] &lt; 0 ? 0 : fMV[i];				
+			}
+			// 保存
+            JIEOU-&gt;ei[i] = ei[i];
+            JIEOU-&gt;ei_1[i] = ei_1[i];
+            JIEOU-&gt;fUk[i] = fUk[i];                
+			Push(&amp;paramStack,fMV[i]);
+		}
+		JIEOU-&gt;ulLastTime = timerCount;
+		// 释放
+		free(ei);
+		free(fUk);
+		free(fMV);
+		free(fPV);
+	}// 时间到点
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.SpecialControl.Fuzzy,ControlTactic,模糊控制器,控制算法">
+      <BasicProperty>
+        <Property name="ModuleName">FUZZY</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">模糊控制器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="模糊控制表" varname="fuzzyControlList" type="System.Single" visible="no">array</Property>
+        <Property name="采样周期" varname="ulTs" type="System.Int32" visible="yes">1000</Property>
+        <Property name="偏差高限" varname="fEH" type="System.Single" visible="yes">100</Property>
+        <Property name="偏差变化率高限" varname="fECH" type="System.Single" visible="yes">100</Property>
+        <Property name="输出高限" varname="fUH" type="System.Single" visible="yes">100</Property>
+        <Property name="自动/手动" varname="cCtrlMod" type="MyEnum" visible="yes">自动,手动</Property>
+        <Property name="偏差模糊论域" varname="ulL" type="System.Int32" visible="no">0</Property>
+        <Property name="偏差变化率模糊论域" varname="ulM" type="System.Int32" visible="no">0</Property>
+        <Property name="偏差" varname="fEi" type="System.Single" visible="no">0</Property>
+        <Property name="控制量模糊论域" varname="ulN" type="System.Int32" visible="yes">0</Property>
+        <Property name="输出" varname="fMV" type="System.Single" visible="no">0</Property>
+        <Property name="设定值" varname="fSV" type="System.Single" visible="yes">0</Property>
+        <Property name="上次控制的时间" varname="ulLastTime" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>// 量化,模糊化
+uint32 ClearToFuzzy(fp32 clearValue,fp32 scale,uint32 ulH)
+{
+    int32 fuzzyValue;
+
+    fuzzyValue = clearValue * scale;
+    if(fuzzyValue &gt; (int32)ulH)
+    {
+        fuzzyValue = ulH;
+    }
+    //fuzzyValue = fuzzyValue &lt; (-ulH) ? (-ulH) : fuzzyValue;
+    if(fuzzyValue &lt; (int32)-ulH)
+    {
+        fuzzyValue = -ulH;
+    }
+
+    return fuzzyValue;
+}
+// 清晰化
+fp32 FuzzyToClear(fp32 FuzzyValue ,fp32 ProportionGene,fp32 ClearMax) 
+{
+    fp32 Result;
+    Result=FuzzyValue * ProportionGene;
+    if ( Result &gt; ClearMax )
+    {
+        Result=ClearMax;
+    }
+    else if ( Result &lt; (-ClearMax) )
+    {
+        Result= (-ClearMax);
+    }
+    return Result;
+}
+// 模糊控制
+void FUZZYControl(FUZZYStruct *FUZZY)
+{
+    fp32 fPV,fDeltaMV;
+    fp32 *fuzzyControlList;
+    fp32 fEH,fECH,fEi,fUH,fMV,fEi_1;
+    uint32 ulL,ulM,ulN;
+	fp32 ulTs;
+    uint8 cCtrlMod;
+    int32 ulFuzzyE,ulFuzzyEC; // 偏差与偏差变化率模糊化结果
+    fp32 scaleE,scaleEC,scaleU;  // 比例因子
+    fp32 fDeltaE;  // 偏差变化
+    fp32 fuzzyValue;  // 模糊化结果
+	uint32 timerInterval;  // 时间跨度
+	 // 时间处理
+	 if(timerCount &lt; FUZZY-&gt;ulLastTime)
+	 {
+	 	  timerInterval = 0xffffffff - FUZZY-&gt;ulLastTime + timerCount;
+	 }
+	 else
+	 {
+	 	  timerInterval = timerCount - FUZZY-&gt;ulLastTime;
+	 }
+    
+    if(timerInterval &gt;= FUZZY-&gt;ulTs)
+    {// 时间到点
+		Pop(&amp;paramStack,&amp;fPV);
+	    cCtrlMod = FUZZY-&gt;cCtrlMod;
+	    ulTs = FUZZY-&gt;ulTs / 1000;    
+	    if(ulTs == 0)
+	    {
+	        ulTs = 1;
+	    }        
+        if(cCtrlMod == 0)       
+        {// 自动
+            fuzzyControlList = FUZZY-&gt;fuzzyControlList;
+            fEH = FUZZY-&gt;fEH;fECH = FUZZY-&gt;fECH;fUH = FUZZY-&gt;fUH;
+            fMV = FUZZY-&gt;fMV;           
+            fEi_1 = FUZZY-&gt;fEi; fEi = FUZZY-&gt;fSV - fPV;         
+            // 范围控制
+            fEi = fEi &gt; fEH ? fEH : fEi;
+            fEi = fEi &lt; (-fEH) ? (-fEH) : fEi;
+            fDeltaE = fEi-fEi_1; // 偏差变化率
+            fDeltaE = fDeltaE &gt; fECH ? fECH : fDeltaE;
+            fDeltaE = fDeltaE &lt; (-fECH) ? (-fECH) : fDeltaE;
+                        
+            ulL = FUZZY-&gt;ulL;ulM = FUZZY-&gt;ulM;ulN = FUZZY-&gt;ulN;
+            scaleE = ulL/fEH;scaleEC = ulM/fECH;scaleU = fUH/ulN;
+            // 模糊化
+            ulFuzzyE = ClearToFuzzy(fEi,scaleE,ulL);
+            ulFuzzyEC = ClearToFuzzy(fDeltaE,scaleEC,ulM);
+            // 取值 e为横坐标,ec为纵坐标
+            fuzzyValue = fuzzyControlList[(ulFuzzyEC+ulM)*(2*ulL+1)+(ulFuzzyE+ulL)];
+            // 清晰化
+            fDeltaMV = FuzzyToClear(fuzzyValue,scaleU,fUH);
+            fMV = FUZZY-&gt;fMV + fDeltaMV;
+
+            fMV = fMV &gt; 1 ? 1 : fMV;
+            fMV = fMV &lt; 0 ? 0 : fMV;
+
+            FUZZY-&gt;fMV = fMV;
+            FUZZY-&gt;fEi = fEi;   
+        }
+        FUZZY-&gt;ulLastTime = timerCount;
+		Push(&amp;paramStack,fMV);
+    }// 时间到点
+   
+
+    
+}</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+  </Category>
+  <Category DisplayName="头文件">
+    <CodeLine>#include "configuration_control.h"
+#include "CassSysVar.h"
+
+stack paramStack;
+
+// 常量输入
+void CONControl(fp32 a)
+{
+    Push(&amp;paramStack,a);    
+}
+
+// 输入: Bingo
+void LDControl(fp32 *a)
+{
+    Push(&amp;paramStack,*a);
+}
+
+// 输出
+void STControl(fp32 *a)
+{
+    Pop(&amp;paramStack,a);
+}</CodeLine>
+  </Category>
+</configuration>

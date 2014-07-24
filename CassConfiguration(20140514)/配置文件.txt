@@ -1,0 +1,13 @@
+ 平台目录\debug\sys下的文件：
+
+ public const string HardwareConfigFileName = "sys\\hardware config.txt"; //硬件配置文件
+ public const string NegativePointsFileName = "sys\\negative_points.txt";   
+ public const string NumberConfigExePath = "sys\\NumberConfig.exe"; //数字识别特征点.exe
+ public const string FeatherPointsExePath = "sys\\FeaturePoints.exe";
+
+用户工程目录下的文件：
+ public const string CompileFileName = "ComFile.txt";   //串口配置文件
+ public const string GenDataConfigFileName = "GenDataConfig.txt";  //智能算法生成特征点配置文件
+
+
+2014.03.27 by wtt

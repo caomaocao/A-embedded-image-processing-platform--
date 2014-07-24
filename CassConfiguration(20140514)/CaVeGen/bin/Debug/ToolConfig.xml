@@ -1,0 +1,389 @@
+﻿<configuration>
+  <Category DisplayName="输入输出">
+    <FDToolBoxItem Type="ControlTactic.GraphicsControl.FileInput,ControlTactic,文件输入,输入输出">
+      <BasicProperty>
+		<Property name="ModuleName">FILEIN</Property>
+        <Property name="ModuleColor">255,238,232,170</Property>
+        <Property name="ModuleSort">文件输入</Property>
+      </BasicProperty>
+      <FunctionProperty />
+      <OtherInfo>
+        <Property name="CodeInfo">// 输入
+static uint8 FILEINControl(char *filename)
+{
+	return 1;
+}
+</Property>
+        <Property name="Description">指令名:  FILEIN
+
+</Property>
+        <Property name="OptimizeInfo">
+        </Property>
+      </OtherInfo>
+    </FDToolBoxItem>
+	<FDToolBoxItem Type="ControlTactic.GraphicsControl.FileOutput,ControlTactic,文件输出,输入输出">
+      <BasicProperty>
+	    <Property name="ModuleName">FILEOUT</Property>
+        <Property name="ModuleColor">255,238,232,170</Property>
+        <Property name="ModuleSort">文件输出</Property>
+      </BasicProperty>
+	  <FunctionProperty />
+      <OtherInfo>
+        <Property name="CodeInfo">// 输出
+	static void FILEOUTControl(char *folderName)
+	{
+
+	}
+          
+        </Property>
+        <Property name="Description">指令名：FILEOUT
+</Property>
+        <Property name="OptimizeInfo">
+        </Property>
+      </OtherInfo>
+    </FDToolBoxItem> 
+	
+	<FDToolBoxItem Type="ControlTactic.GraphicsControl.featherFileIn,ControlTactic,特征输入,输入输出">
+      <BasicProperty>
+	<Property name="ModuleName">FEATHERIN</Property>
+        <Property name="ModuleColor">255,238,232,170</Property>
+        <Property name="ModuleSort">特征输入</Property>
+      </BasicProperty>
+      <FunctionProperty />
+      <OtherInfo>
+        <Property name="CodeInfo">// 输入
+static uint8 FEATHERINControl(char *fileName)
+{
+	return 1;
+}
+       </Property>
+        <Property name="Description">指令名:  FEATHERIN
+
+        </Property>
+        <Property name="OptimizeInfo">
+        </Property>
+      </OtherInfo>
+    </FDToolBoxItem> 
+  </Category>
+  <Category DisplayName="滤波算法">
+    
+    <FDToolBoxItem Type="ControlTactic.GraphicsControl.GaoSi,ControlTactic,高斯处理,滤波算法">
+      <BasicProperty>
+        <Property name="ModuleName">GAOSI</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">Output</Property>
+        <Property name="InputName">
+          <InputValue name="Input">0</InputValue>        
+        </Property>
+        <Property name="ModuleColor">255,255,255,255</Property>
+        <Property name="ModuleSort">高斯处理</Property>
+      </BasicProperty>
+	<FunctionProperty />
+      <OtherInfo>
+        <Property name="CodeInfo">
+          // 高斯函数
+          static uint8 GAOSIControl(GAOSIStruct *GAOSI)
+          {
+          int x,y,scanline;
+          int cur_value,thresh_value;
+          int width,height;
+          int v[9];
+          static int win[9] = { 1,2,1,   /*高斯滤波模板窗体*/
+          2,4,2,
+          1,2,1
+          };
+
+
+          width=bmpinfoarray[18];
+          height=bmpinfoarray[22];
+
+          if(width%4)//bmp宽度不为4要补0
+          scanline=(width*8+31)/32*4;
+          else
+          scanline=width;
+
+          for (y=1 ;y&lt;height - 1;y++)
+          {
+          for (x=1;x&lt;width - 1;x++)
+          {
+          v[0] = raw_data[(y-1)*scanline+x-1];
+          v[1] = raw_data[(y-1)*scanline+x];
+          v[2] = raw_data[(y-1)*scanline+x+1];
+          v[3] = raw_data[y*scanline+x-1];
+          v[4] = raw_data[y*scanline+x];
+          v[5] = raw_data[y*scanline+x+1];
+          v[6] = raw_data[(y+1)*scanline+x-1];
+          v[7] = raw_data[(y+1)*scanline+x];
+          v[8] = raw_data[(y+1)*scanline+x+1];
+
+          cur_value = win[0]*v[0] + win[1]*v[1] + win[2]*v[2]
+          + win[3]*v[3] + win[4]*v[4] + win[5]*v[5]
+          + win[6]*v[6] + win[7]*v[7] + win[8]*v[8];
+
+          cur_value = (int)(cur_value/16);
+
+          out_data[y*scanline+x] = cur_value;
+          }
+          }
+          Save_File(GAOSI->index);
+          return 0;
+          }
+        </Property>
+        <Property name="Description">指令名：拉普拉斯处理</Property>
+        <Property name="OptimizeInfo">
+        </Property>
+      </OtherInfo>
+    </FDToolBoxItem>
+    
+    <FDToolBoxItem Type="ControlTactic.GraphicsControl.Laplace,ControlTactic,拉普拉斯处理,滤波算法">
+      <BasicProperty>
+        <Property name="ModuleName">LAPLACE</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">Output</Property>
+        <Property name="InputName">
+          <InputValue name="Input">0</InputValue>
+        </Property>
+        <Property name="ModuleColor">255,255,255,255</Property>
+        <Property name="ModuleSort">拉普拉斯处理</Property>
+      </BasicProperty>
+	<FunctionProperty />
+      <OtherInfo>
+        <Property name="CodeInfo">
+          // laplace函数
+          static uint8 LAPLACEControl(GAOSIStruct *LABULASI)
+          {
+          int x,y,scanline;
+          int cur_value,thresh_value;
+          int width,height;
+          int v[9];
+
+          static int win[9] = { 0,1,0,   /*高斯滤波模板窗体*/
+          1,-4,1,
+          0,1,0
+          };
+
+          width=bmpinfoarray[18];
+          height=bmpinfoarray[22];
+
+          if(width%4)//bmp宽度不为4要补0
+          scanline=(width*8+31)/32*4;
+          else
+          scanline=width;
+
+          for(x=1;x&lt;height-1;x++)
+		    for(y=1;y&lt;width-1;y++)
+          {
+          v[0] = raw_data[(x-1)*scanline+y-1];
+          v[1] = raw_data[(x-1)*scanline+y];
+          v[2] = raw_data[(x-1)*scanline+y+1];
+          v[3] = raw_data[(x)*scanline+y-1];
+          v[4] = raw_data[(x)*scanline+y];
+          v[5] = raw_data[(x)*scanline+y+1];
+          v[6] = raw_data[(x+1)*scanline+y-1];
+          v[7] = raw_data[(x+1)*scanline+y];
+          v[8] = raw_data[(x+1)*scanline+y+1];
+
+          cur_value = win[0]*v[0] + win[1]*v[1] + win[2]*v[2]
+          + win[3]*v[3] + win[4]*v[4] + win[5]*v[5]
+          + win[6]*v[6] + win[7]*v[7] + win[8]*v[8];
+
+          cur_value = (int)(cur_value/16);
+
+          out_data[x*scanline+y] = cur_value;
+          }
+
+          Save_File(LABULASI->index);
+          return 0;
+          }
+        </Property>
+        <Property name="Description">指令名：高斯处理</Property>
+        <Property name="OptimizeInfo">
+        </Property>
+      </OtherInfo>
+    </FDToolBoxItem>
+		
+		
+    <FDToolBoxItem Type="ControlTactic.GraphicsControl.Erode,ControlTactic,腐蚀处理,滤波算法">
+    <BasicProperty>
+      <Property name="ModuleName">ERODE</Property>
+      <Property name="TextColor">255,0,0,255</Property>
+      <Property name="OutputName">Output</Property>
+      <Property name="InputName">
+        <InputValue name="Input">0</InputValue>
+      </Property>
+      <Property name="ModuleColor">255,255,255,255</Property>
+      <Property name="ModuleSort">腐蚀处理</Property>
+    </BasicProperty>
+	<FunctionProperty />
+    <OtherInfo>
+      <Property name="CodeInfo">
+        
+static uint8 ERODEControl(ERODEStruct *ERODE)
+{
+	int scanline,k,i,j;
+	int flag;
+	int a=ERODE->index;
+    	unsigned char pix[5];
+	
+	int width=bmpinfoarray[18];
+	
+	if(width%4)
+		scanline=(width*8+31)/32*4;
+	else
+		scanline=width;
+	
+	for(i=1;i&lt;bmpinfo.height-1;i++)                                          //edge problem...
+    	{
+        	for(j=1;j&lt;bmpinfo.width-1;j++)
+		{
+			flag=1;
+			pix[0]=raw_data[i*scanline+j];
+			pix[1]=raw_data[i*scanline+j-2];
+			pix[2]=raw_data[i*scanline+j-1];
+			pix[3]=raw_data[i*scanline+j+1];
+			pix[4]=raw_data[i*scanline+j];
+                   
+			for(k=0;k&lt;5;k++)
+			{
+				if((pix[0]==255)||(pix[k]==255))
+				{
+					flag=0;
+					break;
+				}
+				if(flag==0)
+				{
+					break;
+				}
+			}
+			if(flag==0)
+				out_data[i*scanline+j]=255;		
+			else	
+				out_data[i*scanline+j]=0;			
+		}
+	}
+	Save_File(a);
+    return 1;	
+}
+      </Property>
+      <Property name="Description">指令名：腐蚀处理</Property>
+      <Property name="OptimizeInfo">
+      </Property>
+    </OtherInfo>
+  </FDToolBoxItem>
+	
+	<FDToolBoxItem Type="ControlTactic.GraphicsControl.Binary,ControlTactic,二值化处理,滤波算法">
+    <BasicProperty>
+      <Property name="ModuleName">BINARY</Property>
+      <Property name="TextColor">255,0,0,255</Property>
+      <Property name="OutputName">Output</Property>
+      <Property name="InputName">
+        <InputValue name="Input">0</InputValue>
+      </Property>
+      <Property name="ModuleColor">255,255,255,255</Property>
+      <Property name="ModuleSort">二值化处理</Property>
+    </BasicProperty>
+    <FunctionProperty>
+      <Property name="阈值" varname="cass_mv_binary_threshold" type="System.Single" visible="yes" exp="" optype="" opvalue="" opnode="" relate="">128</Property>
+	</FunctionProperty>
+    <OtherInfo>
+      <Property name="CodeInfo">
+static uint8 BINARYControl(BINARYStruct *BINARY)
+{
+	int x,y,scanline,width,height;
+	int a=BINARY->index;	
+	
+	width=bmpinfoarray[18];
+	height=bmpinfoarray[22];
+	
+	if(width%4)//bmp宽度不为4要补0
+		scanline=(width*8+31)/32*4;
+	else
+		scanline=width;
+	for(x=0;x&lt;scanline*height;x++)
+	{
+		if(raw_data[x]&gt;cass_mv_binary_threshold)
+		{
+			out_data[x]=255;
+			raw_data[x]=255;
+		}
+		else
+		{
+			out_data[x]=0;
+			raw_data[x]=0;
+		}
+	}
+	Save_File(a);	
+	return 1;
+}
+      </Property>
+      <Property name="Description">指令名：二值化处理</Property>
+      <Property name="OptimizeInfo">
+      </Property>
+    </OtherInfo>
+  </FDToolBoxItem>
+  </Category>
+  <Category DisplayName="匹配算法">
+   <FDToolBoxItem Type="ControlTactic.GraphicsControl.Match,ControlTactic,识别处理,匹配算法">
+      <BasicProperty>
+        <Property name="ModuleName">MATCH</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">Output</Property>
+        <Property name="InputName">
+          <InputValue name="Input">0</InputValue>
+        </Property>
+        <Property name="ModuleColor">255,255,255,255</Property>
+        <Property name="ModuleSort">识别处理</Property>
+      </BasicProperty>
+    <FunctionProperty>
+      <Property name="阈值" varname="cass_mv_match_percent" type="System.Single" visible="yes" exp="" optype="" opvalue="" opnode="" relate="">128</Property>
+	</FunctionProperty>
+      <OtherInfo>
+        <Property name="CodeInfo">// 识别处理函数
+static uint8 MATCHControl(MATCHStruct *MATCH)
+{
+    	int tempx,tempy,tempvalue,tempdot;
+	int sum=0,sumvalue=0,x;
+	int scanline;
+	int flag=1;
+	int width=bmpinfoarray[18];
+	
+	if(width%4)
+		scanline=(width*8+31)/32*4;
+	else
+		scanline=width;
+	
+	x=7;
+	while(flag)
+	{
+		sum+=dotarraynumber[x];
+		x+=4;
+		if(dotarraynumber[x]==-1)
+			flag=0;
+	}
+
+	x=4;
+	while(x&lt;1000&amp;&amp;(dotarraynumber[x]!=-1))
+          {
+          tempx=dotarraynumber[x];
+          tempy=dotarraynumber[x+1];
+          tempdot=dotarraynumber[x+2];
+          tempvalue=dotarraynumber[x+3];
+
+          if(raw_data[tempx*scanline+tempy]==tempdot)
+          {
+          sumvalue+=tempvalue;
+          }
+          x+=4;
+          }
+          cass_mv_match_percent =( sumvalue * 100/sum);
+          return 1;
+          }</Property>
+  <Property name="Description">指令名：识别处理</Property>
+        <Property name="OptimizeInfo">
+        </Property>
+      </OtherInfo>
+    </FDToolBoxItem>
+
+  </Category>
+ 
+</configuration>

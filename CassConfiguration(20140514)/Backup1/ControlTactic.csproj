@@ -1,0 +1,258 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{295212E4-2D55-4833-866D-26C131B021E2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ControlTactic</RootNamespace>
+    <AssemblyName>ControlTactic</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ADControl.Designer.cs">
+      <DependentUpon>ADControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Arithmetic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Arithmetic.Designer.cs">
+      <DependentUpon>Arithmetic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CanAddIO.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CanAddIO.Designer.cs">
+      <DependentUpon>CanAddIO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DAControl.Designer.cs">
+      <DependentUpon>DAControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialControl\Calculator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SpecialControl\Calculator.Designer.cs">
+      <DependentUpon>Calculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChooseProperty.cs" />
+    <Compile Include="ChooseSerialNumber.cs" />
+    <Compile Include="Constant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Constant.Designer.cs">
+      <DependentUpon>Constant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChoosePort.cs" />
+    <Compile Include="SpecialControl\CalculatorFrom1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialControl\CalculatorFrom1.Designer.cs">
+      <DependentUpon>CalculatorFrom1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialControl\CalculatorForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialControl\CalculatorForm2.Designer.cs">
+      <DependentUpon>CalculatorForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialControl\FuzzyForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialControl\FuzzyForm1.Designer.cs">
+      <DependentUpon>FuzzyForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialControl\FuzzyForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialControl\FuzzyForm2.Designer.cs">
+      <DependentUpon>FuzzyForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialControl\JieOu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SpecialControl\JieOu.Designer.cs">
+      <DependentUpon>JieOu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialControl\JieOuForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialControl\JieOuForm1.Designer.cs">
+      <DependentUpon>JieOuForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialControl\ProcessForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialControl\ProcessForm1.Designer.cs">
+      <DependentUpon>ProcessForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialControl\ProcessForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialControl\ProcessForm2.Designer.cs">
+      <DependentUpon>ProcessForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialControl\Fuzzy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SpecialControl\Fuzzy.Designer.cs">
+      <DependentUpon>Fuzzy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputValue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InputValue.Designer.cs">
+      <DependentUpon>InputValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JMP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JMP.Designer.cs">
+      <DependentUpon>JMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Label.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Label.designer.cs">
+      <DependentUpon>Label.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules.Designer.cs">
+      <DependentUpon>Modules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutputValue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OutputValue.Designer.cs">
+      <DependentUpon>OutputValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialControl\Process.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SpecialControl\Process.Designer.cs">
+      <DependentUpon>Process.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemConstant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemConstant.Designer.cs">
+      <DependentUpon>SystemConstant.cs</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ADControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ADControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Arithmetic.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Arithmetic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CanAddIO.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CanAddIO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Constant.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Constant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DAControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DAControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputValue.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InputValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JMP.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>JMP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Label.resx">
+      <DependentUpon>Label.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Modules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutputValue.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OutputValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialControl\CalculatorFrom1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CalculatorFrom1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialControl\CalculatorForm2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CalculatorForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialControl\FuzzyForm1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FuzzyForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialControl\FuzzyForm2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FuzzyForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialControl\JieOuForm1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>JieOuForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialControl\ProcessForm1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProcessForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialControl\ProcessForm2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProcessForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemConstant.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SystemConstant.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

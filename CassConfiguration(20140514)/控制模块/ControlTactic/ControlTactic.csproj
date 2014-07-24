@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{295212E4-2D55-4833-866D-26C131B021E2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ControlTactic</RootNamespace>
+    <AssemblyName>ControlTactic</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ADControl.Designer.cs">
+      <DependentUpon>ADControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Arithmetic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Arithmetic.Designer.cs">
+      <DependentUpon>Arithmetic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CanAddIO.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CanAddIO.Designer.cs">
+      <DependentUpon>CanAddIO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DAControl.Designer.cs">
+      <DependentUpon>DAControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\Filter\MeanFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\Filter\MeanFilter.Designer.cs">
+      <DependentUpon>MeanFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\Filter\MedianFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\Filter\MedianFilter.Designer.cs">
+      <DependentUpon>MedianFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\InAndOut\FileInput2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\InAndOut\FileInput2.designer.cs">
+      <DependentUpon>FileInput2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\NumericalCalculation\CenterOfGravity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\NumericalCalculation\CenterOfGravity.Designer.cs">
+      <DependentUpon>CenterOfGravity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\EdgeDetection\Canny.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\EdgeDetection\Canny.Designer.cs">
+      <DependentUpon>Canny.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\EdgeDetection\Hollowed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\EdgeDetection\Hollowed.Designer.cs">
+      <DependentUpon>Hollowed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\EdgeDetection\HoughLines.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\EdgeDetection\HoughLines.Designer.cs">
+      <DependentUpon>HoughLines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\FeaturePointsDetection\Harris.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\FeaturePointsDetection\Harris.Designer.cs">
+      <DependentUpon>Harris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\Morphology\CloseOperation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\Morphology\CloseOperation.Designer.cs">
+      <DependentUpon>CloseOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\Color\AntiColor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\Color\AntiColor.Designer.cs">
+      <DependentUpon>AntiColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\Color\Binary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\Color\Binary.Designer.cs">
+      <DependentUpon>Binary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\Color\OstuBinary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\Color\OstuBinary.Designer.cs">
+      <DependentUpon>OstuBinary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\Morphology\Denoising.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\Morphology\Denoising.Designer.cs">
+      <DependentUpon>Denoising.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\Color\GrayScaleStretch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\Color\GrayScaleStretch.Designer.cs">
+      <DependentUpon>GrayScaleStretch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\Color\HiagramEqualization.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\Color\HiagramEqualization.Designer.cs">
+      <DependentUpon>HiagramEqualization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\InAndOut\CameraIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\InAndOut\CameraIn.Designer.cs">
+      <DependentUpon>CameraIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\Morphology\Dialate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\Morphology\Dialate.designer.cs">
+      <DependentUpon>Dialate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\Morphology\Erode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\Morphology\Erode.Designer.cs">
+      <DependentUpon>Erode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\featherFileEditor.cs" />
+    <Compile Include="GraphicsControl\featherFileIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\featherFileIn.designer.cs">
+      <DependentUpon>featherFileIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\InAndOut\FileInputEditor.cs" />
+    <Compile Include="GraphicsControl\InAndOut\FileOutputEditor.cs" />
+    <Compile Include="GraphicsControl\Filter\GaussianSmoothing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\Filter\GaussianSmoothing.designer.cs">
+      <DependentUpon>GaussianSmoothing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\InAndOut\FileInput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\InAndOut\FileInput.designer.cs">
+      <DependentUpon>FileInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\InAndOut\FileOutput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\InAndOut\FileOutput.designer.cs">
+      <DependentUpon>FileOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\Filter\Laplace.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\Filter\Laplace.Designer.cs">
+      <DependentUpon>Laplace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\Match\Match.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\Match\Match.designer.cs">
+      <DependentUpon>Match.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\Filter\Prewitt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\Filter\Prewitt.designer.cs">
+      <DependentUpon>Prewitt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\Filter\Sobel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\Filter\Sobel.designer.cs">
+      <DependentUpon>Sobel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\Base\GraphicsControlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\Base\GraphicsControlBase.designer.cs">
+      <DependentUpon>GraphicsControlBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\Morphology\OpenOperation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\Morphology\OpenOperation.Designer.cs">
+      <DependentUpon>OpenOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsControl\Morphology\ZhangParallelFastThinning.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsControl\Morphology\ZhangParallelFastThinning.Designer.cs">
+      <DependentUpon>ZhangParallelFastThinning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialControl\Calculator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SpecialControl\Calculator.Designer.cs">
+      <DependentUpon>Calculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChooseProperty.cs" />
+    <Compile Include="ChooseSerialNumber.cs" />
+    <Compile Include="Constant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Constant.Designer.cs">
+      <DependentUpon>Constant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChoosePort.cs" />
+    <Compile Include="SpecialControl\CalculatorFrom1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialControl\CalculatorFrom1.Designer.cs">
+      <DependentUpon>CalculatorFrom1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialControl\CalculatorForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialControl\CalculatorForm2.Designer.cs">
+      <DependentUpon>CalculatorForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialControl\FuzzyForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialControl\FuzzyForm1.Designer.cs">
+      <DependentUpon>FuzzyForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialControl\FuzzyForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialControl\FuzzyForm2.Designer.cs">
+      <DependentUpon>FuzzyForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialControl\JieOu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SpecialControl\JieOu.Designer.cs">
+      <DependentUpon>JieOu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialControl\JieOuForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialControl\JieOuForm1.Designer.cs">
+      <DependentUpon>JieOuForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialControl\ProcessForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialControl\ProcessForm1.Designer.cs">
+      <DependentUpon>ProcessForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialControl\ProcessForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialControl\ProcessForm2.Designer.cs">
+      <DependentUpon>ProcessForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialControl\Fuzzy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SpecialControl\Fuzzy.Designer.cs">
+      <DependentUpon>Fuzzy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputValue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InputValue.Designer.cs">
+      <DependentUpon>InputValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JMP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JMP.Designer.cs">
+      <DependentUpon>JMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Label.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Label.designer.cs">
+      <DependentUpon>Label.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules.Designer.cs">
+      <DependentUpon>Modules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutputValue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OutputValue.Designer.cs">
+      <DependentUpon>OutputValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialControl\Process.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SpecialControl\Process.Designer.cs">
+      <DependentUpon>Process.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemConstant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemConstant.Designer.cs">
+      <DependentUpon>SystemConstant.cs</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ADControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ADControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Arithmetic.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Arithmetic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CanAddIO.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CanAddIO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Constant.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Constant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DAControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DAControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphicsControl\Color\Binary.resx">
+      <DependentUpon>Binary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphicsControl\Color\OstuBinary.resx">
+      <DependentUpon>OstuBinary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphicsControl\InAndOut\CameraIn.resx">
+      <DependentUpon>CameraIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphicsControl\InAndOut\FileInput2.resx">
+      <DependentUpon>FileInput2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphicsControl\Morphology\Erode.resx">
+      <DependentUpon>Erode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphicsControl\featherFileIn.resx">
+      <DependentUpon>featherFileIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphicsControl\InAndOut\FileInput.resx">
+      <DependentUpon>FileInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphicsControl\InAndOut\FileOutput.resx">
+      <DependentUpon>FileOutput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphicsControl\Filter\Laplace.resx">
+      <DependentUpon>Laplace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphicsControl\Match\Match.resx">
+      <DependentUpon>Match.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphicsControl\Base\GraphicsControlBase.resx">
+      <DependentUpon>GraphicsControlBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputValue.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InputValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JMP.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>JMP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Label.resx">
+      <DependentUpon>Label.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Modules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutputValue.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OutputValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialControl\CalculatorFrom1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CalculatorFrom1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialControl\CalculatorForm2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CalculatorForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialControl\FuzzyForm1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FuzzyForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialControl\FuzzyForm2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FuzzyForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialControl\JieOuForm1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>JieOuForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialControl\ProcessForm1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProcessForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialControl\ProcessForm2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProcessForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemConstant.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SystemConstant.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

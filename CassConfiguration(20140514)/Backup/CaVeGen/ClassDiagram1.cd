@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="CaVeGen.CassViewGenerator" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>CassViewGenerator.cs</FileName>
+      <HashCode>Prf/5T+77rpZ0fzZef//clt+67uDXr7vXm493TYfPPc=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CaVeGen.NewPorject" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>NewProject.cs</FileName>
+      <HashCode>AAASAAAAQWQAABAACACAAgACAAAAAgBAAKABAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.Program" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Program.cs</FileName>
+      <HashCode>AAAAgAAAAAAAAAAAgAAABAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.XmlSerializerSectionHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>XmlSerializerSectionHandler.cs</FileName>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CaVeGen.CommonOperation.CassMessageBox" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>CommonOperation\CassMessageBox.cs</FileName>
+      <HashCode>AAAgEAAAAAAAAQAAAAAAABAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.CommonOperation.FileOperator" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>CommonOperation\FileOperator.cs</FileName>
+      <HashCode>AAAAAAAAAAAAARAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.CommonOperation.PublicVariable" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>CommonOperation\PublicVariable.cs</FileName>
+      <HashCode>ABFAAMAABKAJgAAYAMgAQSAEAABCACQBAAEI0AigAkA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.CassView">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\CassView.cs</FileName>
+      <HashCode>CAuBoCMqBHmAAkJDABnBkE4iW0IIAAZBQAMBMIAglIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.CodeDomHostLoader" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\CodeDomHostLoader.cs</FileName>
+      <HashCode>QEAgAAIwAAAARQABAAAAIAAAQQAoAIQgAAAiAQEAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.AddressTable">
+    <Position X="7.5" Y="7.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\CreateILXML\AddressTable.cs</FileName>
+      <HashCode>CKACAgBJACIAQIQKgCKCElCLEAcQMBSLIRApZYQAgyQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.GenerateCode" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\CreateILXML\GenerateCode.cs</FileName>
+      <HashCode>oAFAgQCAgAEEBAhEABQQACACIERJACCFAEAAAAAABAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.GenerateXML" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\CreateILXML\GenerateXML.cs</FileName>
+      <HashCode>gBAAAAEAAQBhVIABNRAHYAICCBIGEAFABgAgAQAEBAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.DrawLineArithmetic" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\DrawLineArithmetic.cs</FileName>
+      <HashCode>IAAAAAAEAAABANAAAICCgCAgEGBAQAAAAQAAAAAEAQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.HostControl" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\HostControl.cs</FileName>
+      <HashCode>AAAAAAAAACAAAAAAQACAAgACQAIAAAAAAAAgAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.HostDesign" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\HostDesign.cs</FileName>
+      <HashCode>CIDAAAAACAYAQQgAIQBAAEgAEAAhAQACAAkAEyAggEA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.HostDesignManage" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\HostDesignManage.cs</FileName>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQAAAI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.RecordPortName" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\RecordPortName.cs</FileName>
+      <HashCode>AIAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.TimerParamentSet" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\TimerParamentSet.cs</FileName>
+      <HashCode>AAACAAAAACAAABAQAAiCAgACAAgAAgAIACAAAAEAQQE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.ToolBoxServiceImpl" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\ToolBoxServiceImpl.cs</FileName>
+      <HashCode>EoIAgAAAIqAAHAAAAAGQQEIihCBIAAABAAMCEEAECgA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.TypeResolutionService" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\TypeResolutionService.cs</FileName>
+      <HashCode>AAAAAAAAAIAAIAAAAAAAAAAAAAAAAAFAAAAAAAAACAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.UndoEngineImplication" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\UndoEngineImplication.cs</FileName>
+      <HashCode>AQIAABAoRAAAAAQAABAAAAQAAAAAAABIAEkAABkAAQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.UndoOperation" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\UndoOpration.cs</FileName>
+      <HashCode>AACEAAAAAAAABEBAAAAUAAABAAAQAgEAIQIAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.CodeEditor.Comment" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\CodeEditor\Comment.cs</FileName>
+      <HashCode>AAAAAAABACgIABEAAAiABAAiAAQAEAABAAAAAAAABAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.CodeEditor.ConfigCodeEdit" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\CodeEditor\ConfigCodeEdit.cs</FileName>
+      <HashCode>AAAAAAAAACQAAAAAAACAAAACAAAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.CodeEditor.ErrorViewControl" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\CodeEditor\ErrorViewControl.cs</FileName>
+      <HashCode>kAAAAA2AIyIgAAkAAUCoAABmEwgAAgAABMAAAUBACAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.CodeEditor.PLCCodeEditor" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\CodeEditor\PLCCodeEditor.cs</FileName>
+      <HashCode>mIHJKMgQAaFBDifgDCmAYIgDC0tghREg+2EFQt+oRmo=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.CreateILXML.ConfigOrder" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\CreateILXML\ConfigOrder.cs</FileName>
+      <HashCode>IACAAAACAAAAAABAAAAQAAAAAAAAAAAAACAIAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.FilterProperty.EditControl" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\FilterProperty\EditControl.cs</FileName>
+      <HashCode>AAAAAAAAAgAAAABAAAAAAAAAAAAAAAAAAAgAAAAAAAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.FilterProperty.FilteredPropertyGrid" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\FilterProperty\FilteredPropertyGrid.cs</FileName>
+      <HashCode>AhYAIBAAACACAAAAAACIAAgCEIAAIAAyAAIAAAAACAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.FilterProperty.ObjectWrapper" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\FilterProperty\ObjectWrapper.cs</FileName>
+      <HashCode>AAAACAAACQAAAIAgAAAQAAAAEBAEIAAAAEZAAAAACAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.FilterProperty.XProp" Collapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\FilterProperty\XProp.cs</FileName>
+      <HashCode>AAACBEIAIABAEgAEABACAAQKAAAECoAAAgCQAAAAEAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.DesignViewFiles.FilterProperty.XPropDescriptor" Collapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\FilterProperty\XPropDescriptor.cs</FileName>
+      <HashCode>AAAAAAAAJAAQAgAQQAgAAAAAAAAAAAQAAAQCAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.Help.About" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Help\About.cs</FileName>
+      <HashCode>AAAAAAAAACAAABAAAACAAAACAAAAAAAAAAAAAABAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.Properties.Resources" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gqgENQYAUDIwEL5UQIFxsFAIqZAZEGEC6JsaIEU3qos=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CaVeGen.Properties.Settings" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Windows.Forms.Form" Collapsed="true">
+    <Position X="11.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Struct Name="CaVeGen.DesignViewFiles.ControlInfo">
+    <Position X="2.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\CassView.cs</FileName>
+      <HashCode>ABAAAAAAAAAIAASAAAIEQAAQAABAIAAAAgAIAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CaVeGen.DesignViewFiles.LineInfo">
+    <Position X="4" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\DrawLineArithmetic.cs</FileName>
+      <HashCode>AAAAAAAAAAAAQAAAgAAAAAAAAAIAAAAAAAAAgACAAAg=</HashCode>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CaVeGen.DesignViewFiles.BlockInfo">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\DrawLineArithmetic.cs</FileName>
+      <HashCode>AAAAAAAABAAAAAEQAAAAAEAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CaVeGen.DesignViewFiles.Operation" Collapsed="true">
+    <Position X="5.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\UndoOpration.cs</FileName>
+      <HashCode>ACAAAAAAAABAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CaVeGen.DesignViewFiles.CreateILXML.OrderBlock" Collapsed="true">
+    <Position X="7.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DesignViewFiles\CreateILXML\ConfigOrder.cs</FileName>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAQAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Struct>
+</ClassDiagram>

@@ -1,0 +1,100 @@
+#include <windows.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+HANDLE comPort = NULL;
+
+int SeiralPortOpen(const char* portName,int baudrate,int stopbits, int parity)
+{
+   // instance an object of COMMTIMEOUTS.
+    COMMTIMEOUTS comTimeOut;     
+    DCB dcb;
+
+    comPort = CreateFile(portName,      // Specify port device: default "COM1"
+    GENERIC_READ | GENERIC_WRITE,       // Specify mode that open device.
+    0,                                  // the devide isn't shared.
+    NULL,                               // the object gets a default security.
+    OPEN_EXISTING,                      // Specify which action to take on file. 
+    0,                                  // default.
+    NULL);                              // default.
+
+   
+    if (GetCommState(comPort,&dcb) == 0)
+    {
+      return -1;
+    }
+    dcb.BaudRate = baudrate;    // Specify buad rate of communicaiton.
+    dcb.StopBits = stopbits;    // Specify stopbit of communication.
+    dcb.Parity = parity;        // Specify parity of communication.
+    dcb.fParity = 0; 
+    dcb.fOutxDsrFlow = 0;
+    dcb.fBinary = 1;
+    dcb.fDtrControl = DTR_CONTROL_DISABLE;
+    dcb.fRtsControl = RTS_CONTROL_DISABLE;
+    dcb.fOutX = 0;
+    dcb.fInX = 0;
+    dcb.DCBlength = sizeof(dcb);
+    dcb.ByteSize = 8;    // Specify  byte of size of communication.
+
+    // Set current configuration of serial communication port.
+    if (SetCommState(comPort,&dcb) == 0)
+    {
+       return -1;
+    }
+  
+               
+    // Specify time-out between charactor for receiving.
+    comTimeOut.ReadIntervalTimeout = 300;
+    // Specify value that is multiplied 
+    // by the requested number of bytes to be read. 
+    comTimeOut.ReadTotalTimeoutMultiplier = 3;
+    // Specify value is added to the product of the 
+    // ReadTotalTimeoutMultiplier member
+    comTimeOut.ReadTotalTimeoutConstant = 10000;
+    // Specify value that is multiplied 
+    // by the requested number of bytes to be sent. 
+    comTimeOut.WriteTotalTimeoutMultiplier = 3;
+    // Specify value is added to the product of the 
+    // WriteTotalTimeoutMultiplier member
+    comTimeOut.WriteTotalTimeoutConstant = 0;
+    // set the time-out parameter into device control.
+    SetCommTimeouts(comPort,&comTimeOut);
+    // Updata port's status.
+    return 0;
+
+}
+
+int read_scc(char* inputData,
+                    unsigned int sizeBuffer,
+                    unsigned long* length)
+{
+  if (ReadFile(comPort,  // handle of file to read
+    inputData,               // handle of file to read
+    sizeBuffer,              // number of bytes to read
+    length,                 // pointer to number of bytes read
+    NULL) == 0)              // pointer to structure for data
+  {
+    return -1;
+  }
+
+  return (int)length;
+}
+
+
+int write_scc(LPCVOID outputData,
+                     unsigned int sizeBuffer,
+                     unsigned long* length)
+{
+  if( sizeBuffer> 0)
+  {
+  
+    if (WriteFile(comPort, 	// handle to file to write to
+      outputData,              // pointer to data to write to file
+      sizeBuffer,              // number of bytes to write
+      length,NULL) == 0)      // pointer to number of bytes written
+    {
+      return -1;
+    }
+  }
+  return (int)length;
+}

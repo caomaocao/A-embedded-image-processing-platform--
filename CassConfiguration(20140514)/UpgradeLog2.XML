@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="CassConfiguration">
+</Property><Property Name="解决方案文件" Value="D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\CassConfiguration.sln">
+</Property><Property Name="Date" Value="2013年11月18日">
+</Property><Property Name="Time" Value="14:38:08">
+</Property><Property Name="日志号" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\ControlTactic.csproj" Description="项目文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\ControlTactic.csproj">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\ADControl.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\ADControl.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\ADControl.Designer.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\ADControl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\Arithmetic.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\Arithmetic.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\Arithmetic.Designer.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\Arithmetic.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\CanAddIO.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\CanAddIO.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\CanAddIO.Designer.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\CanAddIO.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\DAControl.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\DAControl.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\DAControl.Designer.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\DAControl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\Calculator.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\Calculator.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\Calculator.Designer.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\Calculator.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\ChooseProperty.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\ChooseProperty.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\ChooseSerialNumber.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\ChooseSerialNumber.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\Constant.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\Constant.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\Constant.Designer.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\Constant.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\ChoosePort.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\ChoosePort.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\CalculatorFrom1.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\CalculatorFrom1.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\CalculatorFrom1.Designer.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\CalculatorFrom1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\CalculatorForm2.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\CalculatorForm2.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\CalculatorForm2.Designer.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\CalculatorForm2.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\FuzzyForm1.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\FuzzyForm1.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\FuzzyForm1.Designer.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\FuzzyForm1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\FuzzyForm2.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\FuzzyForm2.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\FuzzyForm2.Designer.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\FuzzyForm2.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\JieOu.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\JieOu.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\JieOu.Designer.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\JieOu.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\JieOuForm1.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\JieOuForm1.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\JieOuForm1.Designer.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\JieOuForm1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\ProcessForm1.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\ProcessForm1.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\ProcessForm1.Designer.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\ProcessForm1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\ProcessForm2.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\ProcessForm2.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\ProcessForm2.Designer.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\ProcessForm2.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\Fuzzy.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\Fuzzy.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\Fuzzy.Designer.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\Fuzzy.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\InputValue.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\InputValue.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\InputValue.Designer.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\InputValue.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\JMP.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\JMP.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\JMP.Designer.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\JMP.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\Label.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\Label.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\Label.designer.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\Label.designer.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\Modules.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\Modules.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\Modules.Designer.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\Modules.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\OutputValue.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\OutputValue.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\OutputValue.Designer.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\OutputValue.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\Process.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\Process.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\Process.Designer.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\Process.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\Properties\AssemblyInfo.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SystemConstant.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SystemConstant.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SystemConstant.Designer.cs" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SystemConstant.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\ADControl.resx" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\ADControl.resx">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\Arithmetic.resx" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\Arithmetic.resx">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\CanAddIO.resx" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\CanAddIO.resx">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\Constant.resx" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\Constant.resx">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\DAControl.resx" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\DAControl.resx">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\InputValue.resx" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\InputValue.resx">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\JMP.resx" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\JMP.resx">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\Label.resx" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\Label.resx">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\Modules.resx" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\Modules.resx">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\OutputValue.resx" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\OutputValue.resx">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\CalculatorFrom1.resx" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\CalculatorFrom1.resx">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\CalculatorForm2.resx" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\CalculatorForm2.resx">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\FuzzyForm1.resx" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\FuzzyForm1.resx">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\FuzzyForm2.resx" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\FuzzyForm2.resx">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\JieOuForm1.resx" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\JieOuForm1.resx">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\ProcessForm1.resx" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\ProcessForm1.resx">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SpecialControl\ProcessForm2.resx" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SpecialControl\ProcessForm2.resx">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\SystemConstant.resx" Description="文件已成功备份为 D:\图像处理项目\WorkSpace\纯组态软件代码\纯组态软件代码\CassConfiguration\Backup1\SystemConstant.resx">
+</Event><Event ErrorLevel="1" Project="ControlTactic" Source="控制模块\ControlTactic\ControlTactic.csproj" Description="您的项目以 .NET Framework 2.0 或 3.0 为目标。如果您的项目使用的程序集需要更新的 .NET Framework，则项目生成将失败。通过单击项目菜单上的“属性”，然后在“.NET Framework”下拉框中选择一个新版本，可以更改 .NET Framework 的版本。(在 Visual Basic 中，可在单击“高级编辑器选项...”按钮时显示的“编译”选项卡上找到此下拉框。)">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\ControlTactic.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="ControlTactic" Source="控制模块\ControlTactic\ControlTactic.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ControlTactic" Source="控制模块\ControlTactic\ControlTactic.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

@@ -1,0 +1,334 @@
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\obj\Debug\CaVeGen.exe
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\obj\Debug\CaVeGen.pdb
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\bin\Debug\CaVeGen.exe
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\bin\Debug\CaVeGen.pdb
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\bin\Debug\ControlTactic.dll
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\bin\Debug\Janus.Windows.Common.v3.dll
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\bin\Debug\Janus.Windows.ExplorerBar.v3.dll
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\bin\Debug\MagicLibrary.dll
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\bin\Debug\text3.exe
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\bin\Debug\CassMessageBox.dll
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\bin\Debug\text3.pdb
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\bin\Debug\ControlTactic.pdb
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\bin\Debug\Interop.Scripting.dll
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\obj\Debug\Interop.Scripting.dll
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\obj\Debug\CassConfiguration.csproj.ResolveComReference.cache
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\obj\Debug\CaVeGen.CassViewGenerator.resources
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\obj\Debug\CaVeGen.NewPorject.resources
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CassView.resources
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.AddressTable.resources
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.HostControl.resources
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.TimerParamentSet.resources
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.ToolBoxServiceImpl.resources
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\obj\Debug\CaVeGen.Help.About.resources
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\obj\Debug\CaVeGen.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\CaVeGen\obj\Debug\CassConfiguration.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\bin\Debug\CaVeGen.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\bin\Debug\CaVeGen.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\bin\Debug\ControlTactic.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\bin\Debug\Janus.Windows.Common.v3.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\bin\Debug\Janus.Windows.ExplorerBar.v3.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\bin\Debug\MagicLibrary.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\bin\Debug\text3.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\bin\Debug\text3.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\bin\Debug\ControlTactic.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\bin\Debug\Interop.Scripting.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\obj\Debug\Interop.Scripting.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\obj\Debug\CassConfiguration.csproj.ResolveComReference.cache
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.CassViewGenerator.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.NewPorject.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CassView.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.AddressTable.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.HostControl.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.TimerParamentSet.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.ToolBoxServiceImpl.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.Help.About.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\obj\Debug\CassConfiguration.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\obj\Debug\Interop.Scripting.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\obj\Debug\CassConfiguration.csproj.ResolveComReference.cache
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.CassViewGenerator.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.ConfigCodeEdit.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.ErrorViewControl.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.PLCCodeEditor.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.NewPorject.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CassView.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.AddressTable.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.HostControl.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.TimerParamentSet.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.ToolBoxServiceImpl.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.Help.About.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\obj\Debug\CassConfiguration.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\bin\Debug\CaVeGen.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\bin\Debug\CaVeGen.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\bin\Debug\ControlTactic.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\bin\Debug\Janus.Windows.Common.v3.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\bin\Debug\Janus.Windows.ExplorerBar.v3.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\bin\Debug\MagicLibrary.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\bin\Debug\text3.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\bin\Debug\text3.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\bin\Debug\ControlTactic.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\bin\Debug\Interop.Scripting.dll
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\obj\Debug\CaVeGen.exe
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\obj\Debug\CaVeGen.pdb
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\bin\Debug\CaVeGen.exe
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\bin\Debug\CaVeGen.pdb
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\bin\Debug\ControlTactic.dll
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\bin\Debug\Janus.Windows.Common.v3.dll
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\bin\Debug\Janus.Windows.ExplorerBar.v3.dll
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\bin\Debug\MagicLibrary.dll
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\bin\Debug\text3.exe
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\bin\Debug\text3.pdb
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\bin\Debug\ControlTactic.pdb
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\bin\Debug\Interop.Scripting.dll
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\obj\Debug\Interop.Scripting.dll
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\obj\Debug\CassConfiguration.csproj.ResolveComReference.cache
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\obj\Debug\CaVeGen.CassViewGenerator.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.ConfigCodeEdit.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.ErrorViewControl.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.PLCCodeEditor.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.FilterProperty.FilteredPropertyGrid.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\obj\Debug\CaVeGen.NewPorject.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CassView.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.AddressTable.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.HostControl.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.TimerParamentSet.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.ToolBoxServiceImpl.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\obj\Debug\CaVeGen.Help.About.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\obj\Debug\CaVeGen.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.14\CaVeGen\obj\Debug\CassConfiguration.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\obj\Debug\CaVeGen.exe
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\obj\Debug\CaVeGen.pdb
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\bin\Debug\CaVeGen.exe
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\bin\Debug\CaVeGen.pdb
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\bin\Debug\ControlTactic.dll
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\bin\Debug\Janus.Windows.Common.v3.dll
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\bin\Debug\Janus.Windows.ExplorerBar.v3.dll
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\bin\Debug\MagicLibrary.dll
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\bin\Debug\text3.exe
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\bin\Debug\SystemConfiguration.exe
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\bin\Debug\text3.pdb
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\bin\Debug\ControlTactic.pdb
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\bin\Debug\Interop.Scripting.dll
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\obj\Debug\Interop.Scripting.dll
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\obj\Debug\CassConfiguration.csproj.ResolveComReference.cache
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\obj\Debug\CaVeGen.CassViewGenerator.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.Comment.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.ConfigCodeEdit.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.ErrorViewControl.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.PLCCodeEditor.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.FilterProperty.FilteredPropertyGrid.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\obj\Debug\CaVeGen.NewPorject.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CassView.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.AddressTable.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.HostControl.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.TimerParamentSet.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.ToolBoxServiceImpl.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\obj\Debug\CaVeGen.Help.About.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\obj\Debug\CaVeGen.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\CaVeGen\obj\Debug\CassConfiguration.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\bin\Debug\SystemConfiguration.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.Comment.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.ConfigCodeEdit.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.ErrorViewControl.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.PLCCodeEditor.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.FilterProperty.FilteredPropertyGrid.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\obj\Debug\CaVeGen.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\obj\Debug\CaVeGen.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\bin\Debug\CaVeGen.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\bin\Debug\CaVeGen.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\bin\Debug\ControlTactic.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\bin\Debug\Janus.Windows.Common.v3.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\bin\Debug\Janus.Windows.ExplorerBar.v3.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\bin\Debug\MagicLibrary.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\bin\Debug\text3.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\bin\Debug\SystemConfiguration.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\bin\Debug\text3.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\bin\Debug\ControlTactic.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\bin\Debug\Interop.Scripting.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\obj\Debug\Interop.Scripting.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\obj\Debug\CassConfiguration.csproj.ResolveComReference.cache
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\obj\Debug\CaVeGen.CassViewGenerator.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.Comment.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.ConfigCodeEdit.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.ErrorViewControl.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.PLCCodeEditor.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.FilterProperty.FilteredPropertyGrid.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\obj\Debug\CaVeGen.NewPorject.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CassView.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.AddressTable.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.HostControl.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.TimerParamentSet.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.ToolBoxServiceImpl.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\obj\Debug\CaVeGen.Help.About.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\obj\Debug\CaVeGen.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\CaVeGen\obj\Debug\CassConfiguration.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\obj\Debug\CaVeGen.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\obj\Debug\CaVeGen.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\bin\Debug\CaVeGen.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\bin\Debug\CaVeGen.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\bin\Debug\ControlTactic.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\bin\Debug\Janus.Windows.Common.v3.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\bin\Debug\Janus.Windows.ExplorerBar.v3.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\bin\Debug\MagicLibrary.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\bin\Debug\text3.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\bin\Debug\SystemConfiguration.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\bin\Debug\text3.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\bin\Debug\ControlTactic.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\bin\Debug\Interop.Scripting.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\obj\Debug\Interop.Scripting.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\obj\Debug\CassConfiguration.csproj.ResolveComReference.cache
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\obj\Debug\CaVeGen.CassViewGenerator.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.Comment.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.ConfigCodeEdit.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.ErrorViewControl.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.PLCCodeEditor.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.FilterProperty.FilteredPropertyGrid.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\obj\Debug\CaVeGen.NewPorject.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CassView.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.AddressTable.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.HostControl.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.TimerParamentSet.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.ToolBoxServiceImpl.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\obj\Debug\CaVeGen.Help.About.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\obj\Debug\CaVeGen.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\CaVeGen\obj\Debug\CassConfiguration.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\bin\Debug\SystemConfiguration.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.Comment.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.FilterProperty.FilteredPropertyGrid.resources
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.exe
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.pdb
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\bin\Debug\CaVeGen.exe
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\bin\Debug\CaVeGen.pdb
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\bin\Debug\ControlTactic.dll
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\bin\Debug\Janus.Windows.Common.v3.dll
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\bin\Debug\Janus.Windows.ExplorerBar.v3.dll
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\bin\Debug\MagicLibrary.dll
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\bin\Debug\text3.exe
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\bin\Debug\SystemConfiguration.exe
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\bin\Debug\text3.pdb
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\bin\Debug\ControlTactic.pdb
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\bin\Debug\Interop.Scripting.dll
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\obj\Debug\Interop.Scripting.dll
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\obj\Debug\CassConfiguration.csproj.ResolveComReference.cache
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.CassViewGenerator.resources
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.Comment.resources
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.ConfigCodeEdit.resources
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.ErrorViewControl.resources
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.PLCCodeEditor.resources
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.FilterProperty.FilteredPropertyGrid.resources
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.NewPorject.resources
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CassView.resources
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.AddressTable.resources
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.HostControl.resources
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.TimerParamentSet.resources
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.ToolBoxServiceImpl.resources
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.Help.About.resources
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\CaVeGen\obj\Debug\CassConfiguration.csproj.GenerateResource.Cache
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\bin\Debug\CaVeGen.exe
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\bin\Debug\CaVeGen.pdb
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\bin\Debug\ControlTactic.dll
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\bin\Debug\Janus.Windows.Common.v3.dll
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\bin\Debug\Janus.Windows.ExplorerBar.v3.dll
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\bin\Debug\MagicLibrary.dll
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\bin\Debug\text3.exe
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\bin\Debug\SystemConfiguration.exe
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\bin\Debug\text3.pdb
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\bin\Debug\ControlTactic.pdb
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\bin\Debug\Interop.Scripting.dll
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\obj\Debug\ResolveAssemblyReference.cache
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\obj\Debug\Interop.Scripting.dll
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\obj\Debug\CassConfiguration.csproj.ResolveComReference.cache
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.CassViewGenerator.resources
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.Comment.resources
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.ConfigCodeEdit.resources
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.ErrorViewControl.resources
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.PLCCodeEditor.resources
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.FilterProperty.FilteredPropertyGrid.resources
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.NewPorject.resources
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CassView.resources
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.AddressTable.resources
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.HostControl.resources
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.TimerParamentSet.resources
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.ToolBoxServiceImpl.resources
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.Help.About.resources
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.Properties.Resources.resources
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\obj\Debug\CassConfiguration.csproj.GenerateResource.Cache
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.exe
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.pdb
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\bin\Debug\CaVeGen.exe
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\bin\Debug\CaVeGen.pdb
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\bin\Debug\ControlTactic.dll
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\bin\Debug\Janus.Windows.Common.v3.dll
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\bin\Debug\Janus.Windows.ExplorerBar.v3.dll
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\bin\Debug\MagicLibrary.dll
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\bin\Debug\text3.exe
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\bin\Debug\SystemConfiguration.exe
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\bin\Debug\text3.pdb
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\bin\Debug\ControlTactic.pdb
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\bin\Debug\Interop.Scripting.dll
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\obj\Debug\ResolveAssemblyReference.cache
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\obj\Debug\Interop.Scripting.dll
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\obj\Debug\CassConfiguration.csproj.ResolveComReference.cache
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.CassViewGenerator.resources
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.Comment.resources
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.ConfigCodeEdit.resources
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.ErrorViewControl.resources
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.PLCCodeEditor.resources
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.FilterProperty.FilteredPropertyGrid.resources
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.NewPorject.resources
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CassView.resources
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.AddressTable.resources
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.HostControl.resources
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.TimerParamentSet.resources
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.ToolBoxServiceImpl.resources
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.Help.About.resources
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.Properties.Resources.resources
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\obj\Debug\CassConfiguration.csproj.GenerateResource.Cache
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.exe
+E:\configuration\PLCGraphics\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.pdb
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.exe
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.pdb
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\bin\Debug\CaVeGen.exe
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\bin\Debug\CaVeGen.pdb
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\bin\Debug\ControlTactic.dll
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\bin\Debug\Janus.Windows.Common.v3.dll
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\bin\Debug\Janus.Windows.ExplorerBar.v3.dll
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\bin\Debug\MagicLibrary.dll
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\bin\Debug\text3.exe
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\bin\Debug\SystemConfiguration.exe
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\bin\Debug\text3.pdb
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\bin\Debug\ControlTactic.pdb
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\bin\Debug\Interop.Scripting.dll
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\obj\Debug\Interop.Scripting.dll
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\obj\Debug\CassConfiguration.csproj.ResolveComReference.cache
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.CassViewGenerator.resources
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.Comment.resources
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.ConfigCodeEdit.resources
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.ErrorViewControl.resources
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CodeEditor.PLCCodeEditor.resources
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.FilterProperty.FilteredPropertyGrid.resources
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.NewPorject.resources
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.CassView.resources
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.AddressTable.resources
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.HostControl.resources
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.TimerParamentSet.resources
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.DesignViewFiles.ToolBoxServiceImpl.resources
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.Help.About.resources
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\obj\Debug\CaVeGen.Properties.Resources.resources
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\CaVeGen\obj\Debug\CassConfiguration.csproj.GenerateResource.Cache

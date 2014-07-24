@@ -1,0 +1,435 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{08FE4476-6F5D-44A8-A1B2-54741FAD2B05}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CaVeGen</RootNamespace>
+    <AssemblyName>CaVeGen</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/CaVeGen/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.CodeSense, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ControlTactic, Version=1.0.3463.18727, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\控制模块\ControlTactic\bin\Debug\ControlTactic.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.CodeMax, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\baocun\组态\代码编辑器\Interop.CodeMax.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.CodeSense, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\baocun\组态\代码编辑器\Interop.CodeSense.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CassControls\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ExplorerBar.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=dc38f5dfc6212b78, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CassControls\Janus.Windows.ExplorerBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="MagicLibrary, Version=1.7.0.0, Culture=neutral, PublicKeyToken=3a6eb82f876a49bc">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CASSCONTROLS\MagicLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CassViewGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CassViewGenerator.Designer.cs">
+      <DependentUpon>CassViewGenerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignViewFiles\CodeEditor\Comment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DesignViewFiles\CodeEditor\Comment.Designer.cs">
+      <DependentUpon>Comment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignViewFiles\CodeEditor\ConfigCodeEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignViewFiles\CodeEditor\ConfigCodeEdit.Designer.cs">
+      <DependentUpon>ConfigCodeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignViewFiles\CodeEditor\ErrorViewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignViewFiles\CodeEditor\ErrorViewControl.Designer.cs">
+      <DependentUpon>ErrorViewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignViewFiles\CodeEditor\PLCCodeEditor.cs">
+    </Compile>
+    <Compile Include="DesignViewFiles\CodeEditor\PLCCodeEditor.Designer.cs">
+      <DependentUpon>PLCCodeEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignViewFiles\CreateILXML\ConfigOrder.cs" />
+    <Compile Include="DesignViewFiles\UndoOpration.cs" />
+    <Compile Include="NewProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewProject.Designer.cs">
+      <DependentUpon>NewProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonOperation\CassMessageBox.cs" />
+    <Compile Include="CommonOperation\FileOperator.cs" />
+    <Compile Include="DesignViewFiles\CassView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignViewFiles\CassView.Designer.cs">
+      <DependentUpon>CassView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignViewFiles\CodeDomHostLoader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DesignViewFiles\CreateILXML\AddressTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesignViewFiles\CreateILXML\AddressTable.Designer.cs">
+      <DependentUpon>AddressTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignViewFiles\CreateILXML\GenerateXML.cs" />
+    <Compile Include="DesignViewFiles\DrawLineArithmetic.cs" />
+    <Compile Include="DesignViewFiles\FilterProperty\EditControl.cs" />
+    <Compile Include="DesignViewFiles\FilterProperty\FilteredPropertyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DesignViewFiles\FilterProperty\FilteredPropertyGrid.Designer.cs">
+      <DependentUpon>FilteredPropertyGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignViewFiles\FilterProperty\ObjectWrapper.cs" />
+    <Compile Include="DesignViewFiles\FilterProperty\XProp.cs" />
+    <Compile Include="DesignViewFiles\FilterProperty\XPropDescriptor.cs" />
+    <Compile Include="DesignViewFiles\CreateILXML\GenerateCode.cs" />
+    <Compile Include="DesignViewFiles\HostControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignViewFiles\HostControl.Designer.cs">
+      <DependentUpon>HostControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignViewFiles\HostDesign.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DesignViewFiles\HostDesignManage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DesignViewFiles\RecordPortName.cs" />
+    <Compile Include="DesignViewFiles\TimerParamentSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesignViewFiles\TimerParamentSet.Designer.cs">
+      <DependentUpon>TimerParamentSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignViewFiles\ToolBoxServiceImpl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignViewFiles\ToolBoxServiceImpl.Designer.cs">
+      <DependentUpon>ToolBoxServiceImpl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignViewFiles\TypeResolutionService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DesignViewFiles\UndoEngineImplication.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Help\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CassViewGenerator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CassViewGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesignViewFiles\CodeEditor\Comment.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Comment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesignViewFiles\CodeEditor\ConfigCodeEdit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ConfigCodeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesignViewFiles\CodeEditor\ErrorViewControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ErrorViewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesignViewFiles\CodeEditor\PLCCodeEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PLCCodeEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesignViewFiles\FilterProperty\FilteredPropertyGrid.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FilteredPropertyGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewProject.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NewProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesignViewFiles\CassView.resx">
+      <DependentUpon>CassView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesignViewFiles\CreateILXML\AddressTable.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AddressTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesignViewFiles\HostControl.resx">
+      <DependentUpon>HostControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesignViewFiles\TimerParamentSet.resx">
+      <DependentUpon>TimerParamentSet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesignViewFiles\ToolBoxServiceImpl.resx">
+      <DependentUpon>ToolBoxServiceImpl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help\About.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="CommonOperation\PublicVariable.cs" />
+    <Compile Include="XmlSerializerSectionHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Scripting">
+      <Guid>{420B2830-E718-11CF-893D-00A0C9054228}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\controls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\解耦补偿控制器.bmp" />
+    <None Include="Resources\常用对数.bmp" />
+    <None Include="Resources\乘法.bmp" />
+    <None Include="Resources\乘幂.bmp" />
+    <None Include="Resources\除法.bmp" />
+    <None Include="Resources\大于比较.bmp" />
+    <None Include="Resources\大于等于比较.bmp" />
+    <None Include="Resources\等于比较.bmp" />
+    <None Include="Resources\反余弦.bmp" />
+    <None Include="Resources\反正切.bmp" />
+    <None Include="Resources\反正弦.bmp" />
+    <None Include="Resources\高低选择器.bmp" />
+    <None Include="Resources\计算器组态.bmp" />
+    <None Include="Resources\加法.bmp" />
+    <None Include="Resources\减法.bmp" />
+    <None Include="Resources\绝对值.bmp" />
+    <None Include="Resources\开关.bmp" />
+    <None Include="Resources\开关控制器13.bmp" />
+    <None Include="Resources\开关控制器51.bmp" />
+    <None Include="Resources\逻辑非.bmp" />
+    <None Include="Resources\逻辑或.bmp" />
+    <None Include="Resources\逻辑或非.bmp" />
+    <None Include="Resources\逻辑异或.bmp" />
+    <None Include="Resources\逻辑与.bmp" />
+    <None Include="Resources\逻辑与非.bmp" />
+    <None Include="Resources\脉冲输入.bmp" />
+    <None Include="Resources\脉宽调制输出.bmp" />
+    <None Include="Resources\模糊控制器.bmp" />
+    <None Include="Resources\模拟输出.bmp" />
+    <None Include="Resources\模拟输入.bmp" />
+    <None Include="Resources\平方根.bmp" />
+    <None Include="Resources\前馈器.bmp" />
+    <None Include="Resources\求余.bmp" />
+    <None Include="Resources\取整.bmp" />
+    <None Include="Resources\输入变量.bmp" />
+    <None Include="Resources\数字输出.bmp" />
+    <None Include="Resources\数字输入.bmp" />
+    <None Include="Resources\跳转.bmp" />
+    <None Include="Resources\通用线性化器.bmp" />
+    <None Include="Resources\线性变换器.bmp" />
+    <None Include="Resources\小于比较.bmp" />
+    <None Include="Resources\小于等于比较.bmp" />
+    <None Include="Resources\斜坡控制器.bmp" />
+    <None Include="Resources\延时.bmp" />
+    <None Include="Resources\一阶传递函数.bmp" />
+    <None Include="Resources\余切.bmp" />
+    <None Include="Resources\余弦.bmp" />
+    <None Include="Resources\正切.bmp" />
+    <None Include="Resources\正弦.bmp" />
+    <None Include="Resources\指数.bmp" />
+    <None Include="Resources\注释.bmp" />
+    <None Include="Resources\自然对数.bmp" />
+    <None Include="Resources\最少拍控制器.bmp" />
+    <None Include="Resources\返回.bmp" />
+    <None Include="Resources\调用.bmp" />
+    <None Include="Resources\常数.bmp" />
+    <None Include="Resources\不等于比较.bmp" />
+    <None Include="Resources\PID控制器.bmp" />
+    <None Include="Resources\ON延时.bmp" />
+    <None Include="Resources\OFF延时.bmp" />
+    <None Include="Resources\三者取中器.bmp" />
+    <None Include="Resources\比例器.bmp" />
+    <None Include="Resources\比值控制器.bmp" />
+    <None Include="Resources\计时器.bmp" />
+    <None Include="Resources\定长度脉冲.bmp" />
+    <None Include="Resources\最大时限脉冲.bmp" />
+    <None Include="Resources\最小时限脉冲.bmp" />
+    <None Include="Resources\RS触发器.bmp" />
+    <None Include="Resources\纯滞后补偿器 .bmp" />
+    <None Include="Resources\选通器.bmp" />
+    <None Include="Resources\数字组合器.bmp" />
+    <None Include="Resources\看门狗.bmp" />
+    <None Include="Resources\变化率器.bmp" />
+    <None Include="Resources\限值器.bmp" />
+    <None Include="Resources\条件动作表.bmp" />
+    <None Include="Resources\滤波.bmp" />
+    <None Include="Resources\温压补偿器.bmp" />
+    <None Include="Resources\比较器.bmp" />
+    <None Include="Resources\偏差限值器.bmp" />
+    <None Include="Resources\计数器.bmp" />
+    <None Include="Resources\加权平均滤波器.bmp" />
+    <None Include="Resources\变化检测.bmp" />
+    <None Include="Resources\累计器.bmp" />
+    <None Include="Resources\大林控制器.bmp" />
+    <None Include="Resources\输出变量.bmp" />
+    <None Include="Resources\系统变量.bmp" />
+    <None Include="Resources\两输入ON有效或门.bmp" />
+    <None Include="Resources\三输入不一致.bmp" />
+    <None Include="Resources\三输入ON有效或门.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DA转化.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AD转化.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\修改工具\text3\text3.csproj">
+      <Project>{F148E05C-A427-4185-918C-62B25B881CB0}</Project>
+      <Name>text3</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrong.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Code.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\View.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\View1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\worning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Resources\warningss.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

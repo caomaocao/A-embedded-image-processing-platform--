@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DCS>
+  <!--周期-->
+  <Cycle>1000</Cycle>
+  <!--工程索引号,各工程的唯一区别-->
+  <ProjectIndex>0</ProjectIndex>
+  <!--计算器-->
+  <Calculators>
+    <Calculator name="CACUL1">
+      <item>
+        <condition>X0 > X1</condition>        
+        <expression>CACUL->fM[1] = X0 + X1</expression>
+      </item>
+      <item>                
+        <expression>Y0 = X0 + X1</expression>
+      </item>
+    </Calculator>
+  </Calculators>
+  <!--条件动作表-->
+  <ConditionActions>
+    <ConditionAction name="PROCESS1">
+      <item>
+        <condition>(X0 > X1)</condition>
+        <condition>!(X0 + X1 == 0)</condition>
+        <condition>(X2 > X1)</condition>
+        <expression>CACUL->fM[1] = X0 + X1</expression>
+      </item>
+      <item>
+        <condition>(X0 > X1)</condition>
+        <condition>!(X0 + X1 == 0)</condition>
+        <condition>(X2 > X1)</condition>
+        <expression>CACUL->fM[1] = X0 + X1</expression>
+      </item>
+      <item>
+        <condition>(X0 > X1)</condition>
+        <condition>!(X0 + X1 == 0)</condition>
+        <condition>(X2 > X1)</condition>
+        <function>logic1Sub</function>
+      </item>
+      </ConditionAction>
+    </ConditionActions>
+  <!--全局变量区:包括临时变量等-->
+  <EntireVarRegion>
+    <item type="fp32">configuration0_mulOut0</item>
+    <item type="fp32">configuration0_mulOut1</item>
+    <item type="fp32">configuration0_mulOut2</item>
+    <item type="fp32">configuration0_mulOut3</item>
+  </EntireVarRegion>
+  <!--参数表-->
+  <Parameters>
+    <Arrays>
+      <!--数组声明定义区-->
+      <item name="array1" type="fp32" dimension="8">{0,0,0,0,0,0,0,0}</item>
+    </Arrays>
+    <Parameter type="PID" name="configuration0_PID1">
+      <!--E2PROM存储变量的物理地址表-->
+      <E2PROM>
+        <item type="Fp32" name="Kp">0</item>
+        <item type="Fp32" name="Ki">4</item>
+        <item type="Fp32" name="Kd">8</item>
+      </E2PROM>
+      <others>
+        <item name="ei">0</item>
+        <item name="ei_1">0</item>
+        <item name="ei_2">0</item>
+      </others>
+    </Parameter >
+    <Parameter type="PID" name="configuration0_PID2">
+      <E2PROM>
+        <item type="Fp32" name="Ki">12</item>
+        <item type="Uint8" name="cCLorCR">16</item>
+        <item type="Uint32" name="Ts">17</item>
+      </E2PROM>
+      <others>
+        <item name="ei">0</item>
+        <item name="ei_1">0</item>
+        <item name="ei_2">0</item>
+      </others>
+    </Parameter>
+    <Parameter type="CACUL" name="configuration0_CACUL1">      
+      <others>
+        <item name="fM">array1</item>        
+      </others>
+    </Parameter>
+  </Parameters>
+  <!--主策略-->
+  <Main>
+    <instruction name="LDControl">
+      <param>5</param>
+    </instruction>
+    <instruction name="LDControl">
+      <param>6</param>
+    </instruction>
+    <instruction name="ADDControl"/>
+    <instruction name="LDControl">
+      <param>7</param>
+    </instruction>
+    <instruction name="LDControl">
+      <param>8</param>
+    </instruction>
+    <instruction name="ADDControl"/>
+    <instruction name="CALLControl">
+      <param>Configuration0_logic1Sub</param>
+    </instruction>
+    <instruction name="PIDControl">
+      <param>&amp;configuration0_PID1</param>
+    </instruction>
+    <instruction name="Configuration0_CACUL1Control">
+      <param>&amp;configuration0_CACUL1</param>
+    </instruction>
+    <instruction name="RETControl"/>
+    <instruction name="Configuration0_PROCESS1Control"/>
+    <instruction name="COMPAREControl"/>     
+    <instruction name="STControl">
+      <param>&amp;configuration0_mulOut0</param>
+    </instruction>
+    <instruction name="STControl">
+      <param>&amp;configuration0_mulOut1</param>
+    </instruction>
+    <instruction name="STControl">
+      <param>&amp;configuration0_mulOut2</param>
+    </instruction>
+    <instruction name="STControl">
+      <param>&amp;configuration0_mulOut3</param>
+    </instruction>
+    
+  </Main>
+  <!--子策略-->
+  <Function name="logic1Sub">
+    <instruction name="LDControl">
+      <param>5</param>
+    </instruction>
+    <instruction name="LDControl">
+      <param>6</param>
+    </instruction>
+  </Function>
+</DCS>

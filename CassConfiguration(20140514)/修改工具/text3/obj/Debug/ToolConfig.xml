@@ -1,0 +1,1516 @@
+﻿<configuration>
+  <Category DisplayName="变量">
+    <FDToolBoxItem Type="ControlTactic.Constant,ControlTactic,常数,变量">
+      <BasicProperty>
+        <Property name="ModuleColor">255, 238, 232, 170</Property>
+        <Property name="ModuleSort">常数</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.SystemConstant,ControlTactic,系统变量,变量">
+      <BasicProperty>
+        <Property name="ModuleColor">255, 238, 232, 170</Property>
+        <Property name="ModuleSort">系统变量</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.InputValue,ControlTactic,输入变量,变量">
+      <BasicProperty>
+        <Property name="ModuleColor">255, 238, 232, 170</Property>
+        <Property name="ModuleSort">输入变量</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.OutputValue,ControlTactic,输出变量,变量">
+      <BasicProperty>
+        <Property name="ModuleColor">255, 238, 232, 170</Property>
+        <Property name="ModuleSort">输出变量</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+  </Category>
+  <Category DisplayName="数学运算">
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,加法,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">ADD</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1</Property>
+        <Property name="ModuleColor">255, 255, 255, 255</Property>
+        <Property name="ModuleSort">加法</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,减法,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">SUB</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1</Property>
+        <Property name="ModuleColor">255, 255, 255, 255</Property>
+        <Property name="ModuleSort">减法</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,乘法,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">MUL</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1</Property>
+        <Property name="ModuleColor">255, 255, 255, 255</Property>
+        <Property name="ModuleSort">乘法</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,除法,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">DIV</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1</Property>
+        <Property name="ModuleColor">255, 255, 255, 255</Property>
+        <Property name="ModuleSort">除法</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,乘幂,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">POWER</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0</Property>
+        <Property name="ModuleColor">255, 255, 255, 255</Property>
+        <Property name="ModuleSort">乘幂</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,求余,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">MOD</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV,QUAT</Property>
+        <Property name="InputName">EN,IN0,IN1</Property>
+        <Property name="ModuleColor">255, 255, 255, 255</Property>
+        <Property name="ModuleSort">求余</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,绝对值,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">ABS</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255, 255, 255, 255</Property>
+        <Property name="ModuleSort">绝对值</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,反余弦,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">ARCCOS</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255, 255, 255, 255</Property>
+        <Property name="ModuleSort">反余弦</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,反正弦,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">ARCSIN</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255, 255, 255, 255</Property>
+        <Property name="ModuleSort">反正弦</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,反正切,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">ARCTAN</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255, 255, 255, 255</Property>
+        <Property name="ModuleSort">反正切</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,余弦,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">COS</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255, 255, 255, 255</Property>
+        <Property name="ModuleSort">余弦</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,正弦,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">SIN</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255, 255, 255, 255</Property>
+        <Property name="ModuleSort">正弦</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,正切,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">TAN</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255, 255, 255, 255</Property>
+        <Property name="ModuleSort">正切</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,余切,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">CTAN</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255,255,255,255</Property>
+        <Property name="ModuleSort">余切</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,指数,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">EXP</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255, 255, 255, 255</Property>
+        <Property name="ModuleSort">指数</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,常用对数,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">LG</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255, 255, 255, 255</Property>
+        <Property name="ModuleSort">常用对数</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,自然对数,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">LN</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255, 255, 255, 255</Property>
+        <Property name="ModuleSort">自然对数</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,平方根,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">SQRT</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255, 255, 255, 255</Property>
+        <Property name="ModuleSort">平方根</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,取整,数学运算">
+      <BasicProperty>
+        <Property name="ModuleName">TRUNC</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255, 255, 255, 255</Property>
+        <Property name="ModuleSort">取整</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+  </Category>
+  <Category DisplayName="逻辑功能">
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,逻辑与,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">AND</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1,IN2</Property>
+        <Property name="ModuleColor">255, 0, 255, 255</Property>
+        <Property name="ModuleSort">逻辑与</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="运算类型" varname="type" type="MyEnum" visible="yes">位,字节,字,双字</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,逻辑或,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">OR</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1,IN2</Property>
+        <Property name="ModuleColor">255, 0, 255, 255</Property>
+        <Property name="ModuleSort">逻辑或</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="运算类型" varname="type" type="MyEnum" visible="yes">位,字节,字,双字</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,逻辑非,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">NOT</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255, 0, 255, 255</Property>
+        <Property name="ModuleSort">逻辑非</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="运算类型" varname="type" type="MyEnum" visible="yes">位,字节,字,双字</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,逻辑异或,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">XOR</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1</Property>
+        <Property name="ModuleColor">255, 0, 255, 255</Property>
+        <Property name="ModuleSort">逻辑异或</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="运算类型" varname="type" type="MyEnum" visible="yes">位,字节,字,双字</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,逻辑与非,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">NAND</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1,IN2</Property>
+        <Property name="ModuleColor">255, 0, 255, 255</Property>
+        <Property name="ModuleSort">逻辑与非</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="运算类型" varname="type" type="MyEnum" visible="yes">位,字节,字,双字</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,逻辑或非,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">NOR</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1,IN2</Property>
+        <Property name="ModuleColor">255, 0, 255, 255</Property>
+        <Property name="ModuleSort">逻辑或非</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="运算类型" varname="type" type="MyEnum" visible="yes">位,字节,字,双字</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,两输入ON有效或门,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">QOR2</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1,IN2,IN3</Property>
+        <Property name="ModuleColor">255, 0, 255, 255</Property>
+        <Property name="ModuleSort">两输入ON有效或门</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,三输入ON有效或门,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">QOR3</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1,IN2,IN3</Property>
+        <Property name="ModuleColor">255, 0, 255, 255</Property>
+        <Property name="ModuleSort">三输入ON有效或门</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,三输入不一致,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">DISP3</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1,IN2</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">三输入不一致</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="运算类型" varname="type" type="MyEnum" visible="yes">位,字节,字,双字</Property>
+        <Property name="采样周期" varname="cycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+        <Property name="上次的输出" varname="lastValue" type="MyEnum" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,开关,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">SWIT</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1,SW</Property>
+        <Property name="ModuleColor">255, 0, 255, 255</Property>
+        <Property name="ModuleSort">开关</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="运算类型" varname="type" type="MyEnum" visible="yes">位,字节,字,双字</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,定长度脉冲,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">PULSE</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">定长度脉冲</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="定长脉冲" varname="cycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+        <Property name="上次的输入" varname="lastInValue" type="MyEnum" visible="no">0</Property>
+        <Property name="上次的输出" varname="lastOutValue" type="MyEnum" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,最大时限脉冲,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">MAXPL</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255, 0, 255, 255</Property>
+        <Property name="ModuleSort">最大时限脉冲</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="定长脉冲" varname="cycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+        <Property name="上次的输入" varname="lastInValue" type="MyEnum" visible="no">0</Property>
+        <Property name="上次的输出" varname="lastOutValue" type="MyEnum" visible="no">0</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,最小时限脉冲,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">MINPL</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN</Property>
+        <Property name="ModuleColor">255, 0, 255, 255</Property>
+        <Property name="ModuleSort">最小时限脉冲</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="定长脉冲" varname="cycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+        <Property name="上次的输入" varname="lastInValue" type="MyEnum" visible="no">0</Property>
+        <Property name="上次的输出" varname="lastOutValue" type="MyEnum" visible="no">0</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,等于比较,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">EQ</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">等于比较</Property>
+      </BasicProperty>
+      <FunctionProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,不等于比较,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">NE</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">不等于比较</Property>
+      </BasicProperty>
+      <FunctionProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,大于比较,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">GT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">大于比较</Property>
+      </BasicProperty>
+      <FunctionProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,小于比较,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">LT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">小于比较</Property>
+      </BasicProperty>
+      <FunctionProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,大于等于比较,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">GE</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">大于等于比较</Property>
+      </BasicProperty>
+      <FunctionProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,小于等于比较,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">LE</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">小于等于比较</Property>
+      </BasicProperty>
+      <FunctionProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,延时,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">DELAY</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0</Property>
+        <Property name="ModuleColor">255, 0, 255, 255</Property>
+        <Property name="ModuleSort">延时</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="延时时间" varname="cycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+        <Property name="上次的输出" varname="lastOutValue" type="MyEnum" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,ON延时,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">ONDLY</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">ON延时</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="延时时间" varname="cycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+        <Property name="上次的输出" varname="lastOutValue" type="MyEnum" visible="no">0</Property>
+        <Property name="OFF-&gt;ON标志" varname="onSign" type="MyEnum" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,OFF延时,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">OFFDLY</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">OFF延时</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="延时时间" varname="cycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+        <Property name="上次的输出" varname="lastOutValue" type="MyEnum" visible="no">0</Property>
+        <Property name="ON-&gt;OFF标志" varname="offSign" type="MyEnum" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,看门狗,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">WTDOG</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">看门狗</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="复位时间" varname="cycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+        <Property name="上次的输入" varname="lastInValue" type="MyEnum" visible="no">0</Property>
+        <Property name="是否触发" varname="isTrigger" type="MyEnum" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,RS触发器,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">RS</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,R,S,SW</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">RS触发器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次的输出" varname="lastOutValue" type="MyEnum" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,变化检测,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">CHDCT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">EN,IN0,IN1,IN2</Property>
+        <Property name="ModuleColor">255,0,255,255</Property>
+        <Property name="ModuleSort">变化检测</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="检测周期" varname="cycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+        <Property name="上次的输入1" varname="lastIn1" type="MyEnum" visible="no">0</Property>
+        <Property name="上次的输入2" varname="lastIn2" type="MyEnum" visible="no">0</Property>
+        <Property name="上次的输入3" varname="lastIn3" type="MyEnum" visible="no">0</Property>
+        <Property name="变化标记" varname="mark" type="MyEnum" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Modules,ControlTactic,选通器,逻辑功能">
+      <BasicProperty>
+        <Property name="ModuleName">SELECT</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">CH0,CH1,CH2,CH3,CH4,CH5,CH6,CH7</Property>
+        <Property name="InputName">EN,IN0</Property>
+        <Property name="ModuleColor">255, 0, 255, 255</Property>
+        <Property name="ModuleSort">选通器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="通道1低限选通" varname="cIsMin1" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道1高限选通" varname="cIsMax1" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道1低限" varname="fMin1" type="System.Single" visible="yes">0</Property>
+        <Property name="通道1高限" varname="fMax1" type="System.Single" visible="yes">1000</Property>
+        <Property name="通道2低限选通" varname="cIsMin2" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道2高限选通" varname="cIsMax2" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道2低限" varname="fMin2" type="System.Single" visible="yes">0</Property>
+        <Property name="通道2高限" varname="fMax2" type="System.Single" visible="yes">1000</Property>
+        <Property name="通道3低限选通" varname="cIsMin3" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道3高限选通" varname="cIsMax3" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道3低限" varname="fMin3" type="System.Single" visible="yes">0</Property>
+        <Property name="通道3高限" varname="fMax3" type="System.Single" visible="yes">1000</Property>
+        <Property name="通道4低限选通" varname="cIsMin4" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道4高限选通" varname="cIsMax4" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道4低限" varname="fMin4" type="System.Single" visible="yes">0</Property>
+        <Property name="通道4高限" varname="fMax4" type="System.Single" visible="yes">1000</Property>
+        <Property name="通道5低限选通" varname="cIsMin5" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道5高限选通" varname="cIsMax5" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道5低限" varname="fMin5" type="System.Single" visible="yes">0</Property>
+        <Property name="通道5高限" varname="fMax5" type="System.Single" visible="yes">1000</Property>
+        <Property name="通道6低限选通" varname="cIsMin6" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道6高限选通" varname="cIsMax6" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道6低限" varname="fMin6" type="System.Single" visible="yes">0</Property>
+        <Property name="通道6高限" varname="fMax6" type="System.Single" visible="yes">1000</Property>
+        <Property name="通道7低限选通" varname="cIsMin7" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道7高限选通" varname="cIsMax7" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道7低限" varname="fMin7" type="System.Single" visible="yes">0</Property>
+        <Property name="通道7高限" varname="fMax7" type="System.Single" visible="yes">1000</Property>
+        <Property name="通道8低限选通" varname="cIsMin8" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道8高限选通" varname="cIsMax8" type="System.Boolean" visible="yes">true</Property>
+        <Property name="通道8低限" varname="fMin8" type="System.Single" visible="yes">0</Property>
+        <Property name="通道8高限" varname="fMax8" type="System.Single" visible="yes">1000</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+  </Category>
+  <Category DisplayName="程序控制">
+    <FDToolBoxItem Type="ControlTactic.JMP,ControlTactic,跳转,程序控制">
+      <BasicProperty>
+        <Property name="ModuleColor">255, 238, 232, 170</Property>
+        <Property name="ModuleSort">跳转</Property>
+        <Property name="ModuleName">JMP</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.JMP,ControlTactic,调用,程序控制">
+      <BasicProperty>
+        <Property name="ModuleColor">255, 238, 232, 170</Property>
+        <Property name="ModuleSort">调用</Property>
+        <Property name="ModuleName">CALL</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.OutputValue,ControlTactic,返回,程序控制">
+      <BasicProperty>
+        <Property name="ModuleColor">255, 238, 232, 170</Property>
+        <Property name="ModuleSort">返回</Property>
+        <Property name="ModuleName">RET</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Label,ControlTactic,注释,程序控制">
+      <BasicProperty>
+        <Property name="ModuleSort">注释</Property>
+      </BasicProperty>
+      <FunctionProperty>
+      </FunctionProperty>
+    </FDToolBoxItem>
+  </Category>
+  <Category DisplayName="算法支撑">
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,模拟输入,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">AI</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">RAW</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">模拟输入</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="测量值" varname="" type="System.Single" visible="yes">0</Property>
+        <Property name="设定值" varname="" type="System.Single" visible="yes">0</Property>
+        <Property name="上一次测量值" varname="" type="System.Single" visible="yes">0</Property>
+        <Property name="原始测量值" varname="" type="System.Single" visible="yes">0</Property>
+        <Property name="是否量程转换" varname="" type="System.Boolean" visible="yes">false</Property>
+        <Property name="工程单位低限" varname="" type="System.Single" visible="yes">0</Property>
+        <Property name="工程单位高限" varname="" type="System.Single" visible="yes">100</Property>
+        <Property name="原始数据低限" varname="" type="System.Single" visible="yes">0</Property>
+        <Property name="原始数据高限" varname="" type="System.Single" visible="yes">100</Property>
+        <Property name="低限" varname="" type="System.Single" visible="yes">10</Property>
+        <Property name="低限报警" varname="" type="System.Boolean" visible="yes">false</Property>
+        <Property name="低低限" varname="" type="System.Single" visible="yes">0</Property>
+        <Property name="低低限报警" varname="" type="System.Boolean" visible="yes">false</Property>
+        <Property name="高限" varname="" type="System.Single" visible="yes">90</Property>
+        <Property name="高限报警" varname="" type="System.Boolean" visible="yes">false</Property>
+        <Property name="高高限" varname="" type="System.Single" visible="yes">100</Property>
+        <Property name="高高限报警" varname="" type="System.Boolean" visible="yes">false</Property>
+        <Property name="变化率" varname="" type="System.Single" visible="yes">100</Property>
+        <Property name="变化率报警" varname="" type="System.Boolean" visible="yes">false</Property>
+        <Property name="偏差" varname="" type="System.Single" visible="yes">100</Property>
+        <Property name="偏差报警" varname="" type="System.Boolean" visible="yes">false</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,模拟输出,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">AO</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">OP</Property>
+        <Property name="InputName">PV</Property>
+        <Property name="ModuleColor">255, 102, 205, 170</Property>
+        <Property name="ModuleSort">模拟输出</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="输出值" varname="" type="System.Single" visible="yes">0</Property>
+        <Property name="设定值" varname="" type="System.Single" visible="yes">0</Property>
+        <Property name="上一次输出值" varname="" type="System.Single" visible="yes">0</Property>
+        <Property name="实际输出值" varname="" type="System.Single" visible="yes">0</Property>
+        <Property name="是否量程转换" varname="" type="System.Boolean" visible="yes">false</Property>
+        <Property name="工程单位低限" varname="" type="System.Single" visible="yes">0</Property>
+        <Property name="工程单位高限" varname="" type="System.Single" visible="yes">100</Property>
+        <Property name="原始数据低限" varname="" type="System.Single" visible="yes">0</Property>
+        <Property name="原始数据高限" varname="" type="System.Single" visible="yes">100</Property>
+        <Property name="低限" varname="" type="System.Single" visible="yes">10</Property>
+        <Property name="低限报警" varname="" type="System.Boolean" visible="yes">false</Property>
+        <Property name="低低限" varname="" type="System.Single" visible="yes">0</Property>
+        <Property name="低低限报警" varname="" type="System.Boolean" visible="yes">false</Property>
+        <Property name="高限" varname="" type="System.Single" visible="yes">90</Property>
+        <Property name="高限报警" varname="" type="System.Boolean" visible="yes">false</Property>
+        <Property name="高高限" varname="" type="System.Single" visible="yes">100</Property>
+        <Property name="高高限报警" varname="" type="System.Boolean" visible="yes">false</Property>
+        <Property name="变化率" varname="" type="System.Single" visible="yes">100</Property>
+        <Property name="变化率报警" varname="" type="System.Boolean" visible="yes">false</Property>
+        <Property name="偏差" varname="" type="System.Single" visible="yes">100</Property>
+        <Property name="偏差报警" varname="" type="System.Boolean" visible="yes">false</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,数字输入,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">DI</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">RAW</Property>
+        <Property name="ModuleColor">255, 102, 205, 170</Property>
+        <Property name="ModuleSort">数字输入</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="测量值" varname="" type="System.Boolean" visible="yes">false</Property>
+        <Property name="正/反动作" varname="" type="MyEnum" visible="yes">正动作,反动作</Property>
+        <Property name="正常值" varname="" type="System.Boolean" visible="yes">false</Property>
+        <Property name="报警值" varname="" type="System.Boolean" visible="yes">false</Property>
+        <Property name="原始测量值" varname="" type="System.Boolean" visible="yes">false</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,数字输出,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">DO</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">OP</Property>
+        <Property name="InputName">PV</Property>
+        <Property name="ModuleColor">255, 102, 205, 170</Property>
+        <Property name="ModuleSort">数字输出</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="输出" varname="" type="System.Boolean" visible="yes">false</Property>
+        <Property name="正/反动作" varname="" type="MyEnum" visible="yes">正动作,反动作</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>
+        </CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,脉冲输入,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">PI</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">RAW</Property>
+        <Property name="ModuleColor">255, 102, 205, 170</Property>
+        <Property name="ModuleSort">脉冲输入</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="工程单位转换因子" varname="fC1" type="System.Single" visible="yes">0</Property>
+        <Property name="仪表系数" varname="fC2" type="System.Single" visible="yes">0</Property>
+        <Property name="基本时间单位" varname="ucTBase" type="MyEnum" visible="yes">秒,分钟,小时</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,纯滞后补偿器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">SMITH</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">纯滞后补偿器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="时间常数T1" varname="ulT1" type="System.Int32" visible="yes">1000</Property>
+        <Property name="时间常数T2" varname="ulT2" type="System.Int32" visible="yes">1000</Property>
+        <Property name="滞后时间" varname="ulLagT" type="System.Int32" visible="yes">10000</Property>
+        <Property name="补偿比例" varname="fK" type="System.Single" visible="yes">1</Property>
+        <Property name="采集周期" varname="ulTs" type="System.Int32" visible="yes">1000</Property>
+        <Property name="输入" varname="fPV" type="System.Single" visible="no">0</Property>
+        <Property name="上上次输出" varname="fMV_1" type="System.Single" visible="no">0</Property>
+        <Property name="上次输出" varname="fMV" type="System.Single" visible="no">0</Property>
+        <Property name="上次记录时间" varname="ulLastTime" type="System.Int32" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,滤波,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">FILT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">滤波</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="工程单位转换因子" varname="fC1" type="System.Single" visible="yes">0</Property>
+        <Property name="仪表系数" varname="fC2" type="System.Single" visible="yes">0</Property>
+        <Property name="滤波时间常数" varname="ulTF" type="System.Int32" visible="yes">1000</Property>
+        <Property name="采样周期" varname="ucTs" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+        <Property name="上次的输出" varname="fLastPV" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,一阶传递函数,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">TRANS</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">一阶传递函数</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="参数A" varname="A" type="System.Single" visible="yes">0</Property>
+        <Property name="参数B" varname="B" type="System.Single" visible="yes">10</Property>
+        <Property name="参数C" varname="C" type="System.Single" visible="yes">1</Property>
+        <Property name="参数D" varname="D" type="System.Single" visible="yes">0</Property>
+        <Property name="采样周期" varname="ucTs" type="System.Int32" visible="yes">1000</Property>
+        <Property name="中间临时变量" varname="Xk" type="System.Single" visible="no">0</Property>
+        <Property name="上次输入" varname="Uk" type="System.Single" visible="no">0</Property>
+        <Property name="上次控制的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,比较器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">COMPARE</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">RESULT,GT,EQ,LT</Property>
+        <Property name="InputName">IN0,IN1</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">比较器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="死区" varname="" type="System.Single" visible="yes">0</Property>
+        <Property name="比较结果" varname="" type="System.Single" visible="yes">0</Property>
+        <Property name="大于" varname="" type="System.Boolean" visible="yes">false</Property>
+        <Property name="小于" varname="" type="System.Boolean" visible="yes">false</Property>
+        <Property name="等于" varname="" type="System.Boolean" visible="yes">false</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,计时器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">TIM</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">FIN,TIM</Property>
+        <Property name="InputName">EN,RST</Property>
+        <Property name="ModuleColor">255, 102, 205, 170</Property>
+        <Property name="ModuleSort">计时器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="计时值" varname="ulTimer" type="System.Int32" visible="yes">0</Property>
+        <Property name="预设值" varname="ulSetTimer" type="System.Int32" visible="yes">10000</Property>
+        <Property name="计时完成" varname="ucIsFinish" type="System.Boolean" visible="yes">false</Property>
+        <Property name="自动复位" varname="ucAutoReset" type="System.Boolean" visible="yes">false</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,计数器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">CNT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">FIN,CNT</Property>
+        <Property name="InputName">IN,RST</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">计数器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="计数值" varname="ulCount" type="System.Int32" visible="yes">0</Property>
+        <Property name="预设值" varname="ulSetValue" type="System.Int32" visible="yes">1000</Property>
+        <Property name="计数类型" varname="ucType" type="MyEnum" visible="yes">上升沿触发,下降沿触发,高电平触发,低电平触发</Property>
+        <Property name="计数完成" varname="ucIsComplete" type="System.Boolean" visible="yes">false</Property>
+        <Property name="自动复位" varname="ucIsAutoReset" type="System.Boolean" visible="yes">false</Property>
+        <Property name="上次的输入值" varname="fLastInValue" type="MyEnum" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,累计器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">TOT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">FIN,TOT</Property>
+        <Property name="InputName">PV,RST</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">累计器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="累计值" varname="accValue" type="System.Single" visible="yes">0</Property>
+        <Property name="预设值" varname="setValue" type="System.Single" visible="yes">100000</Property>
+        <Property name="时间基数(秒)" varname="TBase" type="System.Int32" visible="yes">3600</Property>
+        <Property name="是否累计" varname="isTot" type="System.Boolean" visible="yes">true</Property>
+        <Property name="累计完成" varname="isComplete" type="System.Boolean" visible="yes">false</Property>
+        <Property name="自动复位" varname="isAuto" type="System.Boolean" visible="yes">false</Property>
+        <Property name="小信号切除" varname="valveValue" type="System.Single" visible="yes">0</Property>
+        <Property name="上次采集的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,温压补偿器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">FLCP</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">F,G,P,T,X,Q</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">温压补偿器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="补偿类型" varname="ucType" type="MyEnum" visible="yes">液体,气体、蒸汽,气体、蒸汽(比重),气体和蒸汽体积流量,蒸汽</Property>
+        <Property name="设计比重" varname="fRG" type="System.Single" visible="yes">1</Property>
+        <Property name="设计压力" varname="fRP" type="System.Single" visible="yes">1</Property>
+        <Property name="设计蒸汽参数因子" varname="fRQ" type="System.Single" visible="yes">1</Property>
+        <Property name="设计温度" varname="fRT" type="System.Single" visible="yes">1</Property>
+        <Property name="表压转换系数" varname="fP0" type="System.Single" visible="yes">101.325</Property>
+        <Property name="温度转换系数" varname="fT0" type="System.Single" visible="yes">273.15</Property>
+        <Property name="设计蒸汽系数" varname="fRX" type="System.Single" visible="yes">1</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,通用线性化器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">GLIN</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">通用线性化器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="输入最小值" varname="fInMin" type="System.Single" visible="yes">0</Property>
+        <Property name="输入最大值" varname="fInMax" type="System.Single" visible="yes">100</Property>
+        <Property name="输出最小值" varname="fOutMin" type="System.Single" visible="yes">0</Property>
+        <Property name="输出最大值" varname="fOutMax" type="System.Single" visible="yes">100</Property>
+        <Property name="第1点输入" varname="pt" type="System.Single" visible="yes">0</Property>
+        <Property name="第1点输出" varname="pt" type="System.Single" visible="yes">0</Property>
+        <Property name="第2点输入" varname="pt" type="System.Single" visible="yes">1</Property>
+        <Property name="第2点输出" varname="pt" type="System.Single" visible="yes">1</Property>
+        <Property name="第3点输入" varname="pt" type="System.Single" visible="yes">2</Property>
+        <Property name="第3点输出" varname="pt" type="System.Single" visible="yes">2</Property>
+        <Property name="第4点输入" varname="pt" type="System.Single" visible="yes">3</Property>
+        <Property name="第4点输出" varname="pt" type="System.Single" visible="yes">3</Property>
+        <Property name="第5点输入" varname="pt" type="System.Single" visible="yes">4</Property>
+        <Property name="第5点输出" varname="pt" type="System.Single" visible="yes">4</Property>
+        <Property name="第6点输入" varname="pt" type="System.Single" visible="yes">5</Property>
+        <Property name="第6点输出" varname="pt" type="System.Single" visible="yes">5</Property>
+        <Property name="第7点输入" varname="pt" type="System.Single" visible="yes">6</Property>
+        <Property name="第7点输出" varname="pt" type="System.Single" visible="yes">6</Property>
+        <Property name="第8点输入" varname="pt" type="System.Single" visible="yes">7</Property>
+        <Property name="第8点输出" varname="pt" type="System.Single" visible="yes">7</Property>
+        <Property name="第9点输入" varname="pt" type="System.Single" visible="yes">8</Property>
+        <Property name="第9点输出" varname="pt" type="System.Single" visible="yes">8</Property>
+        <Property name="第10点输入" varname="pt" type="System.Single" visible="yes">9</Property>
+        <Property name="第10点输出" varname="pt" type="System.Single" visible="yes">9</Property>
+        <Property name="第11点输入" varname="pt" type="System.Single" visible="yes">10</Property>
+        <Property name="第11点输出" varname="pt" type="System.Single" visible="yes">10</Property>
+        <Property name="第12点输入" varname="pt" type="System.Single" visible="yes">11</Property>
+        <Property name="第12点输出" varname="pt" type="System.Single" visible="yes">11</Property>
+        <Property name="有效点的个数" varname="effNum" type="System.Int32" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,线性变换器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">LICH</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">线性变换器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="比例系数" varname="fCoeffient" type="System.Single" visible="yes">1</Property>
+        <Property name="偏差" varname="fBias" type="System.Single" visible="yes">0</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,限值器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">LIMIT</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255, 102, 205, 170</Property>
+        <Property name="ModuleSort">限值器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="低限" varname="fMin" type="System.Single" visible="yes">0</Property>
+        <Property name="高限" varname="fMax" type="System.Single" visible="yes">100</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,比例器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">PRECENT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">比例器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="低限" varname="fMin" type="System.Single" visible="yes">0</Property>
+        <Property name="高限" varname="fMax" type="System.Single" visible="yes">100</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,比值控制器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">RATION</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">OP</Property>
+        <Property name="InputName">SV</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">比值控制器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="输出值" varname="fMV" type="System.Single" visible="no">0</Property>
+        <Property name="输入低限" varname="fInMin" type="System.Single" visible="yes">0</Property>
+        <Property name="输入高限" varname="fInMax" type="System.Single" visible="yes">100</Property>
+        <Property name="输出低限" varname="fOutMin" type="System.Single" visible="yes">0</Property>
+        <Property name="输出高限" varname="fOutMax" type="System.Single" visible="yes">100</Property>
+        <Property name="比值设定" varname="fRation" type="System.Single" visible="yes">0</Property>
+        <Property name="爬坡常数" varname="fClimbCon" type="System.Single" visible="yes">100</Property>
+        <Property name="偏差" varname="fBias" type="System.Single" visible="yes">0</Property>
+        <Property name="采样周期" varname="ulLastTime" type="System.Int32" visible="yes">1000</Property>
+        <Property name="手动/自动" varname="ucCtrlMod" type="MyEnum" visible="yes">手动,自动</Property>
+        <Property name="上次的控制时间" varname="ulLastTime" type="System.Int32" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,斜坡控制器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">RAMP</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">NULL</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">斜坡控制器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="输出值" varname="fMV" type="System.Single" visible="no">0</Property>
+        <Property name="手动/自动" varname="ctrlMod" type="MyEnum" visible="yes">手动,自动</Property>
+        <Property name="手动时计时方式" varname="manStyle" type="MyEnum" visible="yes">手动时停止计时,手动时继续计时</Property>
+        <Property name="终止时控制方式" varname="terminateStyle" type="MyEnum" visible="yes">停止控制,重新开始控制</Property>
+        <Property name="初值" varname="initOutValue" type="System.Single" visible="yes">0</Property>
+        <Property name="终值" varname="endOutValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间01" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出01" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间02" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出02" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间03" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出03" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间04" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出04" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间05" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出05" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间06" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出06" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间07" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出07" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间08" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出08" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间09" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出09" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间10" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出10" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间11" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出11" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间12" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出12" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间13" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出13" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间14" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出14" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间15" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出15" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间16" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出16" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间17" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出17" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间18" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出18" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间19" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出19" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间20" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出20" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间21" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出21" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间22" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出22" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间23" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出23" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="时间24" varname="time" type="System.Int32" visible="yes">100</Property>
+        <Property name="输出24" varname="outValue" type="System.Single" visible="yes">100</Property>
+        <Property name="有效段数" varname="sectionNum" type="System.Int32" visible="no">0</Property>
+        <Property name="控制时间" varname="controlTime" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,开关控制器51,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">SW51</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">OP</Property>
+        <Property name="InputName">PV0,PV1,PV2,PV3,PV4</Property>
+        <Property name="ModuleColor">255, 102, 205, 170</Property>
+        <Property name="ModuleSort">开关控制器51</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="输入选择" varname="ucSelect" type="MyEnum" visible="yes">第一输入,第二输入,第三输入,第四输入,第五输入</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,开关控制器13,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">SW13</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">OP0,OP1,OP2</Property>
+        <Property name="InputName">IN0</Property>
+        <Property name="ModuleColor">255, 102, 205, 170</Property>
+        <Property name="ModuleSort">开关控制器13</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="输出选择" varname="ucSelect" type="MyEnum" visible="yes">第一输出,第二输出,第三输出</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,三者取中器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">SWMID</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">OP</Property>
+        <Property name="InputName">PV0,PV1,PV2</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">三者取中器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="算式选择" varname="ucSelect" type="MyEnum" visible="yes">高值,低值,均值</Property>
+        <Property name="有效个数" varname="ucEffNum" type="MyEnum" visible="no">3</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,高低选择器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">SWHL</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">OP</Property>
+        <Property name="InputName">PV0,PV1,PV2,PV3,PV4,PV5</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">高低选择器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="算式选择" varname="ucSelect" type="MyEnum" visible="yes">高选,低选,均值</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,数字组合器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">DC</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">INST,DO0,DO1</Property>
+        <Property name="InputName">OUTST,DI0,DI1</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">数字组合器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="输入状态" varname="Inpt" type="MyEnum" visible="yes">第一有效态,第二有效态,爬行态,非法态</Property>
+        <Property name="输出状态" varname="Outpt" type="MyEnum" visible="yes">第一有效态,第二有效态</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,偏差限值器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">BIASLMT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">偏差限值器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="最大偏差" varname="fMaxBias" type="System.Single" visible="yes">100</Property>
+        <Property name="上次输出" varname="fLastOut" type="System.Single" visible="yes">0</Property>
+        <Property name="采样周期" varname="ulCycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="ulLastTimeRec" type="System.Int32" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,变化率器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">CHRAT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">变化率器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="上次输入" varname="fLastIn" type="System.Single" visible="yes">0</Property>
+        <Property name="采样周期" varname="ulCycle" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="ulLastTimeRec" type="System.Int32" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,脉宽调制输出,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">PVM</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN0</Property>
+        <Property name="ModuleColor">255, 102, 205, 170</Property>
+        <Property name="ModuleSort">脉宽调制输出</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="输入" type="System.Single">0</Property>
+        <Property name="输出" type="System.Single">0</Property>
+        <Property name="时间单位" type="System.Int32">1000</Property>
+        <Property name="复位" type="System.Boolean">false</Property>
+        <Property name="方式" type="MyEnum">周期结束后开始新周期,输入改变时开始新周期</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,加权平均滤波器,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">AVEFLT</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">加权平均滤波器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="系数1" varname="fCoefficient" type="System.Single" visible="yes">12.5</Property>
+        <Property name="系数2" varname="fCoefficient" type="System.Single" visible="yes">12.5</Property>
+        <Property name="系数3" varname="fCoefficient" type="System.Single" visible="yes">12.5</Property>
+        <Property name="系数4" varname="fCoefficient" type="System.Single" visible="yes">12.5</Property>
+        <Property name="系数5" varname="fCoefficient" type="System.Single" visible="yes">12.5</Property>
+        <Property name="系数6" varname="fCoefficient" type="System.Single" visible="yes">12.5</Property>
+        <Property name="系数7" varname="fCoefficient" type="System.Single" visible="yes">12.5</Property>
+        <Property name="系数8" varname="fCoefficient" type="System.Single" visible="yes">12.5</Property>
+        <Property name="输入1" varname="fSavedIn" type="System.Single" visible="yes">0</Property>
+        <Property name="输入2" varname="fSavedIn" type="System.Single" visible="yes">0</Property>
+        <Property name="输入3" varname="fSavedIn" type="System.Single" visible="yes">0</Property>
+        <Property name="输入4" varname="fSavedIn" type="System.Single" visible="yes">0</Property>
+        <Property name="输入5" varname="fSavedIn" type="System.Single" visible="yes">0</Property>
+        <Property name="输入6" varname="fSavedIn" type="System.Single" visible="yes">0</Property>
+        <Property name="输入7" varname="fSavedIn" type="System.Single" visible="yes">0</Property>
+        <Property name="输入8" varname="fSavedIn" type="System.Single" visible="yes">0</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.ManMade,ControlTactic,计算器组态,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">CALCU</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">Y0,Y1,Y2,Y3</Property>
+        <Property name="InputName">X0,X1,X2,X3,X4,X5,X6,X7</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">计算器组态</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="中间变量0" varname="fM" type="System.Single" visible="yes">0</Property>
+        <Property name="中间变量1" varname="fM" type="System.Single" visible="yes">0</Property>
+        <Property name="中间变量2" varname="fM" type="System.Single" visible="yes">0</Property>
+        <Property name="中间变量3" varname="fM" type="System.Single" visible="yes">0</Property>
+        <Property name="中间变量4" varname="fM" type="System.Single" visible="yes">0</Property>
+        <Property name="中间变量5" varname="fM" type="System.Single" visible="yes">0</Property>
+        <Property name="中间变量6" varname="fM" type="System.Single" visible="yes">0</Property>
+        <Property name="中间变量7" varname="fM" type="System.Single" visible="yes">0</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,条件动作表,算法支撑">
+      <BasicProperty>
+        <Property name="ModuleName">PROCESS</Property>
+        <Property name="TextColor">255, 0, 0, 255</Property>
+        <Property name="OutputName">NULL</Property>
+        <Property name="InputName">EN</Property>
+        <Property name="ModuleColor">255, 102, 205, 170</Property>
+        <Property name="ModuleSort">条件动作表</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="使能" varname="" type="System.Boolean" visible="yes">false</Property>
+      </FunctionProperty>
+    </FDToolBoxItem>
+  </Category>
+  <Category DisplayName="控制算法">
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,PID控制器,控制算法">
+      <BasicProperty>
+        <Property name="ModuleName">PID</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">OP</Property>
+        <Property name="InputName">SPC,PV</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">PID控制器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="安全值" varname="fSaveValue" type="System.Single" visible="yes">0</Property>
+        <Property name="被控量" varname="fPV" type="System.Single" visible="no">0</Property>
+        <Property name="被控量报警死区" varname="fHY" type="System.Single" visible="yes">0</Property>
+        <Property name="被控量变化率" varname="fPR" type="System.Single" visible="yes">0</Property>
+        <Property name="被控量的上限状态" varname="cPHA" type="MyEnum" visible="no">0</Property>
+        <Property name="被控量的下限状态" varname="cPLA" type="MyEnum" visible="no">0</Property>
+        <Property name="被控量上限报警" varname="fPH" type="System.Single" visible="yes">100</Property>
+        <Property name="被控量下限报警" varname="fPL" type="System.Single" visible="yes">0</Property>
+        <Property name="比例" varname="Kp" type="System.Single" visible="yes">1</Property>
+        <Property name="采集周期" varname="Ts" type="System.Int32" visible="yes">1000</Property>
+        <Property name="串级,来自主调节模块" varname="fSVC" type="System.Single" visible="no">50</Property>
+        <Property name="串级/上位机" varname="cCASorSCC" type="MyEnum" visible="yes">串级,上位机</Property>
+        <Property name="给定值的变化率" varname="fSR" type="System.Single" visible="yes">0</Property>
+        <Property name="积分(秒)" varname="Ki" type="System.Single" visible="yes">100000</Property>
+        <Property name="记录上次的给定值" varname="fSV" type="System.Single" visible="no">0</Property>
+        <Property name="紧急连锁状态" varname="ucIsEmergency" type="MyEnum" visible="yes">安全态,紧急态</Property>
+        <Property name="内/外给定" varname="cCLorCR" type="MyEnum" visible="yes">内给定,外给定</Property>
+        <Property name="内给定值" varname="fSVL" type="System.Single" visible="yes">50</Property>
+        <Property name="偏差" varname="ei" type="System.Single" visible="yes">0</Property>
+        <Property name="偏差报警值" varname="fDL" type="System.Single" visible="yes">0</Property>
+        <Property name="偏差输入补偿方式" varname="cICM" type="MyEnum" visible="yes">不考虑输入补偿,加补偿,减补偿,置换补偿</Property>
+        <Property name="偏差输入补偿量" varname="fICV" type="System.Single" visible="yes">0</Property>
+        <Property name="偏差死区" varname="fBSGP" type="System.Single" visible="yes">0</Property>
+        <Property name="偏差增益" varname="fBSGN" type="System.Single" visible="yes">1</Property>
+        <Property name="偏差正作用/反作用" varname="cDorR" type="MyEnum" visible="yes">偏差正作用,偏差反作用</Property>
+        <Property name="上次的偏差" varname="ei_1" type="System.Single" visible="no">0</Property>
+        <Property name="上次的时间记录" varname="lastTimeRec" type="System.Int32" visible="no">0</Property>
+        <Property name="上上次的偏差" varname="ei_2" type="System.Single" visible="no">0</Property>
+        <Property name="上位机" varname="fSVS" type="System.Single" visible="yes">50</Property>
+        <Property name="微分(秒)" varname="Kd" type="System.Single" visible="yes">0</Property>
+        <Property name="偏差报警状态" varname="cDLA" type="System.Single" visible="no">0</Property>
+        <Property name="算法选择" varname="cSelect" type="MyEnum" visible="yes">普通PID算法,积分分离PID算法,遇限削弱积分PID算法,微分先行PID算法,梯形积分PID算法</Property>
+        <Property name="输出值" varname="fMV" type="System.Single" visible="no">50</Property>
+        <Property name="积分分离因子" varname="fE0" type="System.Single" visible="yes">0</Property>
+        <Property name="控制量上限" varname="fMH" type="System.Single" visible="yes">100</Property>
+        <Property name="控制量下限" varname="fML" type="System.Single" visible="yes">0</Property>
+        <Property name="上次的被控量" varname="fPV_1" type="System.Single" visible="no">0</Property>
+        <Property name="上上次的被控量" varname="fPV_2" type="System.Single" visible="no">0</Property>
+        <Property name="输出补偿量" varname="fOCV" type="System.Single" visible="yes">0</Property>
+        <Property name="输出补偿方式" varname="cOCM" type="MyEnum" visible="yes">不考虑输入补偿,加补偿,减补偿,置换补偿</Property>
+        <Property name="输出变化率" varname="fMR" type="System.Single" visible="yes">0</Property>
+        <Property name="输出保持" varname="cFHorNH" type="MyEnum" visible="yes">保持,不保持</Property>
+        <Property name="安全输出" varname="cFSorNS" type="MyEnum" visible="yes">安全输出,不安全输出</Property>
+        <Property name="安全输出量" varname="fMS" type="System.Single" visible="yes">0</Property>
+        <Property name="自动/手动" varname="cCtrlMode" type="MyEnum" visible="yes">自动,手动</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,最少拍控制器,控制算法">
+      <BasicProperty>
+        <Property name="ModuleName">Least</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">最少拍控制器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="被控对象的放大系数" varname="fK" type="System.Single" visible="yes">1</Property>
+        <Property name="一阶被控对象的时间常数" varname="ulT1" type="System.Int32" visible="yes">1000</Property>
+        <Property name="被控对象的纯滞后时间" varname="ulTao" type="System.Single" visible="yes">10000</Property>
+        <Property name="采样周期" varname="ulTs" type="System.Int32" visible="yes">1000</Property>
+        <Property name="输出高限" varname="fMH" type="System.Single" visible="yes">100</Property>
+        <Property name="输出低限" varname="fML" type="System.Single" visible="yes">0</Property>
+        <Property name="自动/手动" varname="cCtrlMod" type="MyEnum" visible="yes">自动,手动</Property>
+        <Property name="上次的偏差" varname="fei" type="System.Single" visible="no">0</Property>
+        <Property name="上次控制的时间" varname="ulLastTime" type="System.Int32" visible="no">0</Property>
+        <Property name="输出" varname="fMV" type="System.Single" visible="no">50</Property>
+        <Property name="设定值" varname="fSV" type="System.Single" visible="yes">50</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,大林控制器,控制算法">
+      <BasicProperty>
+        <Property name="ModuleName">Darlin</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">大林控制器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="输出高限" varname="fMH" type="System.Single" visible="yes">100</Property>
+        <Property name="输出低限" varname="fML" type="System.Single" visible="yes">0</Property>
+        <Property name="被控对象的放大系数" varname="fK" type="System.Single" visible="yes">1</Property>
+        <Property name="时间常数1" varname="ulT1" type="System.Int32" visible="yes">1000</Property>
+        <Property name="时间常数2" varname="ulT2" type="System.Int32" visible="yes">1000</Property>
+        <Property name="闭环系统时间常数" varname="ulTTao" type="System.Int32" visible="yes">1000</Property>
+        <Property name="采样周期" varname="ulTs" type="System.Int32" visible="yes">1000</Property>
+        <Property name="自动/手动" varname="cCtrlMod" type="MyEnum" visible="yes">自动,手动</Property>
+        <Property name="输出" varname="fMV" type="System.Single" visible="no">50</Property>
+        <Property name="上上次的输出" varname="fMV_1" type="System.Single" visible="no">0</Property>
+        <Property name="上次的偏差" varname="fei" type="System.Single" visible="no">0</Property>
+        <Property name="上上次的偏差" varname="fei_1" type="System.Single" visible="no">0</Property>
+        <Property name="上次控制的时间" varname="ulLastTime" type="System.Int32" visible="no">0</Property>
+        <Property name="设定值" varname="fSV" type="System.Single" visible="yes">50</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,前馈器,控制算法">
+      <BasicProperty>
+        <Property name="ModuleName">Pre</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">前馈器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="输出高限" varname="fMH" type="System.Single" visible="yes">100</Property>
+        <Property name="输出低限" varname="fML" type="System.Single" visible="yes">0</Property>
+        <Property name="扰动对象的放大系数" varname="fK1" type="System.Single" visible="yes">1</Property>
+        <Property name="被控对象的时间常数" varname="ulT2" type="System.Int32" visible="yes">1000</Property>
+        <Property name="扰动通道的时间常数" varname="ulT1" type="System.Int32" visible="yes">10000</Property>
+        <Property name="采样周期" varname="ulTs" type="System.Int32" visible="yes">1000</Property>
+        <Property name="被控对象的放大系数" varname="fK2" type="System.Single" visible="yes">1</Property>
+        <Property name="闭环系统的时间常数" varname="ulTTao" type="System.Int32" visible="yes">10000</Property>
+        <Property name="自动/手动" varname="cCtrlMod" type="MyEnum" visible="yes">自动,手动</Property>
+        <Property name="上次的输出" varname="fMV" type="System.Single" visible="no">50</Property>
+        <Property name="上次控制的时间" varname="ulLastTime" type="System.Int32" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,解耦补偿控制器,控制算法">
+      <BasicProperty>
+        <Property name="ModuleName">JieOu</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">解耦补偿控制器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="解耦路数" varname="iN" type="System.Int32" visible="yes">2</Property>
+        <Property name="解耦矩阵的参数" varname="paramMatrix" type="System.Single" visible="yes">0</Property>
+        <Property name="上次偏差数组" varname="ei" type="System.Single" visible="no">0</Property>
+        <Property name="上上次偏差数组" varname="fUk" type="System.Single" visible="no">0</Property>
+        <Property name="比例" varname="fKp" type="System.Single" visible="yes">1</Property>
+        <Property name="积分" varname="fKi" type="System.Single" visible="yes">100000</Property>
+        <Property name="微分" varname="fKd" type="System.Single" visible="yes">0</Property>
+        <Property name="设定值" varname="fSV" type="System.Single" visible="yes">50</Property>
+        <Property name="自动/手动" varname="cCtrlMod" type="MyEnum" visible="yes">自动,手动</Property>
+        <Property name="采样周期" varname="ulTs" type="System.Int32" visible="yes">1000</Property>
+        <Property name="上次控制的时间" varname="ulLastTime" type="System.Int32" visible="yes">0</Property>
+      </FunctionProperty>
+      <CodeProperty />
+    </FDToolBoxItem>
+    <FDToolBoxItem Type="ControlTactic.Arithmetic,ControlTactic,模糊控制器,控制算法">
+      <BasicProperty>
+        <Property name="ModuleName">Fuzzy</Property>
+        <Property name="TextColor">255,0,0,255</Property>
+        <Property name="OutputName">PV</Property>
+        <Property name="InputName">IN</Property>
+        <Property name="ModuleColor">255,102,205,170</Property>
+        <Property name="ModuleSort">模糊控制器</Property>
+      </BasicProperty>
+      <FunctionProperty>
+        <Property name="采样周期" varname="ulTs" type="System.Int32" visible="yes">1000</Property>
+        <Property name="偏差高限" varname="fEH" type="System.Single" visible="yes">100</Property>
+        <Property name="偏差变化率高限" varname="fECH" type="System.Single" visible="yes">100</Property>
+        <Property name="输出高限" varname="fUH" type="System.Single" visible="yes">100</Property>
+        <Property name="自动/手动" varname="cCtrlMod" type="MyEnum" visible="yes">自动,手动</Property>
+        <Property name="偏差模糊论域" varname="ulL" type="System.Int32" visible="yes">0</Property>
+        <Property name="偏差变化率模糊论域" varname="ulM" type="System.Int32" visible="yes">0</Property>
+        <Property name="偏差" varname="fEi" type="System.Single" visible="no">0</Property>
+        <Property name="控制量模糊论域" varname="ulN" type="System.Int32" visible="yes">0</Property>
+        <Property name="输出" varname="fMV" type="System.Single" visible="no">0</Property>
+        <Property name="设定值" varname="fSV" type="System.Single" visible="yes">0</Property>
+        <Property name="上次控制的时间" varname="ulLastTime" type="System.Single" visible="no">0</Property>
+      </FunctionProperty>
+      <CodeProperty>
+        <CodeLine>sos</CodeLine>
+        <CodeLine>test</CodeLine>
+      </CodeProperty>
+    </FDToolBoxItem>
+  </Category>
+<Category DisplayName="头文件">
+</Category>
+</configuration>

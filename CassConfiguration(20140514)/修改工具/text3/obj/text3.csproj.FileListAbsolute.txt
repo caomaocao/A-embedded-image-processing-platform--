@@ -1,0 +1,222 @@
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\修改工具\text3\bin\Debug\text3.exe
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\修改工具\text3\bin\Debug\text3.pdb
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\修改工具\text3\bin\Debug\CaVeGen.exe
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\修改工具\text3\bin\Debug\AxInterop.CodeSense.dll
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\修改工具\text3\bin\Debug\MagicLibrary.dll
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\修改工具\text3\bin\Debug\Interop.CodeSense.dll
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\修改工具\text3\bin\Debug\CassMessageBox.dll
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\修改工具\text3\bin\Debug\Janus.Windows.Common.v3.dll
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\修改工具\text3\bin\Debug\Janus.Windows.ExplorerBar.v3.dll
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\修改工具\text3\bin\Debug\CaVeGen.pdb
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\修改工具\text3\bin\Debug\ControlTactic.pdb
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\修改工具\text3\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\修改工具\text3\obj\Debug\text3.ToolConfig.xml
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\修改工具\text3\obj\Debug\text3.Form1.resources
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\修改工具\text3\obj\Debug\text3.Form2.resources
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\修改工具\text3\obj\Debug\text3.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\修改工具\text3\obj\Debug\text3.Form3.resources
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\修改工具\text3\obj\Debug\text3.Form4.resources
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\修改工具\text3\obj\Debug\text3.Form5.resources
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\修改工具\text3\obj\Debug\text3.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\修改工具\text3\obj\Debug\text3.exe
+C:\Documents and Settings\Administrator\桌面\Project1_6.21\Project1_6.21\修改工具\text3\obj\Debug\text3.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\修改工具\text3\bin\Debug\text3.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\修改工具\text3\bin\Debug\text3.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\修改工具\text3\bin\Debug\CaVeGen.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\修改工具\text3\bin\Debug\AxInterop.CodeSense.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\修改工具\text3\bin\Debug\MagicLibrary.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\修改工具\text3\bin\Debug\Interop.CodeSense.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\修改工具\text3\bin\Debug\Janus.Windows.Common.v3.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\修改工具\text3\bin\Debug\Janus.Windows.ExplorerBar.v3.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\修改工具\text3\bin\Debug\CaVeGen.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\修改工具\text3\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\修改工具\text3\obj\Debug\text3.ToolConfig.xml
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\修改工具\text3\obj\Debug\text3.Form1.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\修改工具\text3\obj\Debug\text3.Form2.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\修改工具\text3\obj\Debug\text3.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\修改工具\text3\obj\Debug\text3.Form3.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\修改工具\text3\obj\Debug\text3.Form4.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\修改工具\text3\obj\Debug\text3.Form5.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\修改工具\text3\obj\Debug\text3.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\修改工具\text3\obj\Debug\text3.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\CassConfiguration\修改工具\text3\obj\Debug\text3.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\修改工具\text3\bin\Debug\text3.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\修改工具\text3\bin\Debug\text3.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\修改工具\text3\bin\Debug\CaVeGen.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\修改工具\text3\bin\Debug\AxInterop.CodeSense.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\修改工具\text3\bin\Debug\MagicLibrary.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\修改工具\text3\bin\Debug\Interop.CodeSense.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\修改工具\text3\bin\Debug\Janus.Windows.Common.v3.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\修改工具\text3\bin\Debug\Janus.Windows.ExplorerBar.v3.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\修改工具\text3\bin\Debug\CaVeGen.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\修改工具\text3\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\修改工具\text3\obj\Debug\text3.ToolConfig.xml
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\修改工具\text3\obj\Debug\text3.Form1.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\修改工具\text3\obj\Debug\text3.Form2.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\修改工具\text3\obj\Debug\text3.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\修改工具\text3\obj\Debug\text3.Form3.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\修改工具\text3\obj\Debug\text3.Form4.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\修改工具\text3\obj\Debug\text3.Form5.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\修改工具\text3\obj\Debug\text3.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\修改工具\text3\obj\Debug\text3.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\修改工具\text3\obj\Debug\text3.pdb
+C:\Documents and Settings\Administrator\桌面\Project_7.14\修改工具\text3\bin\Debug\text3.exe
+C:\Documents and Settings\Administrator\桌面\Project_7.14\修改工具\text3\bin\Debug\text3.pdb
+C:\Documents and Settings\Administrator\桌面\Project_7.14\修改工具\text3\bin\Debug\CaVeGen.exe
+C:\Documents and Settings\Administrator\桌面\Project_7.14\修改工具\text3\bin\Debug\AxInterop.CodeSense.dll
+C:\Documents and Settings\Administrator\桌面\Project_7.14\修改工具\text3\bin\Debug\MagicLibrary.dll
+C:\Documents and Settings\Administrator\桌面\Project_7.14\修改工具\text3\bin\Debug\Interop.CodeSense.dll
+C:\Documents and Settings\Administrator\桌面\Project_7.14\修改工具\text3\bin\Debug\Janus.Windows.Common.v3.dll
+C:\Documents and Settings\Administrator\桌面\Project_7.14\修改工具\text3\bin\Debug\Janus.Windows.ExplorerBar.v3.dll
+C:\Documents and Settings\Administrator\桌面\Project_7.14\修改工具\text3\bin\Debug\CaVeGen.pdb
+C:\Documents and Settings\Administrator\桌面\Project_7.14\修改工具\text3\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\Project_7.14\修改工具\text3\obj\Debug\text3.ToolConfig.xml
+C:\Documents and Settings\Administrator\桌面\Project_7.14\修改工具\text3\obj\Debug\text3.Form1.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.14\修改工具\text3\obj\Debug\text3.Form2.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.14\修改工具\text3\obj\Debug\text3.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.14\修改工具\text3\obj\Debug\text3.Form3.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.14\修改工具\text3\obj\Debug\text3.Form4.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.14\修改工具\text3\obj\Debug\text3.Form5.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.14\修改工具\text3\obj\Debug\text3.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\Project_7.14\修改工具\text3\obj\Debug\text3.exe
+C:\Documents and Settings\Administrator\桌面\Project_7.14\修改工具\text3\obj\Debug\text3.pdb
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\修改工具\text3\bin\Debug\text3.exe
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\修改工具\text3\bin\Debug\text3.pdb
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\修改工具\text3\bin\Debug\CaVeGen.exe
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\修改工具\text3\bin\Debug\AxInterop.CodeSense.dll
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\修改工具\text3\bin\Debug\MagicLibrary.dll
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\修改工具\text3\bin\Debug\Interop.CodeSense.dll
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\修改工具\text3\bin\Debug\Janus.Windows.Common.v3.dll
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\修改工具\text3\bin\Debug\Janus.Windows.ExplorerBar.v3.dll
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\修改工具\text3\bin\Debug\CaVeGen.pdb
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\修改工具\text3\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\修改工具\text3\obj\Debug\text3.ToolConfig.xml
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\修改工具\text3\obj\Debug\text3.Form1.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\修改工具\text3\obj\Debug\text3.Form2.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\修改工具\text3\obj\Debug\text3.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\修改工具\text3\obj\Debug\text3.Form3.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\修改工具\text3\obj\Debug\text3.Form4.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\修改工具\text3\obj\Debug\text3.Form5.resources
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\修改工具\text3\obj\Debug\text3.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\修改工具\text3\obj\Debug\text3.exe
+C:\Documents and Settings\Administrator\桌面\Project_7.17last\修改工具\text3\obj\Debug\text3.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\修改工具\text3\bin\Debug\text3.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\修改工具\text3\bin\Debug\text3.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\修改工具\text3\bin\Debug\CaVeGen.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\修改工具\text3\bin\Debug\AxInterop.CodeSense.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\修改工具\text3\bin\Debug\MagicLibrary.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\修改工具\text3\bin\Debug\Interop.CodeSense.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\修改工具\text3\bin\Debug\Janus.Windows.Common.v3.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\修改工具\text3\bin\Debug\Janus.Windows.ExplorerBar.v3.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\修改工具\text3\bin\Debug\CaVeGen.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\修改工具\text3\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\修改工具\text3\obj\Debug\text3.ToolConfig.xml
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\修改工具\text3\obj\Debug\text3.Form1.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\修改工具\text3\obj\Debug\text3.Form2.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\修改工具\text3\obj\Debug\text3.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\修改工具\text3\obj\Debug\text3.Form3.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\修改工具\text3\obj\Debug\text3.Form4.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\修改工具\text3\obj\Debug\text3.Form5.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\修改工具\text3\obj\Debug\text3.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\修改工具\text3\obj\Debug\text3.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\project0720\修改工具\text3\obj\Debug\text3.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\修改工具\text3\bin\Debug\text3.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\修改工具\text3\bin\Debug\text3.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\修改工具\text3\bin\Debug\CaVeGen.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\修改工具\text3\bin\Debug\AxInterop.CodeSense.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\修改工具\text3\bin\Debug\MagicLibrary.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\修改工具\text3\bin\Debug\Interop.CodeSense.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\修改工具\text3\bin\Debug\Janus.Windows.Common.v3.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\修改工具\text3\bin\Debug\Janus.Windows.ExplorerBar.v3.dll
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\修改工具\text3\bin\Debug\CaVeGen.pdb
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\修改工具\text3\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\修改工具\text3\obj\Debug\text3.ToolConfig.xml
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\修改工具\text3\obj\Debug\text3.Form1.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\修改工具\text3\obj\Debug\text3.Form2.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\修改工具\text3\obj\Debug\text3.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\修改工具\text3\obj\Debug\text3.Form3.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\修改工具\text3\obj\Debug\text3.Form4.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\修改工具\text3\obj\Debug\text3.Form5.resources
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\修改工具\text3\obj\Debug\text3.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\修改工具\text3\obj\Debug\text3.exe
+C:\Documents and Settings\Administrator\桌面\CassConfiguration\Project_0720\修改工具\text3\obj\Debug\text3.pdb
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\修改工具\text3\bin\Debug\text3.exe
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\修改工具\text3\bin\Debug\text3.pdb
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\修改工具\text3\bin\Debug\CaVeGen.exe
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\修改工具\text3\bin\Debug\AxInterop.CodeSense.dll
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\修改工具\text3\bin\Debug\MagicLibrary.dll
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\修改工具\text3\bin\Debug\Interop.CodeSense.dll
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\修改工具\text3\bin\Debug\Janus.Windows.Common.v3.dll
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\修改工具\text3\bin\Debug\Janus.Windows.ExplorerBar.v3.dll
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\修改工具\text3\bin\Debug\CaVeGen.pdb
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\修改工具\text3\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\修改工具\text3\obj\Debug\text3.ToolConfig.xml
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\修改工具\text3\obj\Debug\text3.Form1.resources
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\修改工具\text3\obj\Debug\text3.Form2.resources
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\修改工具\text3\obj\Debug\text3.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\修改工具\text3\obj\Debug\text3.Form3.resources
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\修改工具\text3\obj\Debug\text3.Form4.resources
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\修改工具\text3\obj\Debug\text3.Form5.resources
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\修改工具\text3\obj\Debug\text3.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\修改工具\text3\obj\Debug\text3.exe
+C:\Documents and Settings\Administrator\桌面\0805\CassConfiguration\修改工具\text3\obj\Debug\text3.pdb
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\修改工具\text3\bin\Debug\text3.exe
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\修改工具\text3\bin\Debug\text3.pdb
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\修改工具\text3\bin\Debug\CaVeGen.exe
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\修改工具\text3\bin\Debug\AxInterop.CodeSense.dll
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\修改工具\text3\bin\Debug\MagicLibrary.dll
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\修改工具\text3\bin\Debug\Interop.CodeSense.dll
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\修改工具\text3\bin\Debug\Janus.Windows.Common.v3.dll
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\修改工具\text3\bin\Debug\Janus.Windows.ExplorerBar.v3.dll
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\修改工具\text3\bin\Debug\CaVeGen.pdb
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\修改工具\text3\obj\Debug\ResolveAssemblyReference.cache
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\修改工具\text3\obj\Debug\text3.ToolConfig.xml
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\修改工具\text3\obj\Debug\text3.Form1.resources
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\修改工具\text3\obj\Debug\text3.Form2.resources
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\修改工具\text3\obj\Debug\text3.Properties.Resources.resources
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\修改工具\text3\obj\Debug\text3.Form3.resources
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\修改工具\text3\obj\Debug\text3.Form4.resources
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\修改工具\text3\obj\Debug\text3.Form5.resources
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\修改工具\text3\obj\Debug\text3.csproj.GenerateResource.Cache
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\修改工具\text3\obj\Debug\text3.exe
+E:\configuration\PLCGraphics组态_优化\PLCGraphics组态_优化\PLCGraphics加版本号\CassConfiguration\修改工具\text3\obj\Debug\text3.pdb
+E:\configuration\PLCGraphics\CassConfiguration\修改工具\text3\bin\Debug\text3.exe
+E:\configuration\PLCGraphics\CassConfiguration\修改工具\text3\bin\Debug\text3.pdb
+E:\configuration\PLCGraphics\CassConfiguration\修改工具\text3\bin\Debug\CaVeGen.exe
+E:\configuration\PLCGraphics\CassConfiguration\修改工具\text3\bin\Debug\AxInterop.CodeSense.dll
+E:\configuration\PLCGraphics\CassConfiguration\修改工具\text3\bin\Debug\MagicLibrary.dll
+E:\configuration\PLCGraphics\CassConfiguration\修改工具\text3\bin\Debug\Interop.CodeSense.dll
+E:\configuration\PLCGraphics\CassConfiguration\修改工具\text3\bin\Debug\Janus.Windows.Common.v3.dll
+E:\configuration\PLCGraphics\CassConfiguration\修改工具\text3\bin\Debug\Janus.Windows.ExplorerBar.v3.dll
+E:\configuration\PLCGraphics\CassConfiguration\修改工具\text3\bin\Debug\CaVeGen.pdb
+E:\configuration\PLCGraphics\CassConfiguration\修改工具\text3\obj\Debug\ResolveAssemblyReference.cache
+E:\configuration\PLCGraphics\CassConfiguration\修改工具\text3\obj\Debug\text3.ToolConfig.xml
+E:\configuration\PLCGraphics\CassConfiguration\修改工具\text3\obj\Debug\text3.Form1.resources
+E:\configuration\PLCGraphics\CassConfiguration\修改工具\text3\obj\Debug\text3.Form2.resources
+E:\configuration\PLCGraphics\CassConfiguration\修改工具\text3\obj\Debug\text3.Properties.Resources.resources
+E:\configuration\PLCGraphics\CassConfiguration\修改工具\text3\obj\Debug\text3.Form3.resources
+E:\configuration\PLCGraphics\CassConfiguration\修改工具\text3\obj\Debug\text3.Form4.resources
+E:\configuration\PLCGraphics\CassConfiguration\修改工具\text3\obj\Debug\text3.Form5.resources
+E:\configuration\PLCGraphics\CassConfiguration\修改工具\text3\obj\Debug\text3.csproj.GenerateResource.Cache
+E:\configuration\PLCGraphics\CassConfiguration\修改工具\text3\obj\Debug\text3.exe
+E:\configuration\PLCGraphics\CassConfiguration\修改工具\text3\obj\Debug\text3.pdb
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\修改工具\text3\bin\Debug\text3.exe
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\修改工具\text3\bin\Debug\text3.pdb
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\修改工具\text3\bin\Debug\CaVeGen.exe
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\修改工具\text3\bin\Debug\AxInterop.CodeSense.dll
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\修改工具\text3\bin\Debug\MagicLibrary.dll
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\修改工具\text3\bin\Debug\Interop.CodeSense.dll
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\修改工具\text3\bin\Debug\Janus.Windows.Common.v3.dll
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\修改工具\text3\bin\Debug\Janus.Windows.ExplorerBar.v3.dll
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\修改工具\text3\bin\Debug\CaVeGen.pdb
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\修改工具\text3\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\修改工具\text3\obj\Debug\text3.ToolConfig.xml
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\修改工具\text3\obj\Debug\text3.Form1.resources
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\修改工具\text3\obj\Debug\text3.Form2.resources
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\修改工具\text3\obj\Debug\text3.Properties.Resources.resources
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\修改工具\text3\obj\Debug\text3.Form3.resources
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\修改工具\text3\obj\Debug\text3.Form4.resources
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\修改工具\text3\obj\Debug\text3.Form5.resources
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\修改工具\text3\obj\Debug\text3.csproj.GenerateResource.Cache
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\修改工具\text3\obj\Debug\text3.exe
+D:\Documents and Settings\lenovo\My Documents\李杰龙刻盘\组态工程\代码\纯组态软件代码\CassConfiguration\修改工具\text3\obj\Debug\text3.pdb
